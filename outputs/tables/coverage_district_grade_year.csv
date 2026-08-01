@@ -35,6 +35,15 @@ Bengaluru Rural,5,2024-25,broad,3120,6689.0,46.6
 Bengaluru Rural,6,2022-23,broad,2732,6507.0,42.0
 Bengaluru Rural,6,2023-24,broad,2888,6909.0,41.8
 Bengaluru Rural,6,2024-25,broad,2546,6678.0,38.1
+Bengaluru Urban,4,2022-23,broad,0,37999.0,0.0
+Bengaluru Urban,4,2023-24,broad,0,30856.0,0.0
+Bengaluru Urban,4,2024-25,broad,0,39500.0,0.0
+Bengaluru Urban,5,2022-23,broad,0,35591.0,0.0
+Bengaluru Urban,5,2023-24,broad,0,36666.0,0.0
+Bengaluru Urban,5,2024-25,broad,0,30277.0,0.0
+Bengaluru Urban,6,2022-23,broad,0,35517.0,0.0
+Bengaluru Urban,6,2023-24,broad,0,34566.0,0.0
+Bengaluru Urban,6,2024-25,broad,0,35214.0,0.0
 Bidar,4,2022-23,broad,5045,18462.0,27.3
 Bidar,4,2023-24,broad,4359,17888.0,24.4
 Bidar,4,2024-25,broad,5161,20612.0,25.0
@@ -62,10 +71,13 @@ Chikkaballapura,5,2024-25,broad,5257,8394.0,62.6
 Chikkaballapura,6,2022-23,broad,2792,8589.0,32.5
 Chikkaballapura,6,2023-24,broad,3015,9241.0,32.6
 Chikkaballapura,6,2024-25,broad,3806,8552.0,44.5
+Chikkamagaluru,4,2022-23,broad,0,8737.0,0.0
 Chikkamagaluru,4,2023-24,broad,4897,7880.0,62.1
 Chikkamagaluru,4,2024-25,broad,5112,8583.0,59.6
+Chikkamagaluru,5,2022-23,broad,0,8722.0,0.0
 Chikkamagaluru,5,2023-24,broad,5424,8581.0,63.2
 Chikkamagaluru,5,2024-25,broad,4792,7859.0,61.0
+Chikkamagaluru,6,2022-23,broad,0,8485.0,0.0
 Chikkamagaluru,6,2023-24,broad,4473,9065.0,49.3
 Chikkamagaluru,6,2024-25,broad,4196,8878.0,47.3
 Chitradurga,4,2022-23,broad,10028,16381.0,61.2
@@ -78,8 +90,14 @@ Chitradurga,6,2022-23,broad,8479,16562.0,51.2
 Chitradurga,6,2023-24,broad,9005,17644.0,51.0
 Chitradurga,6,2024-25,broad,8513,16219.0,52.5
 Dakshina Kannada,4,2022-23,broad,556,15379.0,3.6
+Dakshina Kannada,4,2023-24,broad,0,15104.0,0.0
+Dakshina Kannada,4,2024-25,broad,0,16261.0,0.0
 Dakshina Kannada,5,2022-23,broad,592,15299.0,3.9
+Dakshina Kannada,5,2023-24,broad,0,15305.0,0.0
+Dakshina Kannada,5,2024-25,broad,0,15162.0,0.0
 Dakshina Kannada,6,2022-23,broad,475,13573.0,3.5
+Dakshina Kannada,6,2023-24,broad,0,15729.0,0.0
+Dakshina Kannada,6,2024-25,broad,0,15672.0,0.0
 Davanagere,4,2022-23,broad,2488,15102.0,16.5
 Davanagere,4,2023-24,broad,3884,14583.0,26.6
 Davanagere,4,2024-25,broad,6835,15290.0,44.7
@@ -197,6 +215,15 @@ Ramanagara,5,2024-25,broad,3654,6832.0,53.5
 Ramanagara,6,2022-23,broad,440,7463.0,5.9
 Ramanagara,6,2023-24,broad,4176,8306.0,50.3
 Ramanagara,6,2024-25,broad,3086,7489.0,41.2
+Shivamogga,4,2022-23,broad,0,16642.0,0.0
+Shivamogga,4,2023-24,broad,0,15307.0,0.0
+Shivamogga,4,2024-25,broad,0,15688.0,0.0
+Shivamogga,5,2022-23,broad,0,16660.0,0.0
+Shivamogga,5,2023-24,broad,0,16087.0,0.0
+Shivamogga,5,2024-25,broad,0,15211.0,0.0
+Shivamogga,6,2022-23,broad,0,15846.0,0.0
+Shivamogga,6,2023-24,broad,0,16305.0,0.0
+Shivamogga,6,2024-25,broad,0,15880.0,0.0
 Tumakuru,4,2022-23,broad,6237,21068.0,29.6
 Tumakuru,4,2023-24,broad,10676,20438.0,52.2
 Tumakuru,4,2024-25,broad,11976,20482.0,58.5
@@ -207,11 +234,23 @@ Tumakuru,6,2022-23,broad,5267,21293.0,24.7
 Tumakuru,6,2023-24,broad,9870,23379.0,42.2
 Tumakuru,6,2024-25,broad,9603,21013.0,45.7
 Udupi,4,2022-23,broad,899,8223.0,10.9
+Udupi,4,2023-24,broad,0,8088.0,0.0
+Udupi,4,2024-25,broad,0,8483.0,0.0
 Udupi,5,2022-23,broad,1058,7096.0,14.9
+Udupi,5,2023-24,broad,0,8334.0,0.0
+Udupi,5,2024-25,broad,0,8180.0,0.0
 Udupi,6,2022-23,broad,858,8733.0,9.8
+Udupi,6,2023-24,broad,0,7551.0,0.0
+Udupi,6,2024-25,broad,0,8736.0,0.0
 Uttara Kannada,4,2022-23,broad,265,15290.0,1.7
+Uttara Kannada,4,2023-24,broad,0,15485.0,0.0
+Uttara Kannada,4,2024-25,broad,0,15786.0,0.0
 Uttara Kannada,5,2022-23,broad,311,15948.0,2.0
+Uttara Kannada,5,2023-24,broad,0,15267.0,0.0
+Uttara Kannada,5,2024-25,broad,0,15613.0,0.0
 Uttara Kannada,6,2022-23,broad,225,15870.0,1.4
+Uttara Kannada,6,2023-24,broad,0,16200.0,0.0
+Uttara Kannada,6,2024-25,broad,0,15563.0,0.0
 Vijayanagara,4,2022-23,broad,6267,17880.0,35.1
 Vijayanagara,4,2023-24,broad,6481,18326.0,35.4
 Vijayanagara,4,2024-25,broad,8205,19399.0,42.3
@@ -275,6 +314,15 @@ Bengaluru Rural,5,2024-25,rural,3120,4869.0,64.1
 Bengaluru Rural,6,2022-23,rural,2732,4567.0,59.8
 Bengaluru Rural,6,2023-24,rural,2888,4863.0,59.4
 Bengaluru Rural,6,2024-25,rural,2546,4658.0,54.7
+Bengaluru Urban,4,2022-23,rural,0,8097.0,0.0
+Bengaluru Urban,4,2023-24,rural,0,6335.0,0.0
+Bengaluru Urban,4,2024-25,rural,0,8018.0,0.0
+Bengaluru Urban,5,2022-23,rural,0,7449.0,0.0
+Bengaluru Urban,5,2023-24,rural,0,7285.0,0.0
+Bengaluru Urban,5,2024-25,rural,0,6131.0,0.0
+Bengaluru Urban,6,2022-23,rural,0,6672.0,0.0
+Bengaluru Urban,6,2023-24,rural,0,6283.0,0.0
+Bengaluru Urban,6,2024-25,rural,0,6341.0,0.0
 Bidar,4,2022-23,rural,5045,12323.0,40.9
 Bidar,4,2023-24,rural,4359,12585.0,34.6
 Bidar,4,2024-25,rural,5161,14073.0,36.7
@@ -302,10 +350,13 @@ Chikkaballapura,5,2024-25,rural,5257,6740.0,78.0
 Chikkaballapura,6,2022-23,rural,2792,6297.0,44.3
 Chikkaballapura,6,2023-24,rural,3015,6876.0,43.8
 Chikkaballapura,6,2024-25,rural,3806,6344.0,60.0
+Chikkamagaluru,4,2022-23,rural,0,7026.0,0.0
 Chikkamagaluru,4,2023-24,rural,4897,6304.0,77.7
 Chikkamagaluru,4,2024-25,rural,5112,6709.0,76.2
+Chikkamagaluru,5,2022-23,rural,0,6980.0,0.0
 Chikkamagaluru,5,2023-24,rural,5424,6801.0,79.8
 Chikkamagaluru,5,2024-25,rural,4792,6191.0,77.4
+Chikkamagaluru,6,2022-23,rural,0,6631.0,0.0
 Chikkamagaluru,6,2023-24,rural,4473,7081.0,63.2
 Chikkamagaluru,6,2024-25,rural,4196,6828.0,61.5
 Chitradurga,4,2022-23,rural,10028,13899.0,72.1
@@ -318,8 +369,14 @@ Chitradurga,6,2022-23,rural,8479,13320.0,63.7
 Chitradurga,6,2023-24,rural,9005,14029.0,64.2
 Chitradurga,6,2024-25,rural,8513,12864.0,66.2
 Dakshina Kannada,4,2022-23,rural,556,9310.0,6.0
+Dakshina Kannada,4,2023-24,rural,0,9381.0,0.0
+Dakshina Kannada,4,2024-25,rural,0,9701.0,0.0
 Dakshina Kannada,5,2022-23,rural,592,9183.0,6.4
+Dakshina Kannada,5,2023-24,rural,0,9200.0,0.0
+Dakshina Kannada,5,2024-25,rural,0,9284.0,0.0
 Dakshina Kannada,6,2022-23,rural,475,7874.0,6.0
+Dakshina Kannada,6,2023-24,rural,0,9079.0,0.0
+Dakshina Kannada,6,2024-25,rural,0,9018.0,0.0
 Davanagere,4,2022-23,rural,2488,9911.0,25.1
 Davanagere,4,2023-24,rural,3884,9772.0,39.7
 Davanagere,4,2024-25,rural,6835,9616.0,71.1
@@ -437,6 +494,15 @@ Ramanagara,5,2024-25,rural,3654,5164.0,70.8
 Ramanagara,6,2022-23,rural,440,5258.0,8.4
 Ramanagara,6,2023-24,rural,4176,5787.0,72.2
 Ramanagara,6,2024-25,rural,3086,5147.0,60.0
+Shivamogga,4,2022-23,rural,0,11863.0,0.0
+Shivamogga,4,2023-24,rural,0,11078.0,0.0
+Shivamogga,4,2024-25,rural,0,10645.0,0.0
+Shivamogga,5,2022-23,rural,0,11895.0,0.0
+Shivamogga,5,2023-24,rural,0,11357.0,0.0
+Shivamogga,5,2024-25,rural,0,10872.0,0.0
+Shivamogga,6,2022-23,rural,0,10891.0,0.0
+Shivamogga,6,2023-24,rural,0,11158.0,0.0
+Shivamogga,6,2024-25,rural,0,10750.0,0.0
 Tumakuru,4,2022-23,rural,6237,17502.0,35.6
 Tumakuru,4,2023-24,rural,10676,17158.0,62.2
 Tumakuru,4,2024-25,rural,11976,16485.0,72.6
@@ -447,11 +513,23 @@ Tumakuru,6,2022-23,rural,5267,16487.0,31.9
 Tumakuru,6,2023-24,rural,9870,18000.0,54.8
 Tumakuru,6,2024-25,rural,9603,16016.0,60.0
 Udupi,4,2022-23,rural,899,5601.0,16.1
+Udupi,4,2023-24,rural,0,5674.0,0.0
+Udupi,4,2024-25,rural,0,5808.0,0.0
 Udupi,5,2022-23,rural,1058,4690.0,22.6
+Udupi,5,2023-24,rural,0,5647.0,0.0
+Udupi,5,2024-25,rural,0,5743.0,0.0
 Udupi,6,2022-23,rural,858,5655.0,15.2
+Udupi,6,2023-24,rural,0,4948.0,0.0
+Udupi,6,2024-25,rural,0,5857.0,0.0
 Uttara Kannada,4,2022-23,rural,265,11724.0,2.3
+Uttara Kannada,4,2023-24,rural,0,11912.0,0.0
+Uttara Kannada,4,2024-25,rural,0,11920.0,0.0
 Uttara Kannada,5,2022-23,rural,311,12243.0,2.5
+Uttara Kannada,5,2023-24,rural,0,11537.0,0.0
+Uttara Kannada,5,2024-25,rural,0,11856.0,0.0
 Uttara Kannada,6,2022-23,rural,225,11427.0,2.0
+Uttara Kannada,6,2023-24,rural,0,11585.0,0.0
+Uttara Kannada,6,2024-25,rural,0,10956.0,0.0
 Vijayanagara,4,2022-23,rural,6267,14014.0,44.7
 Vijayanagara,4,2023-24,rural,6481,14874.0,43.6
 Vijayanagara,4,2024-25,rural,8205,15031.0,54.6
@@ -515,6 +593,15 @@ Bengaluru Rural,5,2024-25,strict,3120,6345.0,49.2
 Bengaluru Rural,6,2022-23,strict,2732,6037.0,45.3
 Bengaluru Rural,6,2023-24,strict,2888,6441.0,44.8
 Bengaluru Rural,6,2024-25,strict,2546,6198.0,41.1
+Bengaluru Urban,4,2022-23,strict,0,27593.0,0.0
+Bengaluru Urban,4,2023-24,strict,0,22251.0,0.0
+Bengaluru Urban,4,2024-25,strict,0,29433.0,0.0
+Bengaluru Urban,5,2022-23,strict,0,25296.0,0.0
+Bengaluru Urban,5,2023-24,strict,0,26445.0,0.0
+Bengaluru Urban,5,2024-25,strict,0,21733.0,0.0
+Bengaluru Urban,6,2022-23,strict,0,24632.0,0.0
+Bengaluru Urban,6,2023-24,strict,0,24178.0,0.0
+Bengaluru Urban,6,2024-25,strict,0,24767.0,0.0
 Bidar,4,2022-23,strict,5045,13289.0,38.0
 Bidar,4,2023-24,strict,4359,13396.0,32.5
 Bidar,4,2024-25,strict,5161,15254.0,33.8
@@ -542,10 +629,13 @@ Chikkaballapura,5,2024-25,strict,5257,7505.0,70.0
 Chikkaballapura,6,2022-23,strict,2792,7443.0,37.5
 Chikkaballapura,6,2023-24,strict,3015,8085.0,37.3
 Chikkaballapura,6,2024-25,strict,3806,7509.0,50.7
+Chikkamagaluru,4,2022-23,strict,0,7945.0,0.0
 Chikkamagaluru,4,2023-24,strict,4897,7159.0,68.4
 Chikkamagaluru,4,2024-25,strict,5112,7730.0,66.1
+Chikkamagaluru,5,2022-23,strict,0,7944.0,0.0
 Chikkamagaluru,5,2023-24,strict,5424,7738.0,70.1
 Chikkamagaluru,5,2024-25,strict,4792,7095.0,67.5
+Chikkamagaluru,6,2022-23,strict,0,7641.0,0.0
 Chikkamagaluru,6,2023-24,strict,4473,8183.0,54.7
 Chikkamagaluru,6,2024-25,strict,4196,7938.0,52.9
 Chitradurga,4,2022-23,strict,10028,15053.0,66.6
@@ -558,8 +648,14 @@ Chitradurga,6,2022-23,strict,8479,15102.0,56.1
 Chitradurga,6,2023-24,strict,9005,15935.0,56.5
 Chitradurga,6,2024-25,strict,8513,14691.0,57.9
 Dakshina Kannada,4,2022-23,strict,556,11355.0,4.9
+Dakshina Kannada,4,2023-24,strict,0,11388.0,0.0
+Dakshina Kannada,4,2024-25,strict,0,12104.0,0.0
 Dakshina Kannada,5,2022-23,strict,592,10991.0,5.4
+Dakshina Kannada,5,2023-24,strict,0,11225.0,0.0
+Dakshina Kannada,5,2024-25,strict,0,11356.0,0.0
 Dakshina Kannada,6,2022-23,strict,475,9696.0,4.9
+Dakshina Kannada,6,2023-24,strict,0,11125.0,0.0
+Dakshina Kannada,6,2024-25,strict,0,11337.0,0.0
 Davanagere,4,2022-23,strict,2488,11825.0,21.0
 Davanagere,4,2023-24,strict,3884,11560.0,33.6
 Davanagere,4,2024-25,strict,6835,12006.0,56.9
@@ -677,6 +773,15 @@ Ramanagara,5,2024-25,strict,3654,6236.0,58.6
 Ramanagara,6,2022-23,strict,440,6518.0,6.8
 Ramanagara,6,2023-24,strict,4176,7251.0,57.6
 Ramanagara,6,2024-25,strict,3086,6558.0,47.1
+Shivamogga,4,2022-23,strict,0,14237.0,0.0
+Shivamogga,4,2023-24,strict,0,13130.0,0.0
+Shivamogga,4,2024-25,strict,0,13226.0,0.0
+Shivamogga,5,2022-23,strict,0,14192.0,0.0
+Shivamogga,5,2023-24,strict,0,13660.0,0.0
+Shivamogga,5,2024-25,strict,0,12978.0,0.0
+Shivamogga,6,2022-23,strict,0,13425.0,0.0
+Shivamogga,6,2023-24,strict,0,13828.0,0.0
+Shivamogga,6,2024-25,strict,0,13506.0,0.0
 Tumakuru,4,2022-23,strict,6237,19635.0,31.8
 Tumakuru,4,2023-24,strict,10676,19147.0,55.8
 Tumakuru,4,2024-25,strict,11976,19020.0,63.0
@@ -687,11 +792,23 @@ Tumakuru,6,2022-23,strict,5267,19154.0,27.5
 Tumakuru,6,2023-24,strict,9870,20889.0,47.2
 Tumakuru,6,2024-25,strict,9603,18666.0,51.4
 Udupi,4,2022-23,strict,899,6300.0,14.3
+Udupi,4,2023-24,strict,0,6358.0,0.0
+Udupi,4,2024-25,strict,0,6593.0,0.0
 Udupi,5,2022-23,strict,1058,5295.0,20.0
+Udupi,5,2023-24,strict,0,6387.0,0.0
+Udupi,5,2024-25,strict,0,6446.0,0.0
 Udupi,6,2022-23,strict,858,6421.0,13.4
+Udupi,6,2023-24,strict,0,5590.0,0.0
+Udupi,6,2024-25,strict,0,6665.0,0.0
 Uttara Kannada,4,2022-23,strict,265,13848.0,1.9
+Uttara Kannada,4,2023-24,strict,0,14126.0,0.0
+Uttara Kannada,4,2024-25,strict,0,14384.0,0.0
 Uttara Kannada,5,2022-23,strict,311,14369.0,2.2
+Uttara Kannada,5,2023-24,strict,0,13821.0,0.0
+Uttara Kannada,5,2024-25,strict,0,14188.0,0.0
 Uttara Kannada,6,2022-23,strict,225,13952.0,1.6
+Uttara Kannada,6,2023-24,strict,0,14308.0,0.0
+Uttara Kannada,6,2024-25,strict,0,13721.0,0.0
 Vijayanagara,4,2022-23,strict,6267,16494.0,38.0
 Vijayanagara,4,2023-24,strict,6481,17071.0,38.0
 Vijayanagara,4,2024-25,strict,8205,17951.0,45.7

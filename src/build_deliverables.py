@@ -6,25 +6,43 @@ os.chdir(ROOT)
 TEAM = "datathon_csf"
 
 # ============================ 1. MD -> PDF ============================
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.units import cm
-from reportlab.lib.colors import HexColor
-from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle)
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+# reportlab and python-docx are needed ONLY for the PDF and DOCX builds. With SKIP_DOCS=1
+# the notebook just wants slides + manifest + claims, so these must not be top-level imports
+# or a missing wheel (common on very new Python) blocks the whole script.
 from PIL import Image as PILImage
 
-INK = HexColor("#123B47"); MUT = HexColor("#5A6B70")
-SS = getSampleStyleSheet()
-ST = {
- "title": ParagraphStyle("t", parent=SS["Title"], fontName="Helvetica-Bold", fontSize=17, leading=21, textColor=INK, spaceAfter=4, alignment=0),
- "meta":  ParagraphStyle("m", parent=SS["Normal"], fontName="Helvetica", fontSize=8.5, leading=11.5, textColor=MUT, spaceAfter=10),
- "h2":    ParagraphStyle("h2", parent=SS["Heading2"], fontName="Helvetica-Bold", fontSize=12.5, leading=15, textColor=INK, spaceBefore=12, spaceAfter=4),
- "h3":    ParagraphStyle("h3", parent=SS["Heading3"], fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=INK, spaceBefore=9, spaceAfter=3),
- "body":  ParagraphStyle("b", parent=SS["Normal"], fontName="Helvetica", fontSize=9.3, leading=12.6, spaceAfter=5, alignment=4),
- "bullet":ParagraphStyle("bu", parent=SS["Normal"], fontName="Helvetica", fontSize=9.3, leading=12.6, spaceAfter=3, leftIndent=14, bulletIndent=4),
- "cell":  ParagraphStyle("c", parent=SS["Normal"], fontName="Helvetica", fontSize=8, leading=10),
- "cellh": ParagraphStyle("ch", parent=SS["Normal"], fontName="Helvetica-Bold", fontSize=8, leading=10),
-}
+def _reportlab():
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.units import cm
+    from reportlab.lib.colors import HexColor
+    from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table, TableStyle
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    return dict(A4=A4, cm=cm, HexColor=HexColor, SimpleDocTemplate=SimpleDocTemplate,
+                Paragraph=Paragraph, Spacer=Spacer, Image=Image, Table=Table,
+                TableStyle=TableStyle, getSampleStyleSheet=getSampleStyleSheet,
+                ParagraphStyle=ParagraphStyle)
+
+INK_HEX, MUT_HEX = "#123B47", "#5A6B70"
+ST = None            # built on first use, inside _build_styles()
+
+def _build_styles():
+    global ST, INK, MUT
+    if ST is not None: return
+    R = _reportlab()
+    HexColor = R["HexColor"]; ParagraphStyle = R["ParagraphStyle"]
+    INK = HexColor(INK_HEX); MUT = HexColor(MUT_HEX)
+    SS = R["getSampleStyleSheet"]()
+    ST = {
+     "title": ParagraphStyle("t", parent=SS["Title"], fontName="Helvetica-Bold", fontSize=17, leading=21, textColor=INK, spaceAfter=4, alignment=0),
+     "meta":  ParagraphStyle("m", parent=SS["Normal"], fontName="Helvetica", fontSize=8.5, leading=11.5, textColor=MUT, spaceAfter=10),
+     "h2":    ParagraphStyle("h2", parent=SS["Heading2"], fontName="Helvetica-Bold", fontSize=12.5, leading=15, textColor=INK, spaceBefore=12, spaceAfter=4),
+     "h3":    ParagraphStyle("h3", parent=SS["Heading3"], fontName="Helvetica-Bold", fontSize=10.5, leading=13, textColor=INK, spaceBefore=9, spaceAfter=3),
+     "body":  ParagraphStyle("b", parent=SS["Normal"], fontName="Helvetica", fontSize=9.3, leading=12.6, spaceAfter=5, alignment=4),
+     "bullet":ParagraphStyle("bu", parent=SS["Normal"], fontName="Helvetica", fontSize=9.3, leading=12.6, spaceAfter=3, leftIndent=14, bulletIndent=4),
+     "cell":  ParagraphStyle("c", parent=SS["Normal"], fontName="Helvetica", fontSize=8, leading=10),
+     "cellh": ParagraphStyle("ch", parent=SS["Normal"], fontName="Helvetica-Bold", fontSize=8, leading=10),
+    }
+
 def inline(t):
     t = t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
@@ -33,6 +51,12 @@ def inline(t):
     return t
 
 def md_to_pdf(md_path, pdf_path, two_page=False):
+    _build_styles()
+    R = _reportlab()
+    A4 = R["A4"]; cm = R["cm"]; HexColor = R["HexColor"]
+    SimpleDocTemplate = R["SimpleDocTemplate"]; Paragraph = R["Paragraph"]
+    Spacer = R["Spacer"]; Image = R["Image"]; Table = R["Table"]
+    TableStyle = R["TableStyle"]; ParagraphStyle = R["ParagraphStyle"]
     lines = open(md_path, encoding="utf-8").read().splitlines()
     story, i, first_h1 = [], 0, True
     S = dict(ST)                      # local copy; two_page = the tight one-pager layout
@@ -102,12 +126,15 @@ else:
     md_to_pdf("docs/policy_note_FINAL.md", os.path.join("docs", "policy_note.pdf"), two_page=True)
 
 # ============================ 1b. MD -> DOCX (editable) ============================
-from docx import Document
-from docx.shared import Pt, Cm, RGBColor
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.table import WD_TABLE_ALIGNMENT
+def _docx():
+    from docx import Document
+    from docx.shared import Pt, Cm, RGBColor
+    from docx.enum.text import WD_ALIGN_PARAGRAPH
+    from docx.enum.table import WD_TABLE_ALIGNMENT
+    return Document, Pt, Cm, RGBColor, WD_ALIGN_PARAGRAPH, WD_TABLE_ALIGNMENT
 
 def _runs(par, text, size=10, bold=False):
+    _D, Pt, _C, _R, _W, _T = _docx()
     """Render **bold**, *italic* and `code` inside one paragraph."""
     for tok in re.split(r"(\*\*.+?\*\*|(?<!\*)\*[^*]+?\*(?!\*)|`[^`]+?`)", text):
         if not tok: continue
@@ -122,6 +149,7 @@ def _runs(par, text, size=10, bold=False):
 
 def md_to_docx(md_path, docx_path, compact=False):
     """compact=True is the one-page policy-note layout."""
+    Document, Pt, Cm, RGBColor, WD_ALIGN_PARAGRAPH, WD_TABLE_ALIGNMENT = _docx()
     lines = open(md_path, encoding="utf-8").read().splitlines()
     doc = Document()
     sec = doc.sections[0]
@@ -197,7 +225,13 @@ if not SKIP_DOCS:
 from pptx import Presentation
 from pptx.util import Emu
 EMU = 914400
-prs = Presentation("docs/slides_TEMPLATE.pptx")
+TEMPLATE = "docs/slides_TEMPLATE.pptx"
+BUILD_SLIDES = os.path.exists(TEMPLATE)
+if not BUILD_SLIDES:
+    print("NOTE: %s is missing, so slides.pptx cannot be rebuilt." % TEMPLATE)
+    print("      The committed slides.pptx is left as it is. manifest.yml and claims.json"
+          " are still refreshed below.")
+prs = Presentation(TEMPLATE) if BUILD_SLIDES else None
 
 def set_shape_text(sh, new_text):
     """Write lines into existing paragraphs, preserving per-paragraph formatting."""
@@ -219,6 +253,11 @@ def set_shape_text(sh, new_text):
             para.runs[0].font.name = paras[0].runs[0].font.name
 
 def put_figure(slide, box_idx, img, blank_idxs, caption_idx=None, caption=None):
+    if not os.path.exists(img):
+        # a figure can be absent if run_all.py wiped outputs/ after it was drawn. Leave the
+        # placeholder box alone and carry on rather than killing the whole build.
+        print("   WARNING: %s missing, slide keeps its placeholder" % img)
+        return
     shapes = list(slide.shapes)
     box = shapes[box_idx]
     x, y, w, h = box.left, box.top, box.width, box.height
@@ -230,76 +269,79 @@ def put_figure(slide, box_idx, img, blank_idxs, caption_idx=None, caption=None):
     for bi in blank_idxs: set_shape_text(shapes[bi], "")
     if caption_idx is not None: set_shape_text(shapes[caption_idx], caption)
 
-F = "outputs/figures/"
-S = prs.slides
-# S0 title
-set_shape_text(S[0].shapes[3], "The grade 6 collapse is real.\nThe grade 4 recovery is not.")
-set_shape_text(S[0].shapes[4], "Move the remedial block to the multiplicative step in grades 5-6, and never publish a rank without coverage.")
-set_shape_text(S[0].shapes[5], "Team datathon_csf  ·  Datathon 2026  ·  1 August 2026")
-# S1 why it matters
-set_shape_text(S[1].shapes[1], "She learns to add. Then we lose her at multiply.")
-set_shape_text(S[1].shapes[2], "A child in a Kalaburagi GP gets 42 of 100 questions right; in Udupi, 74. And the older she gets, the worse it goes: grade 6 multiplication fell from 51% to 35% in three years. The ladder breaks at the multiplicative step, in grades 5 and 6, exactly where PARAKH shows government schools losing to private.")
-set_shape_text(S[1].shapes[5], "1,379,087")
-set_shape_text(S[1].shapes[6], "student records in this census: rural government schools, grades 4-6, three years")
-put_figure(S[1], 7, F+"09_year_grade_heatmap.png", [8, 9], 10, "Mean score by grade and year: the gradient inverted.")
-set_shape_text(S[1].shapes[12], "")
-# S2 audit
-set_shape_text(S[2].shapes[4], "1,379,087 student records")
-set_shape_text(S[2].shapes[5], "grades 4-6, 3 years, 20 items per paper, official per-file competency map. One row per child; duplicates kept by design (no student ID) and logged.")
-set_shape_text(S[2].shapes[12], "3 joining traps defused")
-set_shape_text(S[2].shapes[13], "GP ID is the only canonical key (names repeat); GP and cluster do not nest (1,718 GPs span clusters); external joins refused below 60% match. All logged.")
-# S3 finding 1: the collapse
-set_shape_text(S[3].shapes[1], "The grade 6 collapse survives every selection test we could throw at it")
-put_figure(S[3], 2, F+"10_g6_collapse.png", [3, 4], 5, "Built straight from the 9 organiser CSVs by src/figure_g6_collapse.py. Dashed line: the same 2,182 GPs in all three years.")
-set_shape_text(S[3].shapes[6], "G6 multiplication 51 → 35, division 55 → 38 (raw)\n\nConstant-GP panel: -19.7pp and -22.0pp, worse than raw\n\nAt zero coverage change: -19.3pp. Stable-coverage districts: -18.7pp\n\nNewly reached GPs score HIGHER than veterans (+4.6pp)\n\nAnd the G4 division 'gain' (+5.6pp) vanishes in the panel (-0.6pp)")
-set_shape_text(S[3].shapes[8], "SO WHAT   Treat this as real deterioration, not measurement noise. The remedial block belongs at grades 5-6 multiplication-division, starting this academic year.")
-set_shape_text(S[3].shapes[9], "outputs/tables/hypothesis_menu.csv rows EH1-EH6, EH22  ·  g6_collapse_from_raw.csv  ·  items change yearly: competency-level reading, externally corroborated by ASER and PARAKH")
-# S4 finding 2: bottleneck
-set_shape_text(S[4].shapes[1], "Multiplication gates everything after it")
-put_figure(S[4], 2, F+"02_competency_bottleneck.png", [3, 4])
-put_figure(S[5], 2, F+"05_floor_vs_mean.png", [3, 4])
-put_figure(S[6], 2, F+"04_gender_by_competency.png", [3, 4])
-put_figure(S[7], 2, F+"06_bright_spots.png", [3, 4])
-put_figure(S[8], 8, F+"07_triage.png", [9, 10])
-set_shape_text(S[4].shapes[6], "Bottleneck Score\ngate lift  x  (1 − current mastery)\n\nMultiplication: 55.2% mastery, +45.1pp lift to division\n\nAddition → subtraction lift: +48pp (72% vs 24%)\n\nDivision: weakest safe competency at 43.3%")
-set_shape_text(S[4].shapes[8], "SO WHAT   Sequence Kalika Balavardhane's remedial block: fluency first, then multiplication, then division. Grades 5-6 first. Materials by Term 2, 2026-27.")
-# S5 finding 3: floor
-set_shape_text(S[5].shapes[1], "Averages hide the floor, and the floor tracks who shows up")
-set_shape_text(S[5].shapes[12], "12 of 25 districts: floor lagged the mean")
-set_shape_text(S[5].shapes[13], "Only Mysuru and Kodagu raised the 10th percentile by 5pp.")
-set_shape_text(S[5].shapes[16], "Divergence -6.4pp where coverage grew fastest")
-set_shape_text(S[5].shapes[17], "vs +3.0pp where coverage was stable (r = -0.54). A falling floor in an expanding district is triage, not proof of decline.")
-set_shape_text(S[5].shapes[19], "SO WHAT   Add two columns to the existing review format: the 10th-percentile score and assessment coverage. Cost: nil. Owner: Samagra Shiksha MIS cell.")
-# S6 finding 4: gender
-set_shape_text(S[6].shapes[1], "Girls lead on 10 of 11 competencies, and it survives the participation check")
-set_shape_text(S[6].shapes[6], "+2.0pp overall; Cohen's d = 0.07\n\nLargest lead: multiplication +3.6pp; only exception: measurement\n\nDistricts with balanced boy-girl coverage: girls +3.6pp\n\nWhere girls are over-assessed the lead SHRINKS (r = -0.47),\nso participation deflates the gap, it does not inflate it")
-set_shape_text(S[6].shapes[8], "SO WHAT   Real but small. Protect girls' momentum through the multiplicative wall; do not build a flagship programme on d = 0.07.")
-# S7 finding 5: cross-dataset
-set_shape_text(S[7].shapes[1], "Independent surveys agree with our map, and some places beat their conditions")
-set_shape_text(S[7].shapes[6], "Validation, rural against rural\nASER 2024 district arithmetic: rho = 0.56\nPARAKH RS 2024 govt-school maths: rho = 0.51\n\nByndoor block: +31.5pp above prediction\nBright spots cluster: Belagavi holds 6 of 22 (p = 0.02)")
-set_shape_text(S[7].shapes[8], "SO WHAT   Trust the map. Send the CRP cadre to Byndoor and Belagavi's bright blocks with a checklist, then replicate what they find.")
-# S8 product
-set_shape_text(S[8].shapes[6], "Early-warning model\npersistence features only; CV RMSE 10.5pp, R² 0.49 (1,939 GPs)")
-set_shape_text(S[8].shapes[7], "Structural data did not beat the same-as-last-year baseline. We say so, and ship the honest model.")
-set_shape_text(S[8].shapes[13], "SO WHAT   One HTML file, no login, no licence: dashboard.html runs offline from the repo, filterable by district and block.")
-# S9 recommendations
-set_shape_text(S[9].shapes[5], "Rebalance teachers to grade 4-6 PTR, Kalyana Karnataka first")
-set_shape_text(S[9].shapes[6], "KK PTR is 35.6 vs 21.8 elsewhere and the gap widened to -15.8pp. Target: PTR under 30 in the 7 districts by June 2028.")
-set_shape_text(S[9].shapes[7], "Owner: Commissioner DSEL + KKRDB  ·  2027-28 transfer cycle")
-set_shape_text(S[9].shapes[11], "Sequence remediation on multiplication-division")
-set_shape_text(S[9].shapes[12], "Grades 5-6, inside Kalika Balavardhane, Term 2 2026-27. Success: G6 multiplication from 35.1% to 45% by the next round.")
-set_shape_text(S[9].shapes[13], "Owner: DSERT via BEO + CRP cadre")
-set_shape_text(S[9].shapes[18], "Two columns added to the existing format: 10th-percentile score and coverage. Cost: nil.")
-set_shape_text(S[9].shapes[19], "Owner: Samagra Shiksha MIS cell  ·  next quarterly review")
-# S10 where wrong
-set_shape_text(S[10].shapes[7], "Census is 2011, NFHS-5 is 2019-21, assessment is 2022-25. We treat these as slow-moving structural conditions, stated per table.")
-set_shape_text(S[10].shapes[12], "Coverage is 37.8%, not a census")
-set_shape_text(S[10].shapes[13], "Participation is voluntary and doubled over three years (25.1% to 49.9%). We quantified selection six ways, adjusted every league table for it, and it cannot explain the G6 decline. Denominator reconciles to the cross-validated UDISE file.")
-# S11 closer
-set_shape_text(S[11].shapes[1], "Put the remedial block at the multiplicative step in grades 5-6, this academic year.")
-set_shape_text(S[11].shapes[2], "The Kalaburagi child who can add is still in the room. Reach her before division leaves it.")
-set_shape_text(S[11].shapes[3], "Repository: github.com/common-del/datathon_csf   ·   Team datathon_csf   ·   Reproduce with: python src/run_all.py")
-prs.save("slides.pptx")
+if BUILD_SLIDES:
+    F = "outputs/figures/"
+    S = prs.slides
+    # S0 title
+    set_shape_text(S[0].shapes[3], "The grade 6 collapse is real.\nThe grade 4 recovery is not.")
+    set_shape_text(S[0].shapes[4], "Move the remedial block to the multiplicative step in grades 5-6, and never publish a rank without coverage.")
+    set_shape_text(S[0].shapes[5], "Team datathon_csf  ·  Datathon 2026  ·  1 August 2026")
+    # S1 why it matters
+    set_shape_text(S[1].shapes[1], "She learns to add. Then we lose her at multiply.")
+    set_shape_text(S[1].shapes[2], "A child in a Kalaburagi GP gets 42 of 100 questions right; in Udupi, 74. And the older she gets, the worse it goes: grade 6 multiplication fell from 51% to 35% in three years. The ladder breaks at the multiplicative step, in grades 5 and 6, exactly where PARAKH shows government schools losing to private.")
+    set_shape_text(S[1].shapes[5], "1,379,087")
+    set_shape_text(S[1].shapes[6], "student records in this census: rural government schools, grades 4-6, three years")
+    put_figure(S[1], 7, F+"09_year_grade_heatmap.png", [8, 9], 10, "Mean score by grade and year: the gradient inverted.")
+    set_shape_text(S[1].shapes[12], "")
+    # S2 audit
+    set_shape_text(S[2].shapes[4], "1,379,087 student records")
+    set_shape_text(S[2].shapes[5], "grades 4-6, 3 years, 20 items per paper, official per-file competency map. One row per child; duplicates kept by design (no student ID) and logged.")
+    set_shape_text(S[2].shapes[12], "3 joining traps defused")
+    set_shape_text(S[2].shapes[13], "GP ID is the only canonical key (names repeat); GP and cluster do not nest (1,718 GPs span clusters); external joins refused below 60% match. All logged.")
+    # S3 finding 1: the collapse
+    set_shape_text(S[3].shapes[1], "The grade 6 collapse survives every selection test we could throw at it")
+    put_figure(S[3], 2, F+"10_g6_collapse.png", [3, 4], 5, "Built straight from the 9 organiser CSVs by src/figure_g6_collapse.py. Dashed line: the same 2,182 GPs in all three years.")
+    set_shape_text(S[3].shapes[6], "G6 multiplication 51 → 35, division 55 → 38 (raw)\n\nConstant-GP panel: -19.7pp and -22.0pp, worse than raw\n\nAt zero coverage change: -19.3pp. Stable-coverage districts: -18.7pp\n\nNewly reached GPs score HIGHER than veterans (+4.6pp)\n\nAnd the G4 division 'gain' (+5.6pp) vanishes in the panel (-0.6pp)")
+    set_shape_text(S[3].shapes[8], "SO WHAT   Treat this as real deterioration, not measurement noise. The remedial block belongs at grades 5-6 multiplication-division, starting this academic year.")
+    set_shape_text(S[3].shapes[9], "outputs/tables/hypothesis_menu.csv rows EH1-EH6, EH22  ·  g6_collapse_from_raw.csv  ·  items change yearly: competency-level reading, externally corroborated by ASER and PARAKH")
+    # S4 finding 2: bottleneck
+    set_shape_text(S[4].shapes[1], "Multiplication gates everything after it")
+    put_figure(S[4], 2, F+"02_competency_bottleneck.png", [3, 4])
+    put_figure(S[5], 2, F+"05_floor_vs_mean.png", [3, 4])
+    put_figure(S[6], 2, F+"04_gender_by_competency.png", [3, 4])
+    put_figure(S[7], 2, F+"06_bright_spots.png", [3, 4])
+    put_figure(S[8], 8, F+"07_triage.png", [9, 10])
+    set_shape_text(S[4].shapes[6], "Bottleneck Score\ngate lift  x  (1 − current mastery)\n\nMultiplication: 55.2% mastery, +45.1pp lift to division\n\nAddition → subtraction lift: +48pp (72% vs 24%)\n\nDivision: weakest safe competency at 43.3%")
+    set_shape_text(S[4].shapes[8], "SO WHAT   Sequence Kalika Balavardhane's remedial block: fluency first, then multiplication, then division. Grades 5-6 first. Materials by Term 2, 2026-27.")
+    # S5 finding 3: floor
+    set_shape_text(S[5].shapes[1], "Averages hide the floor, and the floor tracks who shows up")
+    set_shape_text(S[5].shapes[12], "12 of 25 districts: floor lagged the mean")
+    set_shape_text(S[5].shapes[13], "Only Mysuru and Kodagu raised the 10th percentile by 5pp.")
+    set_shape_text(S[5].shapes[16], "Divergence -6.4pp where coverage grew fastest")
+    set_shape_text(S[5].shapes[17], "vs +3.0pp where coverage was stable (r = -0.54). A falling floor in an expanding district is triage, not proof of decline.")
+    set_shape_text(S[5].shapes[19], "SO WHAT   Add two columns to the existing review format: the 10th-percentile score and assessment coverage. Cost: nil. Owner: Samagra Shiksha MIS cell.")
+    # S6 finding 4: gender
+    set_shape_text(S[6].shapes[1], "Girls lead on 10 of 11 competencies, and it survives the participation check")
+    set_shape_text(S[6].shapes[6], "+2.0pp overall; Cohen's d = 0.07\n\nLargest lead: multiplication +3.6pp; only exception: measurement\n\nDistricts with balanced boy-girl coverage: girls +3.6pp\n\nWhere girls are over-assessed the lead SHRINKS (r = -0.47),\nso participation deflates the gap, it does not inflate it")
+    set_shape_text(S[6].shapes[8], "SO WHAT   Real but small. Protect girls' momentum through the multiplicative wall; do not build a flagship programme on d = 0.07.")
+    # S7 finding 5: cross-dataset
+    set_shape_text(S[7].shapes[1], "Independent surveys agree with our map, and some places beat their conditions")
+    set_shape_text(S[7].shapes[6], "Validation, rural against rural\nASER 2024 district arithmetic: rho = 0.56\nPARAKH RS 2024 govt-school maths: rho = 0.51\n\nByndoor block: +31.5pp above prediction\nBright spots cluster: Belagavi holds 6 of 22 (p = 0.02)")
+    set_shape_text(S[7].shapes[8], "SO WHAT   Trust the map. Send the CRP cadre to Byndoor and Belagavi's bright blocks with a checklist, then replicate what they find.")
+    # S8 product
+    set_shape_text(S[8].shapes[6], "Early-warning model\npersistence features only; CV RMSE 10.5pp, R² 0.49 (1,939 GPs)")
+    set_shape_text(S[8].shapes[7], "Structural data did not beat the same-as-last-year baseline. We say so, and ship the honest model.")
+    set_shape_text(S[8].shapes[13], "SO WHAT   One HTML file, no login, no licence: dashboard.html runs offline from the repo, filterable by district and block.")
+    # S9 recommendations
+    set_shape_text(S[9].shapes[5], "Rebalance teachers to grade 4-6 PTR, Kalyana Karnataka first")
+    set_shape_text(S[9].shapes[6], "KK PTR is 35.6 vs 21.8 elsewhere and the gap widened to -15.8pp. Target: PTR under 30 in the 7 districts by June 2028.")
+    set_shape_text(S[9].shapes[7], "Owner: Commissioner DSEL + KKRDB  ·  2027-28 transfer cycle")
+    set_shape_text(S[9].shapes[11], "Sequence remediation on multiplication-division")
+    set_shape_text(S[9].shapes[12], "Grades 5-6, inside Kalika Balavardhane, Term 2 2026-27. Success: G6 multiplication from 35.1% to 45% by the next round.")
+    set_shape_text(S[9].shapes[13], "Owner: DSERT via BEO + CRP cadre")
+    set_shape_text(S[9].shapes[18], "Two columns added to the existing format: 10th-percentile score and coverage. Cost: nil.")
+    set_shape_text(S[9].shapes[19], "Owner: Samagra Shiksha MIS cell  ·  next quarterly review")
+    # S10 where wrong
+    set_shape_text(S[10].shapes[7], "Census is 2011, NFHS-5 is 2019-21, assessment is 2022-25. We treat these as slow-moving structural conditions, stated per table.")
+    set_shape_text(S[10].shapes[12], "Coverage is 37.8%, not a census")
+    set_shape_text(S[10].shapes[13], "Participation is voluntary and doubled over three years (25.1% to 49.9%). We quantified selection six ways, adjusted every league table for it, and it cannot explain the G6 decline. Denominator reconciles to the cross-validated UDISE file.")
+    # S11 closer
+    set_shape_text(S[11].shapes[1], "Put the remedial block at the multiplicative step in grades 5-6, this academic year.")
+    set_shape_text(S[11].shapes[2], "The Kalaburagi child who can add is still in the room. Reach her before division leaves it.")
+    set_shape_text(S[11].shapes[3], "Repository: github.com/common-del/datathon_csf   ·   Team datathon_csf   ·   Reproduce with: python src/run_all.py")
+    prs.save("slides.pptx")
+    print('wrote slides.pptx')
+
 print("wrote slides.pptx")
 
 # ============================ 3. MANIFEST + CLAIMS + README ============================
@@ -334,7 +376,7 @@ def C(cid, desc, val, out, how):
             "verification_detail": {"how_to_check": how}}
 existing = {c["claim_id"] for c in cl["claims"]}
 new_claims = [
- C("claim-eh-raw-decline", "G6 multiplicative decline, raw", "multiplication 50.9 to 35.1 (-15.8pp); division 55.0 to 37.6 (-17.4pp), 2022-23 to 2024-25",
+ C("claim-eh-raw-decline", "G6 multiplicative decline, raw", "multiplication 51.0 to 35.1 (-15.8pp); division 55.0 to 37.6 (-17.4pp), 2022-23 to 2024-25",
    "outputs/tables/state_grade_year.csv", "rows grade=6, years 2022-23 and 2024-25, columns C_multiplication and C_division"),
  C("claim-eh-gradient", "Grade gradient inversion", "2022-23: G4 49.6 < G5 56.2 < G6 62.5; 2024-25: G4 57.8 > G5 51.7 > G6 49.3 (pct_mean)",
    "outputs/tables/state_grade_year.csv", "pct_mean by grade and year"),
@@ -383,6 +425,26 @@ new_claims = [
  C("claim-coverage-correction", "Coverage denominator corrected during review",
    "src/coverage.py originally joined from the assessed side, dropping district-grade-years with zero assessed children; that reported 41.8% overall and 26.8/43.8/56.2 by year. Corrected to 37.8% and 25.1/39.0/49.9",
    "outputs/tables/coverage_summary.csv", "run python src/fix_coverage.py; it asserts the denominator equals external_data/udise_rural_stategovt_g46_gender_district.csv and refuses to write otherwise"),
+ C("claim-competency-correlation", "Competency correlations with total score and with each other",
+   "with total: Measurement 0.78, Division 0.76, Multiplication 0.75, Place Value 0.56, Fractions 0.55. Strongest pair Multiplication-Division 0.57, then Measurement-Shapes 0.55, Subtraction-Multiplication and Subtraction-Division 0.52. Place Value weakest link 0.24 (Mensuration), 0.44 (Number Sense). Fractions-Mensuration undefined",
+   "outputs/tables/competency_total_correlation.csv and competency_correlation_matrix.csv",
+   "run python src/figure_competency_correlation.py; pooled over 1,379,087 student rows"),
+ C("claim-kk-udise", "Kalyana Karnataka UDISE input reality 2024-25",
+   "rural State Govt: PTR 33.6 vs 20.4; enrolment per school 139 vs 73; library 91.9% vs 99.5%; internet 16.9% vs 39.2%; private-unaided share of rural enrolment 20.8% vs 34.5%",
+   "outputs/tables/kk_vs_rest_udise.csv",
+   "run python src/figure_kk_vs_rest.py; reads data/udise_csv/udise_ka_school_2024-25.csv and the 371J flag in external_data/karnataka_district_crosswalk.csv"),
+ C("claim-participation-districts", "District participation extremes, 3 years pooled",
+   "top 5: Chitradurga 70.1, Dharwad 66.1, Bengaluru Rural 62.6, Gadag 60.8, Chikkaballapura 59.1; bottom 5: Udupi 5.7, Dakshina Kannada 2.0, Uttara Kannada 0.8, Bengaluru Urban 0.0, Shivamogga 0.0",
+   "outputs/tables/participation_district.csv",
+   "coverage_pct column, sorted; produced by src/figure_report_extras.py"),
+ C("claim-gender-flat", "Gender gap by grade and year",
+   "girls lead in all 9 grade-years; mean gap +2.12pp, max +3.02pp (grade 6, 2023-24); Cohen's d 0.071",
+   "outputs/tables/gender_grade_year.csv",
+   "pivot mean_pct by gender, subtract; produced by src/figure_report_extras.py"),
+ C("claim-gender-coverage-table", "Gender coverage table is rebuilt from source each run",
+   "girls 39.7%, boys 35.9%, gap +3.8pp; 186 rows (31 districts x 3 years x 2 genders)",
+   "outputs/tables/coverage_rural_stategovt_gender.csv",
+   "run python src/fix_coverage.py; assessed counted from the student data, enrolled from the cross-validated UDISE gender file"),
  C("claim-row-count-check", "Raw file row counts sum to the analysis dataset",
    "9 files: 104,015 + 156,940 + 209,867 + 113,164 + 161,979 + 204,008 + 95,523 + 151,938 + 181,653 = 1,379,087",
    "outputs/tables/g6_collapse_from_raw.csv", "sum the n_students column across all 9 rows"),

@@ -6,103 +6,103 @@ DATATHON 2026 PIPELINE   seed=20260801
    usable rows: 1379087 | items: 20 | mean % correct: 53.10
    per-file competency columns present (11) - official mapping, no inference needed
 
-[ 18.2s] DATA QUALITY AND ANOMALY CHECKS
-          done in 5.6s
+[ 16.8s] DATA QUALITY AND ANOMALY CHECKS
+          done in 5.3s
           -> tables/qa_summary.csv  (31 rows)
           -> tables/qa_flags.csv  (1 rows)
           1 flags raised (1 HIGH). Read tables/qa_flags.csv before writing the report.
 
-[ 23.9s] ITEM ANALYSIS (difficulty, discrimination, gender DIF)
-          done in 7.4s
+[ 22.1s] ITEM ANALYSIS (difficulty, discrimination, gender DIF)
+          done in 6.9s
           -> tables/item_analysis.csv  (180 rows)
 
-[ 31.2s] COMPETENCY PROFILE
+[ 29.1s] COMPETENCY PROFILE
           done in 3.7s
           -> tables/competency_profile.csv  (164 rows)
 
-[ 34.9s] COMPETENCY BOTTLENECK (original metric)
+[ 32.8s] COMPETENCY BOTTLENECK (original metric)
           done in 0.5s
           -> tables/competency_bottleneck.csv  (11 rows)
           -> tables/competency_prerequisite_pairs.csv  (54 rows)
 
-[ 35.5s] LEARNING VARIANCE SIGNATURE (original metric)
+[ 33.3s] LEARNING VARIANCE SIGNATURE (original metric)
           done in 1.5s
           -> tables/variance_signature.csv  (5 rows)
           -> tables/targeting_efficiency_ceiling.csv  (4 rows)
 
-[ 37.0s] AGGREGATE TO DISTRICT
-          done in 1.3s
+[ 34.8s] AGGREGATE TO DISTRICT
+          done in 1.2s
           -> tables/unit_district.csv  (29 rows)
           -> tables/unit_district_by_year.csv  (80 rows)
 
-[ 38.3s] TREND AT DISTRICT
+[ 36.1s] TREND AT DISTRICT
           done in 0.0s
           -> tables/trend_district.csv  (25 rows)
 
-[ 38.3s] AGGREGATE TO BLOCK
-          done in 1.6s
+[ 36.1s] AGGREGATE TO BLOCK
+          done in 1.5s
           -> tables/unit_block.csv  (170 rows)
           -> tables/unit_block_by_year.csv  (463 rows)
 
-[ 40.0s] TREND AT BLOCK
+[ 37.6s] TREND AT BLOCK
           done in 0.0s
           -> tables/trend_block.csv  (136 rows)
 
-[ 40.0s] AGGREGATE TO CLUSTER
-          done in 1.9s
+[ 37.7s] AGGREGATE TO CLUSTER
+          done in 2.0s
           -> tables/unit_cluster.csv  (2906 rows)
           -> tables/unit_cluster_by_year.csv  (6763 rows)
 
-[ 42.0s] TREND AT CLUSTER
+[ 39.8s] TREND AT CLUSTER
           done in 0.0s
           -> tables/trend_cluster.csv  (1479 rows)
 
-[ 42.1s] AGGREGATE TO GP
-          done in 3.1s
+[ 39.9s] AGGREGATE TO GP
+          done in 3.0s
           -> tables/unit_gp.csv  (5617 rows)
           -> tables/unit_gp_by_year.csv  (11672 rows)
 
-[ 45.3s] TREND AT GP
-          done in 0.1s
+[ 43.0s] TREND AT GP
+          done in 0.0s
           -> tables/trend_gp.csv  (2116 rows)
 
-[ 45.4s] FLOOR INDEX AND FLOOR-MEAN DIVERGENCE (original metric)
-          done in 0.5s
+[ 43.1s] FLOOR INDEX AND FLOOR-MEAN DIVERGENCE (original metric)
+          done in 0.4s
           -> tables/floor_index_district.csv  (25 rows)
 
-[ 45.9s] GENDER GAP ANALYSIS
-          done in 4.5s
+[ 43.5s] GENDER GAP ANALYSIS
+          done in 4.1s
           -> tables/gender_overall.csv  (1 rows)
           -> tables/gender_by_competency.csv  (11 rows)
           -> tables/gender_by_tier.csv  (3 rows)
           -> tables/gender_by_district.csv  (29 rows)
           -> tables/gender_by_block.csv  (167 rows)
 
-[ 50.4s] SYNTHETIC COHORT PROGRESSION
-          done in 0.5s
+[ 47.7s] SYNTHETIC COHORT PROGRESSION
+          done in 0.4s
           NOTE: CAVEAT: items differ across years but map to a constant competency framework. Item-level year comparisons mix learning and instrument change; competency-level comparisons are more defensible (still assume similar difficulty within competency). Prefer rankings and competency-level statements across years.
           -> tables/cohort_progression_block.csv  (586 rows)
           -> tables/cohort_progression_summary.csv  (4 rows)
 
-[ 50.9s] EXTERNAL DATASET JOINS
+[ 48.1s] EXTERNAL DATASET JOINS
 
-[ 50.9s] BUILD DISTRICT ALIAS TABLE
+[ 48.1s] BUILD DISTRICT ALIAS TABLE
           done in 0.0s
 
-[ 50.9s] JOIN EXTERNAL DATA AT DISTRICT LEVEL
+[ 48.1s] JOIN EXTERNAL DATA AT DISTRICT LEVEL
           done in 0.1s
           -> tables/unit_district_with_external.csv  (29 rows)
 
-[ 51.1s] JOIN EXTERNAL DATA AT BLOCK LEVEL
+[ 48.2s] JOIN EXTERNAL DATA AT BLOCK LEVEL
           done in 0.1s
           -> tables/unit_block_with_external.csv  (170 rows)
 
-[ 51.2s] JOIN EXTERNAL DATA AT GP LEVEL
+[ 48.3s] JOIN EXTERNAL DATA AT GP LEVEL
           done in 0.3s
           -> tables/unit_gp_with_external.csv  (5617 rows)
           -> tables/external_join_report.csv  (3 rows)
 
-[ 51.6s] EXTERNAL RELIABILITY GATE
+[ 48.8s] EXTERNAL RELIABILITY GATE
    district  USABLE  (coverage 100.0% and no detectable selection bias (p=n/a))
    block     USABLE  (coverage 70.1% and no detectable selection bias (p=0.761))
    cluster   REFUSED  (UDISE+ has no Cluster field; the education-cluster layer does not exist in any joinable external source)
@@ -110,27 +110,27 @@ DATATHON 2026 PIPELINE   seed=20260801
           -> tables/external_reliability_gate.csv  (4 rows)
    external associations restricted to: district, block
 
-[ 51.6s] ASSESSMENT COVERAGE vs UDISE ENROLMENT
-          done in 1.6s
-          !! coverage_district_grade_year.csv is LOCKED (open in Excel?). Wrote coverage_district_grade_year_NEW.csv instead. Close the file and re-run to restore the normal name.
-          -> tables/coverage_matrix_rural_stategovt.csv  (29 rows)
+[ 48.8s] ASSESSMENT COVERAGE vs UDISE ENROLMENT
+          done in 1.5s
+          -> tables/coverage_district_grade_year.csv  (837 rows)
+          -> tables/coverage_matrix_rural_stategovt.csv  (31 rows)
           -> tables/coverage_summary.csv  (3 rows)
 
-[ 53.2s] COVERAGE CHOROPLETH
-          done in 2.8s
-          state coverage 41.8% of State Government enrolment (127 of 240 district-years under 50%)
+[ 50.3s] COVERAGE CHOROPLETH
+          done in 1.6s
+          state coverage 37.8% of State Government enrolment (166 of 279 district-years under 50%)
 
-[ 56.0s] STRUCTURAL ADVANTAGE RESIDUAL at BLOCK (original metric)
-          done in 1.0s
+[ 51.9s] STRUCTURAL ADVANTAGE RESIDUAL at BLOCK (original metric)
+          done in 0.8s
           cv_r2=0.259 on 169 units, 21 features
           -> tables/bright_spots_block.csv  (169 rows)
 
-[ 57.0s] INTERVENTION TRIAGE SCORE at BLOCK (decision tool)
+[ 52.7s] INTERVENTION TRIAGE SCORE at BLOCK (decision tool)
           done in 0.0s
           -> tables/triage_block.csv  (169 rows)
    gp: external features withheld (gate refused); persistence features only
 
-[ 57.1s] EARLY-WARNING MODEL at GP LEVEL
+[ 52.8s] EARLY-WARNING MODEL at GP LEVEL
           done in 3.4s
           -> tables/model_comparison_gp.csv  (4 rows)
           -> tables/early_warning_watchlist_gp.csv  (120 rows)
@@ -138,49 +138,49 @@ DATATHON 2026 PIPELINE   seed=20260801
           no feature set beats simple persistence - report that honestly
           -> outputs/predictions/predictions.csv (1939 GPs, 0-20 scale)
 
-[ 60.5s] FIGURES
+[ 56.3s] FIGURES
 
-[ 60.5s] fig variance
-          done in 0.2s
+[ 56.3s] fig variance
+          done in 0.3s
 
-[ 60.8s] fig competency
+[ 56.6s] fig competency
           done in 0.4s
 
-[ 61.2s] fig ranking district
+[ 57.0s] fig ranking district
           done in 0.5s
 
-[ 61.7s] fig ranking block
+[ 57.5s] fig ranking block
+          done in 0.7s
+
+[ 58.3s] fig gender
+          done in 0.3s
+
+[ 58.6s] fig floor
+          done in 0.5s
+
+[ 59.2s] fig bright spots
+          done in 0.3s
+
+[ 59.5s] fig triage
+          done in 0.5s
+
+[ 60.0s] fig progression
+          done in 0.2s
+
+[ 60.2s] fig year x grade
           done in 0.6s
 
-[ 62.2s] fig gender
-          done in 0.3s
+[ 60.8s] DASHBOARD
 
-[ 62.5s] fig floor
-          done in 0.5s
+[ 60.9s] build dashboard
+          done in 1.7s
 
-[ 63.0s] fig bright spots
-          done in 0.3s
-
-[ 63.3s] fig triage
-          done in 0.5s
-
-[ 63.8s] fig progression
-          done in 0.2s
-
-[ 64.0s] fig year x grade
-          done in 0.4s
-
-[ 64.4s] DASHBOARD
-
-[ 64.5s] build dashboard
-          done in 1.8s
-
-[ 66.3s] MANIFEST AND CLAIMS
+[ 62.6s] MANIFEST AND CLAIMS
           -> manifest.yml (60 output files)
           -> claims.json (18 claims, template schema)
 
 ==============================================================================
-FINISHED in 66.3 seconds
+FINISHED in 62.6 seconds
 All steps completed with no failures.
 Outputs in: outputs/    Read outputs/tables/qa_flags.csv FIRST.
 ==============================================================================

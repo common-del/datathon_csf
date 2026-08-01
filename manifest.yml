@@ -12,6 +12,8 @@ problem_statements:
 outputs:
   - file: "outputs/HYPOTHESIS_MENU.md"
     description: "HYPOTHESIS MENU"
+  - file: "outputs/HYPOTHESIS_REGISTER.xlsx"
+    description: "HYPOTHESIS REGISTER"
   - file: "outputs/RUN_LOG.txt"
     description: "RUN LOG"
   - file: "outputs/figures/01_variance_signature.png"
@@ -59,8 +61,6 @@ outputs:
     description: "competency profile"
   - file: "outputs/tables/coverage_district_grade_year.csv"
     description: "coverage district grade year"
-  - file: "outputs/tables/coverage_district_grade_year_NEW.csv"
-    description: "coverage district grade year NEW"
   - file: "outputs/tables/coverage_district_overall.csv"
     description: "coverage district overall"
   - file: "outputs/tables/coverage_matrix_rural_stategovt.csv"
@@ -143,9 +143,6 @@ outputs:
 
   - file: "outputs/tables/hypothesis_menu.csv"
     description: "all 36 hypotheses with verdict, effect, evidence and caveat"
-
-  - file: "outputs/HYPOTHESIS_REGISTER.xlsx"
-    description: "hypothesis register: methodology, finding, verdict and assumptions per hypothesis"
 
 external_datasets:
   - file: "external_data/ (see external_data/SOURCES.md)"

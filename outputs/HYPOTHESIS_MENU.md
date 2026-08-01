@@ -10,7 +10,7 @@
 - policy: If it survives, the G6 collapse is real deterioration, not new-GP composition; remediation, not measurement, is the response.
 
 **EH3. G6 decline present even in districts whose coverage changed least**
-- effect: bottom-tercile |d_cov| (8 districts, mean |d_cov|=3.9pp): mult -18.7pp, div -21.4pp (all-district: -20.1/-22.6)
+- effect: bottom-tercile |d_cov| (9 districts, mean |d_cov|=4.2pp): mult -18.7pp, div -21.5pp (all-district: -20.1/-22.6)
 - evidence: unweighted district means
 - caveat: coverage change is district-level; within-district reach can still shift
 - policy: Decline without a coverage story in these districts undercuts the pure-selection explanation.
@@ -94,7 +94,7 @@
 - policy: Do not hold coastal districts up as models until their coverage passes ~50%.
 
 **EH24. Mean-vs-floor divergence concentrates where coverage grew fastest**
-- effect: floor-minus-mean divergence by coverage-growth tercile: low +3.0, mid +2.0, high -6.4 pp
+- effect: floor-minus-mean divergence by coverage-growth tercile: low +3.3, mid +1.6, high -7.5 pp
 - evidence: district-level
 - caveat: same selection caveat as EH16
 - policy: Equity metrics from a voluntary contest must be read jointly with coverage.
@@ -154,7 +154,7 @@
 - policy: If supported, part of the reported decline is the contest reaching weaker children, which is a participation success, not only a learning failure.
 
 **EH8. Differential participation by gender inflates the measured girls' lead**
-- effect: r=-0.47 (p=1.14e-05, n=80 district-years) between (girls-boys coverage) and (girls-boys score); the sign is negative: where girls are over-assessed the measured lead is SMALLER
+- effect: r=-0.47 (p=1.25e-05, n=80 district-years) between (girls-boys coverage) and (girls-boys score); the sign is negative: where girls are over-assessed the measured lead is SMALLER
 - evidence: all three years pooled, authoritative UDISE rural State-Govt denominator
 - caveat: district-level; within-school selection unobserved
 - policy: A negative sign means differential participation DEFLATES the measured lead, so the true gap is if anything larger than reported. That is the opposite of the usual worry, and it agrees with EH9, where balanced districts show a bigger lead.

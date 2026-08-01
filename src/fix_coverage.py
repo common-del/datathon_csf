@@ -19,7 +19,29 @@ sys.path.insert(0, HERE); os.chdir(ROOT)
 import config, external, coverage as cov_mod
 
 T = os.path.join("outputs", "tables")
+
+def check_writable(paths):
+    """Excel holds an exclusive lock on any CSV it has open, and pandas then dies with a
+    bare PermissionError deep inside to_csv. Fail early with something actionable."""
+    locked = []
+    for p_ in paths:
+        if not os.path.exists(p_):
+            continue
+        try:
+            with open(p_, "a"):
+                pass
+        except PermissionError:
+            locked.append(p_)
+    if locked:
+        sys.exit("\nCANNOT WRITE. These files are open in another program, most likely Excel:\n"
+                 + "\n".join("   " + x for x in locked)
+                 + "\n\nClose them (quit Excel entirely) and run again. Nothing was changed.\n")
+
 YEARS = ["2022-23", "2023-24", "2024-25"]
+
+check_writable([os.path.join(T, f) for f in
+                ("coverage_district_grade_year.csv", "coverage_matrix_strict_stategovt.csv",
+                 "coverage_summary.csv", "coverage_rural_stategovt_gender.csv")])
 
 old = pd.read_csv(os.path.join(T, "coverage_district_grade_year.csv"))
 assessed = (old[old.basis == "rural"][["canonical_district", "grade", "year", "assessed"]]
@@ -80,38 +102,53 @@ print("   ALL YEARS  %s / %s = %.1f%%"
       % (f"{int(r.assessed.sum()):,}", f"{int(r.enrolled.sum()):,}", 100 * r.assessed.sum() / r.enrolled.sum()))
 print("\nrewrote coverage_district_grade_year.csv, coverage_matrix_strict_stategovt.csv, coverage_summary.csv")
 
-# ---------------------------------------------------------------- gender table, same fix
+# ---------------------------------------------------------------- gender coverage table
+# BUILT HERE, not patched. run_all.py wipes outputs/ at the start, so this table has to be
+# regenerated from source every run or EH8, EH9 and EH10 have nothing to read.
+#   assessed : counted from the student data, by canonical district x year x gender
+#   enrolled : the authoritative, independently cross-validated UDISE rural State-Govt file
 GP = os.path.join(T, "coverage_rural_stategovt_gender.csv")
-if os.path.exists(GP):
-    gv = pd.read_csv(GP)
-    ga = gv[["canonical_district", "Year", "g", "assessed"]].drop_duplicates(["canonical_district", "Year", "g"])
-    # authoritative denominator, long form
-    long = []
-    # the authoritative file uses UDISE spellings; map them onto canonical names
-    A2 = A.copy()
-    amd = external.match_districts(A2["District"].astype(str).str.strip().unique(), alias, "district")
-    A2 = A2.merge(amd[["district", "canonical_district"]],
-                  left_on=A2["District"].astype(str).str.strip(), right_on="district", how="left")
-    A2["canonical_district"] = A2["canonical_district"].fillna(A2["District"].astype(str).str.strip())
-    for y in YEARS:
-        for lab, col in (("boys", "%s Boys" % y), ("girls", "%s Girls" % y)):
-            t = A2[["canonical_district", col]].rename(columns={col: "enrolled"})
-            t["Year"] = y; t["g"] = lab
-            long.append(t)
-    den = pd.concat(long, ignore_index=True)
-    den["enrolled"] = pd.to_numeric(den["enrolled"], errors="coerce").astype("float64").fillna(0)
-    gm = den.merge(ga, on=["canonical_district", "Year", "g"], how="left")
-    gm["assessed"] = gm["assessed"].fillna(0).astype("int64")
-    gm["coverage_pct"] = (100 * gm["assessed"].astype(float) / gm["enrolled"].replace(0, np.nan)).round(1)
-    gm = gm[["canonical_district", "Year", "g", "assessed", "enrolled", "coverage_pct"]]
-    tot = gm.groupby("g").agg(a=("assessed", "sum"), e=("enrolled", "sum"))
-    tot["cov"] = 100 * tot.a / tot.e
-    if abs(int(tot["a"].sum()) - 1379087) > 5:
-        sys.exit("Gender assessed total drifted (%d). Nothing written." % int(tot["a"].sum()))
-    gm.to_csv(GP, index=False)
-    print("\nCORRECTED GENDER COVERAGE:")
-    for k in ("boys", "girls"):
-        print("   %-6s %s assessed / %s enrolled = %.1f%%"
-              % (k, f"{int(tot.loc[k,'a']):,}", f"{int(tot.loc[k,'e']):,}", tot.loc[k, "cov"]))
-    print("   girls-minus-boys coverage gap: %+.1fpp" % (tot.loc["girls", "cov"] - tot.loc["boys", "cov"]))
-    print("rewrote coverage_rural_stategovt_gender.csv")
+print("\nBuilding the gender coverage table from source...")
+import loader
+stu, _meta = loader.load()
+stu = stu[["district", "year", "gender"]].dropna(subset=["district", "year", "gender"])
+sd = external.match_districts(stu["district"].unique(), alias, "district")
+stu = stu.merge(sd[["district", "canonical_district"]], on="district", how="left")
+stu["g"] = (stu["gender"].astype(str).str.strip().str.upper().str[0]
+              .map({"F": "girls", "M": "boys", "G": "girls", "B": "boys"}))
+ga = (stu.dropna(subset=["g"]).groupby(["canonical_district", "year", "g"])
+        .size().rename("assessed").reset_index().rename(columns={"year": "Year"}))
+del stu
+
+# authoritative denominator, long form; the file uses UDISE spellings
+A2 = A.copy()
+amd = external.match_districts(A2["District"].astype(str).str.strip().unique(), alias, "district")
+A2 = A2.merge(amd[["district", "canonical_district"]],
+              left_on=A2["District"].astype(str).str.strip(), right_on="district", how="left")
+A2["canonical_district"] = A2["canonical_district"].fillna(A2["District"].astype(str).str.strip())
+long = []
+for y in YEARS:
+    for lab, col in (("boys", "%s Boys" % y), ("girls", "%s Girls" % y)):
+        t = A2[["canonical_district", col]].rename(columns={col: "enrolled"})
+        t["Year"] = y; t["g"] = lab
+        long.append(t)
+den = pd.concat(long, ignore_index=True)
+den["enrolled"] = pd.to_numeric(den["enrolled"], errors="coerce").astype("float64").fillna(0)
+
+gm = den.merge(ga, on=["canonical_district", "Year", "g"], how="left")
+gm["assessed"] = gm["assessed"].fillna(0).astype("int64")
+gm["coverage_pct"] = (100 * gm["assessed"].astype(float) / gm["enrolled"].replace(0, np.nan)).round(1)
+gm = gm[["canonical_district", "Year", "g", "assessed", "enrolled", "coverage_pct"]]
+
+tot = gm.groupby("g").agg(a=("assessed", "sum"), e=("enrolled", "sum"))
+tot["cov"] = 100 * tot.a / tot.e
+if abs(int(tot["a"].sum()) - 1379087) > 5:
+    sys.exit("Gender assessed total is %s, expected 1,379,087. Nothing written."
+             % f"{int(tot['a'].sum()):,}")
+gm.to_csv(GP, index=False)
+print("CORRECTED GENDER COVERAGE:")
+for k in ("boys", "girls"):
+    print("   %-6s %s assessed / %s enrolled = %.1f%%"
+          % (k, f"{int(tot.loc[k,'a']):,}", f"{int(tot.loc[k,'e']):,}", tot.loc[k, "cov"]))
+print("   girls-minus-boys coverage gap: %+.1fpp" % (tot.loc["girls", "cov"] - tot.loc["boys", "cov"]))
+print("wrote coverage_rural_stategovt_gender.csv (%d rows)" % len(gm))

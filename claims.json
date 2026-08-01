@@ -125,7 +125,7 @@
     {
       "claim_id": "claim-12",
       "description": "Assessment coverage against UDISE RURAL State Government enrolment (the contest universe)",
-      "claimed_value": "41.8% statewide; 127 of 240 district-year-grade cells below 50%",
+      "claimed_value": "37.8% statewide; 166 of 279 district-year-grade cells below 50%",
       "unit": "percent",
       "supporting_output": "outputs/tables/coverage_summary.csv",
       "verification_method": "programmatic",
@@ -303,6 +303,28 @@
       }
     },
     {
+      "claim_id": "claim-coverage-gender",
+      "description": "Assessment coverage by gender",
+      "claimed_value": "girls 39.7%, boys 35.9%, gap +3.8pp; girls better covered in 26 of 31 districts",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_rural_stategovt_gender.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "group by g, sum assessed / sum enrolled"
+      }
+    },
+    {
+      "claim_id": "claim-eh8-signed",
+      "description": "Differential participation deflates the girls lead",
+      "claimed_value": "corr(girls-boys coverage gap, girls-boys score gap) = -0.47 (p=1.1e-05, n=80 district-years)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH8, effect field"
+      }
+    },
+    {
       "claim_id": "claim-eh7-league",
       "description": "Coverage-adjusted league table",
       "claimed_value": "17 of 26 districts move >=3 ranks; Raichur 19 to 12, Hassan 4 to 11, Gadag 15 to 20, Kodagu 13 to 8 (2024-25)",
@@ -424,6 +446,17 @@
       }
     },
     {
+      "claim_id": "claim-coverage-correction",
+      "description": "Coverage denominator corrected during review",
+      "claimed_value": "src/coverage.py originally joined from the assessed side, dropping district-grade-years with zero assessed children; that reported 41.8% overall and 26.8/43.8/56.2 by year. Corrected to 37.8% and 25.1/39.0/49.9",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_summary.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "run python src/fix_coverage.py; it asserts the denominator equals external_data/udise_rural_stategovt_g46_gender_district.csv and refuses to write otherwise"
+      }
+    },
+    {
       "claim_id": "claim-row-count-check",
       "description": "Raw file row counts sum to the analysis dataset",
       "claimed_value": "9 files: 104,015 + 156,940 + 209,867 + 113,164 + 161,979 + 204,008 + 95,523 + 151,938 + 181,653 = 1,379,087",
@@ -435,36 +468,14 @@
       }
     },
     {
-      "claim_id": "claim-coverage-gender",
-      "description": "Assessment coverage by gender",
-      "claimed_value": "girls 39.7%, boys 35.9%, gap +3.8pp; girls better covered in 26 of 31 districts",
+      "claim_id": "claim-competency-correlation",
+      "description": "Competency correlations with total score and with each other",
+      "claimed_value": "with total: Measurement 0.78, Division 0.76, Multiplication 0.75, Place Value 0.56, Fractions 0.55. Strongest pair Multiplication-Division 0.57, then Measurement-Shapes 0.55, Subtraction-Multiplication and Subtraction-Division 0.52. Place Value weakest link 0.24 (Mensuration), 0.44 (Number Sense). Fractions-Mensuration undefined",
       "unit": "",
-      "supporting_output": "outputs/tables/coverage_rural_stategovt_gender.csv",
+      "supporting_output": "outputs/tables/competency_total_correlation.csv and competency_correlation_matrix.csv",
       "verification_method": "programmatic",
       "verification_detail": {
-        "how_to_check": "group by g, sum assessed / sum enrolled"
-      }
-    },
-    {
-      "claim_id": "claim-eh8-signed",
-      "description": "Differential participation deflates the girls lead",
-      "claimed_value": "corr(girls-boys coverage gap, girls-boys score gap) = -0.47 (p=1.1e-05, n=80 district-years)",
-      "unit": "",
-      "supporting_output": "outputs/tables/hypothesis_menu.csv",
-      "verification_method": "programmatic",
-      "verification_detail": {
-        "how_to_check": "row id=EH8, effect field"
-      }
-    },
-    {
-      "claim_id": "claim-coverage-correction",
-      "description": "Coverage denominator corrected during review",
-      "claimed_value": "src/coverage.py originally joined from the assessed side, dropping district-grade-years with zero assessed children; that reported 41.8% overall and 26.8/43.8/56.2 by year. Corrected to 37.8% and 25.1/39.0/49.9",
-      "unit": "",
-      "supporting_output": "outputs/tables/coverage_summary.csv",
-      "verification_method": "programmatic",
-      "verification_detail": {
-        "how_to_check": "run python src/fix_coverage.py; it asserts the denominator equals external_data/udise_rural_stategovt_g46_gender_district.csv and refuses to write otherwise"
+        "how_to_check": "run python src/figure_competency_correlation.py; pooled over 1,379,087 student rows"
       }
     },
     {
@@ -482,7 +493,7 @@
       "claim_id": "claim-participation-districts",
       "description": "District participation extremes, 3 years pooled",
       "claimed_value": "top 5: Chitradurga 70.1, Dharwad 66.1, Bengaluru Rural 62.6, Gadag 60.8, Chikkaballapura 59.1; bottom 5: Udupi 5.7, Dakshina Kannada 2.0, Uttara Kannada 0.8, Bengaluru Urban 0.0, Shivamogga 0.0",
-      "unit": "%",
+      "unit": "",
       "supporting_output": "outputs/tables/participation_district.csv",
       "verification_method": "programmatic",
       "verification_detail": {
@@ -493,7 +504,7 @@
       "claim_id": "claim-gender-flat",
       "description": "Gender gap by grade and year",
       "claimed_value": "girls lead in all 9 grade-years; mean gap +2.12pp, max +3.02pp (grade 6, 2023-24); Cohen's d 0.071",
-      "unit": "pp",
+      "unit": "",
       "supporting_output": "outputs/tables/gender_grade_year.csv",
       "verification_method": "programmatic",
       "verification_detail": {
@@ -501,14 +512,14 @@
       }
     },
     {
-      "claim_id": "claim-competency-correlation",
-      "description": "Competency correlations with total score and with each other",
-      "claimed_value": "with total: Measurement 0.78, Division 0.76, Multiplication 0.75, Place Value 0.56, Fractions 0.55. Strongest pair Multiplication-Division 0.57, then Measurement-Shapes 0.55, Subtraction-Multiplication and Subtraction-Division 0.52. Place Value weakest link 0.24 (Mensuration), 0.44 (Number Sense). Fractions-Mensuration undefined, never co-occur",
-      "unit": "pearson r",
-      "supporting_output": "outputs/tables/competency_total_correlation.csv and competency_correlation_matrix.csv",
+      "claim_id": "claim-gender-coverage-table",
+      "description": "Gender coverage table is rebuilt from source each run",
+      "claimed_value": "girls 39.7%, boys 35.9%, gap +3.8pp; 186 rows (31 districts x 3 years x 2 genders)",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_rural_stategovt_gender.csv",
       "verification_method": "programmatic",
       "verification_detail": {
-        "how_to_check": "run python src/figure_competency_correlation.py; pooled over 1,379,087 student rows"
+        "how_to_check": "run python src/fix_coverage.py; assessed counted from the student data, enrolled from the cross-validated UDISE gender file"
       }
     }
   ]
