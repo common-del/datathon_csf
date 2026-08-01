@@ -1,0 +1,2 @@
+severity,issue
+HIGH,"Contest COVERAGE changes across years (not a naming problem: the organiser crosswalk resolves names). Districts appear or drop out between years, so state-level year trends mix real change with coverage change. Restrict cross-year claims to the 25 districts present in all three years, and say so."

@@ -1,0 +1,21 @@
+item,competency_code,competency_label,difficulty_rank
+Q1,C01,Number recognition & place value,0
+Q2,C01,Number recognition & place value,0
+Q3,C02,Addition without carry,1
+Q4,C02,Addition without carry,1
+Q5,C03,Subtraction with borrowing,2
+Q6,C03,Subtraction with borrowing,2
+Q7,C04,Multiplication tables & facts,3
+Q8,C04,Multiplication tables & facts,3
+Q9,C05,Division (sharing & grouping),4
+Q10,C05,Division (sharing & grouping),4
+Q11,C06,Fractions - identify & compare,5
+Q12,C06,Fractions - identify & compare,5
+Q13,C07,"Measurement (length, weight)",6
+Q14,C07,"Measurement (length, weight)",6
+Q15,C08,Time & money word problems,7
+Q16,C08,Time & money word problems,7
+Q17,C09,Data handling & simple graphs,8
+Q18,C09,Data handling & simple graphs,8
+Q19,C10,Multi-step word problems,9
+Q20,C10,Multi-step word problems,9

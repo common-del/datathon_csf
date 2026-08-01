@@ -1,0 +1,12 @@
+competency_code,competency_label,mastery_rate_pct,gate_lift_pp,n_downstream,bottleneck_score
+multiplication,multiplication,55.2,45.1,1,0.202
+measurement,measurement,58.0,37.8,4,0.1589
+mensuration,mensuration,55.6,35.6,2,0.158
+data handling,data handling,59.3,38.0,5,0.1546
+subtraction,subtraction,62.2,37.0,6,0.1397
+place value,place value,56.8,28.9,3,0.1251
+number sense,number sense,66.9,36.5,9,0.121
+fraction,fraction,63.4,33.0,6,0.1208
+shapes,shapes,66.5,35.8,8,0.1199
+addition,addition,79.0,38.9,10,0.0818
+division,division,52.3,,0,

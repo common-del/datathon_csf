@@ -1,0 +1,5 @@
+feature_set,model,n_units,n_features,cv_rmse_pp,cv_mae_pp,cv_r2
+A_persistence,ridge,1939,4,10.481,7.913,0.486
+C_both,ridge,1939,4,10.481,7.913,0.486
+A_persistence,gbm,1939,4,10.629,8.068,0.471
+C_both,gbm,1939,4,10.629,8.068,0.471

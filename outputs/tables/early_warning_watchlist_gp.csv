@@ -1,0 +1,121 @@
+district,block,cluster,gp,latest_actual_pct,predicted_pct,prediction_error_pp,n_y2
+Bidar,B0020 bidar,C0124 bagdal,844 aurad (s),28.66,23.72,4.94,56
+Bidar,B0020 bidar,C0124 bagdal,921 bagdal,16.63,24.41,-7.78,126
+Kalaburagi,B0119 sedam,C1211 mudhol,4505 mudhol,27.79,24.93,2.86,86
+Chitradurga,B0097 molakalmur,C0592 hanagal,2645 hirekerehalli,25.22,24.97,0.25,135
+Ballari,B0012 ballari east,C1504 sidiginamola,3445 karekallu,28.42,25.49,2.93,146
+Kalaburagi,B0036 chittapur,C0688 honguntta,2743 hongunta,18.73,25.62,-6.89,138
+Kalaburagi,B0036 chittapur,C1583 tengali,1736 dandoti,26.55,26.01,0.54,42
+Kalaburagi,B0119 sedam,C0965 kolakunda,3011 jakanpalli,28.13,26.27,1.86,107
+Kalaburagi,B0036 chittapur,C0542 gundagurthi,1262 bhagodi,28.21,26.83,1.38,106
+Ballari,B0012 ballari east,C1415 rupanagudi,5136 rupanagudi,19.46,26.88,-7.42,280
+Ballari,B0128 siruguppa,C0802 k belgal,3116 k.belagallu,15.4,27.11,-11.71,260
+Ballari,B0013 ballari west,C0974 koluru,6196 kolur (b),31.13,28.08,3.05,150
+Chitradurga,B0026 challakere,C1295 neelagethanahatti,4689 nalegetanahatti,22.04,28.11,-6.07,194
+Bidar,B0068 humnabad,C1632 udbal,2974 itaga,27.26,28.12,-0.86,146
+Ballari,B0128 siruguppa,C1509 sirigeri,3734 konchegeri,23.73,28.23,-4.5,204
+Chitradurga,B0026 challakere,C0436 dodderi,1412 budnahatti,24.3,28.28,-3.98,136
+Chitradurga,B0097 molakalmur,C0592 hanagal,2382 hanagal,22.8,28.56,-5.76,264
+Bidar,B0015 basavakalyan,C1382 rajeshwar,2389 hanamanth wadi r,27.98,28.58,-0.6,47
+Ballari,B0128 siruguppa,C0378 darur,5194 sanavasapura,23.41,28.68,-5.27,274
+Vijayanagara,B0065 hosapete,"C0001 15th ward, hospet",3269 kallahallli,26.97,29.12,-2.15,114
+Raichur,B0096 manvi,C1442 sangapur,3120 k.gudadinni,24.2,29.28,-5.08,119
+Kalaburagi,B0049 gulbarga south,C1277 nandur (k),213009027 hagaraga,39.3,29.29,10.01,57
+Kalaburagi,B0036 chittapur,C0993 korwar,3784 korwar,28.68,29.59,-0.91,95
+Chitradurga,B0097 molakalmur,C0400 devasamudra,1809 devasamudra,27.19,29.64,-2.45,267
+Kalaburagi,B0036 chittapur,C0993 korwar,2162 gotur,26.8,29.68,-2.88,147
+Kalaburagi,B0002 aland,C1466 savaleshwar,5280 sawaleshwar,19.35,29.86,-10.51,147
+Kalaburagi,B0036 chittapur,C0566 halakatta,2324 halakatta,35.44,29.9,5.54,90
+Bidar,B0015 basavakalyan,C0295 chandikapur,4962 paratapur,50.25,30.03,20.22,119
+Kalaburagi,B0001 afzalpur,C0898 karajagi,622 allagi (b),29.23,30.03,-0.8,143
+Kodagu,B0140 virajpet,C1044 kutta,3965 kutta,33.26,30.11,3.15,72
+Chitradurga,B0097 molakalmur,C1574 tammenahalli,5687 thammenahalli,23.47,30.26,-6.79,445
+Chitradurga,B0097 molakalmur,C1258 nagasamudra,1613 chikkerahalli,19.2,30.43,-11.23,220
+Kalaburagi,B0036 chittapur,C0038 allolli,595 alahalli,31.21,30.58,0.63,170
+Davanagere,B0028 channagiri,C1347 pandomati,4951 pandomatti,65.46,30.76,34.7,87
+Bidar,B0020 bidar,C1103 malegaon,820 astoor,32.56,30.84,1.72,90
+Kalaburagi,B0036 chittapur,C1363 pethsiroor,6252 mugalanagaon,22.73,30.9,-8.17,108
+Ballari,B0012 ballari east,C0567 halakundi,2326 halakundhi,24.21,31.06,-6.85,208
+Bidar,B0068 humnabad,C1131 manna-ekhelli,4243 mangalgi,35.91,31.12,4.79,66
+Bidar,B0015 basavakalyan,C0851 kalkora,3263 kalkhora,28.93,31.14,-2.21,131
+Bidar,B0020 bidar,C0171 baroor,1071 baroor,48.43,31.18,17.25,67
+Yadgir,B0120 shahapur,C0209 bendebembali,5825 tumakur,31.53,31.46,0.07,150
+Kalaburagi,B0036 chittapur,C0085 arankal,775 arankal,34.08,31.55,2.53,109
+Kalaburagi,B0049 gulbarga south,C1277 nandur (k),3957 kusnoor,30.48,31.6,-1.12,84
+Ballari,B0117 sandur,C0152 bandri,4846 nidugurthi,21.26,31.6,-10.34,247
+Bidar,B0019 bhalki,C0409 dhannura (s),1824 dhannura (s),39.47,31.65,7.82,47
+Kalaburagi,B0001 afzalpur,C0149 bandarwad,1019 bandarwad,39.64,31.66,7.98,84
+Kalaburagi,B0033 chincholi,C1399 ratkal,2333 halcher,35.26,31.67,3.59,77
+Bidar,B0019 bhalki,C0228 bhatambra,1277 bhatambra,38.96,31.74,7.22,67
+Kalaburagi,B0073 jewargi,C1704 wadgera,6015 wadgera 29,26.96,31.74,-4.78,224
+Chitradurga,B0026 challakere,C0398 devareddihalli,1802 devarareddihalli,26.84,31.76,-4.92,236
+Kodagu,B0140 virajpet,C1044 kutta,5503 srimangala,23.73,31.85,-8.12,55
+Chamarajanagara,B0080 kollegala,C0996 kothanur,1926 doddinduvadi,44.3,31.89,12.41,142
+Kalaburagi,B0002 aland,C0451 duttargaon,6183 dannuru,31.44,31.91,-0.47,94
+Chitradurga,B0097 molakalmur,C0763 j.b.halli,5221 santhegudda,29.83,31.99,-2.16,146
+Kalaburagi,B0033 chincholi,C1311 nidgunda,3562 kerolli,32.93,32.04,0.89,58
+Bidar,B0068 humnabad,C1632 udbal,4583 mustari,26.23,32.06,-5.83,81
+Kalaburagi,B0073 jewargi,C1286 naribol,213009043 madari,33.19,32.19,1.0,105
+Chikkaballapura,B0010 bagepally,C0253 billur,1353 billur,35.29,32.3,2.99,68
+Chitradurga,B0026 challakere,C1292 nayakanahatti,2163 goudagere,23.17,32.5,-9.33,210
+Davanagere,B0071 jagalur,C0241 bidarakere,6545 bidarakere,27.48,32.5,-5.02,133
+Kalaburagi,B0036 chittapur,C0038 allolli,3985 ladlapur,33.56,32.59,0.97,80
+Kalaburagi,B0119 sedam,C1040 kurkunta,4107 madkal,28.92,32.63,-3.71,65
+Bidar,B0019 bhalki,C0441 dongapur,1940 dongapur,48.78,32.68,16.1,41
+Kodagu,B0140 virajpet,C1555 t. shettigeri,1363 birunani,33.15,32.69,0.46,27
+Chamarajanagara,B0054 hanur,C1076 maaralli,4444 minyam,24.31,32.79,-8.48,87
+Chitradurga,B0026 challakere,C0156 banjigere,4269 mannekote,27.62,32.81,-5.19,143
+Chitradurga,B0035 chitradurga,C1721 yalagodu,6067 yalagodu,31.11,32.86,-1.75,203
+Bidar,B0020 bidar,C1103 malegaon,4172 malegaon,28.47,32.93,-4.46,88
+Kalaburagi,B0033 chincholi,C0954 kodli,3667 kodli,31.01,33.15,-2.14,198
+Vijayanagara,B0084 kudligi,C1070 m.b. iyyana halli,1013 banavikallu,34.03,33.17,0.86,226
+Chitradurga,B0026 challakere,C1307 neralagunte,4821 nerlagunte,38.26,33.24,5.02,138
+Ballari,B0117 sandur,C1592 tharanagara,5695 tharanagara,30.69,33.27,-2.58,173
+Vijayanagara,B0084 kudligi,C0711 hudem,3094 jummobanahalli,26.55,33.27,-6.72,103
+Ballari,B0012 ballari east,C1191 moka,4043 m.gonal,41.22,33.28,7.94,192
+Bidar,B0020 bidar,C0171 baroor,2707 hokrana (b),36.11,33.33,2.78,54
+Raichur,B0096 manvi,C0637 heera,1640 chincharaki,36.02,33.34,2.68,59
+Vijayanagara,B0084 kudligi,"C1017 kudligi, for girls",5443 sivapura,21.93,33.35,-11.42,197
+Chitradurga,B0026 challakere,C0497 ghataparthy,2076 gataparthi,29.26,33.36,-4.1,195
+Kalaburagi,B0002 aland,C0676 hodalur,605 alanga,33.66,33.42,0.24,93
+Raichur,B0096 manvi,C1037 kurdi,3923 kurdi,30.23,33.43,-3.2,173
+Bidar,B0020 bidar,C0063 andura,5205 sangolgi,28.1,33.46,-5.36,116
+Kalaburagi,B0119 sedam,C0872 kanagadda,4394 medak,25.81,33.49,-7.68,186
+Kalaburagi,B0036 chittapur,C0566 halakatta,3311 kamarwadi,28.7,33.52,-4.82,77
+Raichur,B0111 raichur,C1162 matamari,4358 matamari,34.83,33.58,1.25,233
+Bidar,B0068 humnabad,C0298 changlera,4400 meenkera,38.67,33.67,5.0,135
+Chitradurga,B0097 molakalmur,C0979 konasagara,4822 nerlahalli,37.82,33.69,4.13,133
+Chamarajanagara,B0142 yelandur,C0931 kesthur,6330 honnur,50.2,33.79,16.41,98
+Yadgir,B0123 shorapur,C0903 kardakal,2559 hegganadoddi,27.08,33.95,-6.87,185
+Chikkaballapura,B0034 chintamani,C0275 buradagunte,1420 burudagunte,42.03,34.04,7.99,106
+Ballari,B0128 siruguppa,C1010 kudarhal,6236 bagewadi (b),30.53,34.04,-3.51,189
+Chitradurga,B0026 challakere,C0656 hirehalli,6390 hirehalli,28.37,34.04,-5.67,249
+Ballari,B0117 sandur,C0509 gollalingammanahalli,2125 gollalingamanahalli,20.81,34.05,-13.24,235
+Chitradurga,B0035 chitradurga,C0964 kolahal,590 alagavadi,29.05,34.08,-5.03,184
+Bidar,B0019 bhalki,C0043 alwai marathi,635 alwai,51.39,34.09,17.3,54
+Kalaburagi,B0036 chittapur,C1363 pethsiroor,4336 martur,18.81,34.14,-15.33,159
+Ballari,B0117 sandur,C1610 thoranagal,1831 dharoji,27.64,34.16,-6.52,282
+Chitradurga,B0026 challakere,C0518 gourasamudra,2179 gowrasamudra,24.84,34.16,-9.32,335
+Kalaburagi,B0119 sedam,C1107 malkhed,4181 malkhed,29.19,34.18,-4.99,204
+Vijayanagara,B0084 kudligi,C0736 hurlihal,2895 hurulihal,33.03,34.18,-1.15,155
+Chitradurga,B0097 molakalmur,C0112 b.g.kere,5826 tumakurlahalli,30.87,34.21,-3.34,248
+Chitradurga,B0026 challakere,C0437 doddullarthy,4609 mylanahalli,29.14,34.23,-5.09,214
+Vijayanagara,B0052 hagaribommanahalli,C0158 bannikal,2014 gaddikeri,36.31,34.27,2.04,111
+Kalaburagi,B0001 afzalpur,C0149 bandarwad,2503 hasargundagi,46.18,34.29,11.89,93
+Bidar,B0015 basavakalyan,C0755 islampur,2971 islamapur,36.27,34.35,1.92,55
+Yadgir,B0141 yadgir,C0885 kandakoor,6220 yempad,23.2,34.35,-11.15,147
+Ballari,B0128 siruguppa,C0924 kenchanagudda,3541 kenchanagudda,24.45,34.39,-9.94,281
+Ballari,B0012 ballari east,C0145 banapura,1078 basarakodu,21.31,34.44,-13.13,245
+Kalaburagi,B0036 chittapur,C1583 tengali,5665 tengali,33.77,34.45,-0.68,118
+Bidar,B0015 basavakalyan,C1187 mirkhal marathi,2018 gadigoundgaon,50.48,34.47,16.01,52
+Chitradurga,B0059 hiriyur,C0414 dindavara,1850 dindavara,58.22,34.47,23.75,245
+Vijayanagara,B0055 harapanahalli,C1507 singrihalli,5430 singrihalli,37.15,34.47,2.68,158
+Ballari,B0128 siruguppa,C0625 hatcholli,1124 beerahalli,35.36,34.49,0.87,238
+Kalaburagi,B0036 chittapur,C0631 hebbal,3366 kandgol,42.06,34.52,7.54,63
+Davanagere,B0071 jagalur,C0406 devikere,1817 devikere,31.7,34.62,-2.92,200
+Bidar,B0015 basavakalyan,C0944 kitta,3629 kitta,35.47,34.66,0.81,75
+Kalaburagi,B0036 chittapur,C0232 bheemanahalli,627 allur (b),44.01,34.69,9.32,91
+Bidar,B0015 basavakalyan,C1201 muchalam,2157 gorta b,31.49,34.71,-3.22,37
+Raichur,B0039 devadurga,C0036 alkod,621 alkod,33.39,34.74,-1.35,214
+Bidar,B0015 basavakalyan,C1384 rajola,4747 narayanpur,44.18,34.77,9.41,91
+Chitradurga,B0026 challakere,C0770 jajuru,3010 jajur,43.08,34.79,8.29,156

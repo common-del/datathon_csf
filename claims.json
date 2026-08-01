@@ -1,41 +1,514 @@
 {
-  "team_name": "REPLACE_WITH_TEAM_NAME",
+  "team_name": "datathon_csf",
   "claims": [
     {
       "claim_id": "claim-1",
-      "description": "REPLACE. Example: 'Grade 5 girls in X district score Y percent lower on average than boys in the ABC GP Maths Contest'",
-      "supporting_output": "outputs/tables/gender_gap.csv",
+      "description": "Analysis dataset size",
+      "claimed_value": "1379087 student records, 20 items",
+      "unit": "",
+      "supporting_output": "outputs/tables/qa_summary.csv row 'rows'",
       "verification_method": "programmatic",
-      "claimed_value": "Y",
-      "unit": "percent",
       "verification_detail": {
-        "filters": { "district": "X", "grade": 5, "year": "ABC" },
-        "group_by": "gender",
-        "aggregate": "mean",
-        "column": "Score"
+        "how_to_check": "outputs/tables/qa_summary.csv row 'rows'"
       }
     },
     {
       "claim_id": "claim-2",
-      "description": "REPLACE. Example: 'Our regression model predicts Grade 4 scores with R2 = 0.XY on a held-out test set'",
-      "supporting_output": "outputs/tables/model_metrics.csv",
-      "verification_method": "reproducible",
-      "claimed_value": "0.XY",
-      "unit": "ratio",
+      "description": "Hardest item",
+      "claimed_value": "Q14 at 35.0% correct",
+      "unit": "",
+      "supporting_output": "outputs/tables/item_analysis.csv",
+      "verification_method": "programmatic",
       "verification_detail": {
-        "expected_output_file": "outputs/tables/model_metrics.csv",
-        "metric_to_check": "r2",
-        "random_seed": 42,
-        "test_split": 0.2
+        "how_to_check": "outputs/tables/item_analysis.csv, first row when sorted by pct_correct"
       }
     },
     {
       "claim_id": "claim-3",
-      "description": "REPLACE. A qualitative or policy claim that cannot be reduced to one number. Example: 'Block-level mentoring reduced learning gaps in comparable districts, per NGO reports'",
-      "verification_method": "jury_review",
+      "description": "Binding competency bottleneck",
+      "claimed_value": "multiplication: 55.2% mastery, gate lift 45.1 pp",
+      "unit": "",
+      "supporting_output": "outputs/tables/competency_bottleneck.csv",
+      "verification_method": "programmatic",
       "verification_detail": {
-        "reasoning": "REPLACE. Why this needs jury judgement rather than a programmatic or reproducible check",
-        "external_dataset": "data/external/REPLACE_IF_ANY.csv"
+        "how_to_check": "outputs/tables/competency_bottleneck.csv, top row by bottleneck_score"
+      }
+    },
+    {
+      "claim_id": "claim-4",
+      "description": "Share of learning variation that is within Gram Panchayat",
+      "claimed_value": "77.8% of total variation (df-adjusted 78.1%)",
+      "unit": "",
+      "supporting_output": "outputs/tables/variance_signature.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/variance_signature.csv, last row"
+      }
+    },
+    {
+      "claim_id": "claim-5",
+      "description": "Fastest improving district",
+      "claimed_value": "Mysuru +1.96 pp",
+      "unit": "",
+      "supporting_output": "outputs/tables/trend_district.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/trend_district.csv, max change_pp"
+      }
+    },
+    {
+      "claim_id": "claim-6",
+      "description": "Most declining district",
+      "claimed_value": "Mandya -15.76 pp",
+      "unit": "",
+      "supporting_output": "outputs/tables/trend_district.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/trend_district.csv, min change_pp"
+      }
+    },
+    {
+      "claim_id": "claim-7",
+      "description": "Overall gender gap",
+      "claimed_value": "girls 54.04% vs boys 52.01% (+2.03 pp, p=0.0, d=0.071)",
+      "unit": "",
+      "supporting_output": "outputs/tables/gender_overall.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/gender_overall.csv"
+      }
+    },
+    {
+      "claim_id": "claim-8",
+      "description": "External join coverage at district level",
+      "claimed_value": "100.0% of 29 units matched",
+      "unit": "",
+      "supporting_output": "outputs/tables/external_join_report.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/external_join_report.csv"
+      }
+    },
+    {
+      "claim_id": "claim-9",
+      "description": "External join coverage at block level",
+      "claimed_value": "68.2% of 170 units matched",
+      "unit": "",
+      "supporting_output": "outputs/tables/external_join_report.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/external_join_report.csv"
+      }
+    },
+    {
+      "claim_id": "claim-10",
+      "description": "External join coverage at gp level",
+      "claimed_value": "37.4% of 5617 units matched",
+      "unit": "",
+      "supporting_output": "outputs/tables/external_join_report.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/external_join_report.csv"
+      }
+    },
+    {
+      "claim_id": "claim-11",
+      "description": "Levels at which external covariates may be associated with outcomes",
+      "claimed_value": "district, block",
+      "unit": "",
+      "supporting_output": "outputs/tables/external_reliability_gate.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "rule": "student-weighted match >= 60% AND no significant matched-vs-unmatched outcome difference (alpha 0.05); cluster refused because UDISE+ has no cluster field"
+      }
+    },
+    {
+      "claim_id": "claim-12",
+      "description": "Assessment coverage against UDISE RURAL State Government enrolment (the contest universe)",
+      "claimed_value": "41.8% statewide; 127 of 240 district-year-grade cells below 50%",
+      "unit": "percent",
+      "supporting_output": "outputs/tables/coverage_summary.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "numerator": "students in the assessment file",
+        "denominator": "UDISE+ grade-wise enrolment, State Government schools, same year",
+        "group_by": "district x grade x year"
+      }
+    },
+    {
+      "claim_id": "claim-13",
+      "description": "Bright-spot model fit",
+      "claimed_value": "cross-validated R2 = 0.259 at block level using 21 structural features",
+      "unit": "",
+      "supporting_output": "outputs/tables/bright_spots_model_card.json",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/bright_spots_model_card.json"
+      }
+    },
+    {
+      "claim_id": "claim-14",
+      "description": "Strongest bright spot",
+      "claimed_value": "B0024 byndoor: actual 85.1% vs predicted 53.6% (+31.5 pp)",
+      "unit": "",
+      "supporting_output": "outputs/tables/bright_spots_block.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/bright_spots_block.csv, top row"
+      }
+    },
+    {
+      "claim_id": "claim-15",
+      "description": "Triage benchmark used",
+      "claimed_value": "54.28% (median block)",
+      "unit": "",
+      "supporting_output": "outputs/tables/triage_block.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/triage_block.csv"
+      }
+    },
+    {
+      "claim_id": "claim-16",
+      "description": "Top triage priority",
+      "claimed_value": "B0026 challakere, gap 16.8 pp, 21467 children",
+      "unit": "",
+      "supporting_output": "outputs/tables/triage_block.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/triage_block.csv, top row"
+      }
+    },
+    {
+      "claim_id": "claim-17",
+      "description": "Early-warning model performance",
+      "claimed_value": "A_persistence at gp level: CV RMSE 10.48 pp, R2 0.486, precision 0.70, recall 0.38",
+      "unit": "",
+      "supporting_output": "outputs/tables/model_card.json and model_comparison_gp.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "outputs/tables/model_card.json and model_comparison_gp.csv"
+      }
+    },
+    {
+      "claim_id": "claim-18",
+      "description": "Track 2 predictions produced for every modelled GP",
+      "claimed_value": "1939 GPs",
+      "unit": "GPs",
+      "supporting_output": "outputs/predictions/predictions.csv",
+      "verification_method": "reproducible",
+      "verification_detail": {
+        "expected_output_file": "outputs/predictions/predictions.csv",
+        "metric_to_check": "row count and 0-20 range",
+        "random_seed": 20260801
+      }
+    },
+    {
+      "claim_id": "claim-eh-raw-decline",
+      "description": "G6 multiplicative decline, raw",
+      "claimed_value": "multiplication 51.0 to 35.1 (-15.8pp); division 55.0 to 37.6 (-17.4pp), 2022-23 to 2024-25",
+      "unit": "",
+      "supporting_output": "outputs/tables/state_grade_year.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "rows grade=6, years 2022-23 and 2024-25, columns C_multiplication and C_division"
+      }
+    },
+    {
+      "claim_id": "claim-eh-gradient",
+      "description": "Grade gradient inversion",
+      "claimed_value": "2022-23: G4 49.6 < G5 56.2 < G6 62.5; 2024-25: G4 57.8 > G5 51.7 > G6 49.3 (pct_mean)",
+      "unit": "",
+      "supporting_output": "outputs/tables/state_grade_year.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "pct_mean by grade and year"
+      }
+    },
+    {
+      "claim_id": "claim-district-spread",
+      "description": "District spread, pooled",
+      "claimed_value": "Udupi 74.3 to Kalaburagi 42.0 pct_mean",
+      "unit": "",
+      "supporting_output": "outputs/tables/unit_district_with_external.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "pct_mean column, max and min districts"
+      }
+    },
+    {
+      "claim_id": "claim-eh1-panel",
+      "description": "G6 decline in constant-GP panel",
+      "claimed_value": "2,182 GPs in all 3 years: mult 50.5 to 30.8 (-19.7pp), div 54.5 to 32.5 (-22.0pp)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH1, effect field; reproduce via src/extra_hypotheses.py"
+      }
+    },
+    {
+      "claim_id": "claim-eh2-g4",
+      "description": "G4 division gain is compositional",
+      "claimed_value": "raw +5.6pp becomes -0.6pp in constant-GP panel (2,278 GPs)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH2, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh5-intercept",
+      "description": "G6 decline at zero coverage change",
+      "claimed_value": "-19.3pp predicted decline at zero district coverage change (n=25)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH5, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh22-newgp",
+      "description": "Newly reached GPs score higher",
+      "claimed_value": "new 2024-25 GPs (655, 16% of G6 students) mean 53.1 vs veteran 48.6",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH22, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh4-covgrowth",
+      "description": "Coverage growth does not predict score change",
+      "claimed_value": "r=-0.18, p=0.396, n=25 districts",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH4, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-coverage-years",
+      "description": "Coverage by year, rural State Govt basis",
+      "claimed_value": "25.1% (2022-23), 39.0% (2023-24), 49.9% (2024-25); overall 37.8% = 1,379,087 of 3,644,154",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_district_grade_year.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "basis=rural, sum assessed/sum enrolled by year; denominator reconciles to external_data/udise_rural_stategovt_g46_gender_district.csv (1,244,415 in 2022-23)"
+      }
+    },
+    {
+      "claim_id": "claim-eh7-league",
+      "description": "Coverage-adjusted league table",
+      "claimed_value": "17 of 26 districts move >=3 ranks; Raichur 19 to 12, Hassan 4 to 11, Gadag 15 to 20, Kodagu 13 to 8 (2024-25)",
+      "unit": "",
+      "supporting_output": "outputs/tables/league_coverage_adjusted.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "rank_raw vs rank_adj columns"
+      }
+    },
+    {
+      "claim_id": "claim-eh9-genderbal",
+      "description": "Girls' lead in balance-covered district-years",
+      "claimed_value": "+3.57pp across 25 balanced district-years (vs +2.79pp overall)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH9, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh10-genderstable",
+      "description": "Girls' lead stable across years",
+      "claimed_value": "+3.17, +2.55, +2.62pp across the three years",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH10, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh11-aser",
+      "description": "ASER 2024 agreement",
+      "claimed_value": "Spearman rho=0.56 (p=0.004) vs ASER Std6-8 division, n=25 districts",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH11, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh19-kk",
+      "description": "Kalyana Karnataka gap widening",
+      "claimed_value": "-10.0pp (2022-23), -11.9pp (2023-24), -15.8pp (2024-25), student-weighted",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH19, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh14-ladder",
+      "description": "Prerequisite ladder",
+      "claimed_value": "addition to subtraction lift +48pp (72% vs 24%); multiplication to division +45pp",
+      "unit": "",
+      "supporting_output": "outputs/tables/competency_prerequisite_pairs.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "rows addition/subtraction and multiplication/division, lift_pp"
+      }
+    },
+    {
+      "claim_id": "claim-eh16-floorcov",
+      "description": "Floor fall tracks coverage growth",
+      "claimed_value": "r=-0.54 (p=0.005, n=25); divergence -6.4pp in fastest tercile vs +3.0pp slowest",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "rows id=EH16 and EH24, effect fields"
+      }
+    },
+    {
+      "claim_id": "claim-eh23-coastal",
+      "description": "Top 3 pooled districts are the 3 worst-covered",
+      "claimed_value": "Udupi pooled rank 1 on 5.7% coverage, Dakshina Kannada rank 2 on 2.0%, Uttara Kannada rank 3 on 0.8%; all three absent from the 2024-25 round",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH23, effect field; coverage from coverage_district_grade_year.csv basis=rural"
+      }
+    },
+    {
+      "claim_id": "claim-eh13-proxy",
+      "description": "Most informative competency",
+      "claimed_value": "division and measurement 0.67, multiplication 0.66, shapes 0.58 mean correlation with the other competencies",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH13, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-eh20-items",
+      "description": "Instrument quality",
+      "claimed_value": "0 of 180 item-year-grades have discrimination r below 0.15",
+      "unit": "",
+      "supporting_output": "outputs/tables/item_analysis.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "count rows where discrimination_r < 0.15"
+      }
+    },
+    {
+      "claim_id": "claim-raw-replication",
+      "description": "Headline replicated from raw CSVs by independent code",
+      "claimed_value": "src/figure_g6_collapse.py reads the 9 organiser CSVs directly and returns G6 multiplication 50.9 to 35.1 and division 55.0 to 37.6; panel of 2,182 GPs gives 50.5 to 30.8 and 54.5 to 32.5",
+      "unit": "",
+      "supporting_output": "outputs/tables/g6_collapse_from_raw.csv and outputs/tables/g6_collapse_panel_gps.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "run python src/figure_g6_collapse.py; it shares no code with run_all.py and prints the same numbers"
+      }
+    },
+    {
+      "claim_id": "claim-row-count-check",
+      "description": "Raw file row counts sum to the analysis dataset",
+      "claimed_value": "9 files: 104,015 + 156,940 + 209,867 + 113,164 + 161,979 + 204,008 + 95,523 + 151,938 + 181,653 = 1,379,087",
+      "unit": "",
+      "supporting_output": "outputs/tables/g6_collapse_from_raw.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "sum the n_students column across all 9 rows"
+      }
+    },
+    {
+      "claim_id": "claim-coverage-gender",
+      "description": "Assessment coverage by gender",
+      "claimed_value": "girls 39.7%, boys 35.9%, gap +3.8pp; girls better covered in 26 of 31 districts",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_rural_stategovt_gender.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "group by g, sum assessed / sum enrolled"
+      }
+    },
+    {
+      "claim_id": "claim-eh8-signed",
+      "description": "Differential participation deflates the girls lead",
+      "claimed_value": "corr(girls-boys coverage gap, girls-boys score gap) = -0.47 (p=1.1e-05, n=80 district-years)",
+      "unit": "",
+      "supporting_output": "outputs/tables/hypothesis_menu.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "row id=EH8, effect field"
+      }
+    },
+    {
+      "claim_id": "claim-coverage-correction",
+      "description": "Coverage denominator corrected during review",
+      "claimed_value": "src/coverage.py originally joined from the assessed side, dropping district-grade-years with zero assessed children; that reported 41.8% overall and 26.8/43.8/56.2 by year. Corrected to 37.8% and 25.1/39.0/49.9",
+      "unit": "",
+      "supporting_output": "outputs/tables/coverage_summary.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "run python src/fix_coverage.py; it asserts the denominator equals external_data/udise_rural_stategovt_g46_gender_district.csv and refuses to write otherwise"
+      }
+    },
+    {
+      "claim_id": "claim-kk-udise",
+      "description": "Kalyana Karnataka UDISE input reality 2024-25",
+      "claimed_value": "rural State Govt: PTR 33.6 vs 20.4; enrolment per school 139 vs 73; library 91.9% vs 99.5%; internet 16.9% vs 39.2%; private-unaided share of rural enrolment 20.8% vs 34.5%",
+      "unit": "",
+      "supporting_output": "outputs/tables/kk_vs_rest_udise.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "run python src/figure_kk_vs_rest.py; reads data/udise_csv/udise_ka_school_2024-25.csv and the 371J flag in external_data/karnataka_district_crosswalk.csv"
+      }
+    },
+    {
+      "claim_id": "claim-participation-districts",
+      "description": "District participation extremes, 3 years pooled",
+      "claimed_value": "top 5: Chitradurga 70.1, Dharwad 66.1, Bengaluru Rural 62.6, Gadag 60.8, Chikkaballapura 59.1; bottom 5: Udupi 5.7, Dakshina Kannada 2.0, Uttara Kannada 0.8, Bengaluru Urban 0.0, Shivamogga 0.0",
+      "unit": "%",
+      "supporting_output": "outputs/tables/participation_district.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "coverage_pct column, sorted; produced by src/figure_report_extras.py"
+      }
+    },
+    {
+      "claim_id": "claim-gender-flat",
+      "description": "Gender gap by grade and year",
+      "claimed_value": "girls lead in all 9 grade-years; mean gap +2.12pp, max +3.02pp (grade 6, 2023-24); Cohen's d 0.071",
+      "unit": "pp",
+      "supporting_output": "outputs/tables/gender_grade_year.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "pivot mean_pct by gender, subtract; produced by src/figure_report_extras.py"
+      }
+    },
+    {
+      "claim_id": "claim-competency-correlation",
+      "description": "Competency correlations with total score and with each other",
+      "claimed_value": "with total: Measurement 0.78, Division 0.76, Multiplication 0.75, Place Value 0.56, Fractions 0.55. Strongest pair Multiplication-Division 0.57, then Measurement-Shapes 0.55, Subtraction-Multiplication and Subtraction-Division 0.52. Place Value weakest link 0.24 (Mensuration), 0.44 (Number Sense). Fractions-Mensuration undefined, never co-occur",
+      "unit": "pearson r",
+      "supporting_output": "outputs/tables/competency_total_correlation.csv and competency_correlation_matrix.csv",
+      "verification_method": "programmatic",
+      "verification_detail": {
+        "how_to_check": "run python src/figure_competency_correlation.py; pooled over 1,379,087 student rows"
       }
     }
   ]

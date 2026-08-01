@@ -1,0 +1,2 @@
+n_girls,n_boys,mean_pct_girls,mean_pct_boys,gap_pp_girls_minus_boys,welch_t,p_value,cohens_d,practical_note
+737534,641553,54.04,52.01,2.03,41.44,0.0,0.071,gap under 1pp is statistically detectable but not programmatically meaningful at this sample size

@@ -1,0 +1,32 @@
+check,value,note
+rows,1379087,
+question_items_found,20,handbook says 20
+exact_duplicate_rows,84951,identical on geography + all item responses
+duplicate_rows_note,"EXPECTED, not an error: no persistent student or school identifier exists, so two children with identical geography, gender and all 20 responses are indistinguishable by design. Rows are KEPT; deduplicating would delete real children.",
+missing_pct__year,0.0,
+missing_pct__grade,0.0,
+missing_pct__district,0.0,
+missing_pct__block,0.0,
+missing_pct__cluster,0.0,
+missing_pct__gp,0.0,
+missing_pct__gender,0.0,
+rows_with_missing_responses_pct,0.0,
+easiest_item,Q5 (62.4% correct),
+hardest_item,Q13 (40.9% correct),
+items_with_no_variation,0,
+score_mean,10.619,
+score_sd,5.741,
+pct_scoring_zero,3.85,
+pct_scoring_full,3.36,
+score_values_over_4x_uniform,,possible heaping / data-entry artefact
+geography_key_basis,GP ID canonical; block_id/cluster_id derived from GP-ID overlap,
+districts_present_every_year,25,
+districts_only_in_some_years__2022-23,"Dakshina Kannada, Udupi, Uttara Kannada",
+districts_only_in_some_years__2023-24,Chikkamagaluru,
+districts_only_in_some_years__2024-25,Chikkamagaluru,
+year_x_grade_cells,9,
+gp_units_total,5034,
+gp_units_below_min_n,16,excluded from rankings (min n = 15)
+block_units_total,168,
+block_units_below_min_n,1,excluded from rankings (min n = 60)
+gender_share_F,53.48,

@@ -1,0 +1,171 @@
+district,block,n_students,pct_mean,pct_sd,pct_floor,pct_p90,gender_gap_pp
+Bagalkote,B0008 badami,14288,61.54,26.76,20.0,95.0,1.82
+Bagalkote,B0009 bagalkot,8571,70.88,24.16,35.0,95.0,1.38
+Bagalkote,B0021 bilagi,8362,56.57,27.12,15.0,90.0,3.55
+Bagalkote,B0069 hunagund,10214,58.7,28.28,15.0,95.0,1.46
+Bagalkote,B0072 jamakhandi,11470,55.96,28.25,15.0,90.0,2.43
+Bagalkote,B0099 mudhol,8239,49.05,27.53,10.0,85.0,2.49
+Ballari,B0012 ballari east,12764,44.43,29.9,5.0,85.0,3.56
+Ballari,B0013 ballari west,6611,40.32,27.86,5.0,80.0,2.12
+Ballari,B0084 kudligi,103,47.04,29.43,6.0,89.0,0.68
+Ballari,B0117 sandur,12569,44.21,29.7,5.0,85.0,1.97
+Ballari,B0128 siruguppa,14014,39.48,28.16,5.0,80.0,0.71
+Belagavi,B0006 athani,9858,54.51,27.2,15.0,90.0,2.89
+Belagavi,B0011 bailhongal,11947,64.68,25.5,25.0,95.0,2.97
+Belagavi,B0017 belgaum rural,10733,66.51,22.91,35.0,95.0,3.12
+Belagavi,B0032 chikodi,7406,74.64,20.85,45.0,100.0,1.7
+Belagavi,B0045 gokak,5908,66.66,24.2,30.0,95.0,1.18
+Belagavi,B0067 hukkeri,11227,70.29,23.21,35.0,95.0,1.05
+Belagavi,B0075 kagwad,2216,54.65,27.55,15.0,90.0,6.56
+Belagavi,B0078 khanapur,5431,63.55,24.52,25.0,95.0,2.92
+Belagavi,B0098 mudalgi,11571,50.22,27.58,10.0,85.0,1.03
+Belagavi,B0108 nippani,3645,62.56,26.66,20.0,95.0,-1.51
+Belagavi,B0110 raibag,7231,56.31,27.74,15.0,90.0,1.17
+Belagavi,B0113 ramdurg,11485,63.38,26.31,25.0,95.0,1.21
+Belagavi,B0130 soundatti,12207,69.8,23.14,35.0,95.0,2.11
+Belagavi,B0153 kittur,4827,63.57,24.36,30.0,95.0,2.51
+Bengaluru Rural,B0040 devanahalli,5936,81.21,20.45,55.0,100.0,1.71
+Bengaluru Rural,B0042 doddaballapura,7502,55.31,26.63,15.0,90.0,0.74
+Bengaluru Rural,B0064 hosakote,7887,53.72,27.6,15.0,90.0,3.38
+Bengaluru Rural,B0107 nelamangala,6306,60.41,24.87,25.0,90.0,2.8
+Bidar,B0007 aurad,5870,56.44,28.14,15.0,90.0,-0.41
+Bidar,B0015 basavakalyan,10510,41.96,28.71,5.0,85.0,0.51
+Bidar,B0019 bhalki,8904,41.71,28.42,5.0,85.0,1.68
+Bidar,B0020 bidar,7859,41.43,28.37,5.0,85.0,1.36
+Bidar,B0068 humnabad,9790,49.03,30.02,5.0,90.0,2.31
+Chamarajanagara,B0027 chamarajanagar,7670,52.74,27.28,15.0,90.0,6.09
+Chamarajanagara,B0050 gundlupet,9274,50.02,27.94,10.0,85.0,7.47
+Chamarajanagara,B0054 hanur,5741,49.66,28.1,10.0,90.0,4.94
+Chamarajanagara,B0080 kollegala,4914,51.08,27.4,10.0,90.0,5.47
+Chamarajanagara,B0142 yelandur,2577,48.3,26.55,10.0,85.0,6.67
+Chikkaballapura,B0010 bagepally,6830,42.52,27.18,5.0,80.0,1.19
+Chikkaballapura,B0030 chikkaballapur,7277,52.1,27.09,15.0,90.0,4.57
+Chikkaballapura,B0034 chintamani,8631,52.68,28.73,10.0,90.0,3.94
+Chikkaballapura,B0047 gudibanda,2550,46.45,27.03,10.0,85.0,1.7
+Chikkaballapura,B0124 sidlaghatta,7596,49.04,27.35,10.0,85.0,2.3
+Chikkaballapura,B0167 gowribidanur,3451,45.08,27.6,10.0,85.0,2.62
+Chikkamagaluru,B0145 biruru,3988,63.19,25.56,25.0,95.0,3.08
+Chikkamagaluru,B0147 chikmagalur,6118,56.23,27.66,15.0,90.0,4.29
+Chikkamagaluru,B0152 kadur,5777,58.31,27.96,15.0,95.0,2.65
+Chikkamagaluru,B0154 koppa,2437,70.51,23.93,35.0,95.0,2.16
+Chikkamagaluru,B0160 moodigere,3569,54.81,24.97,20.0,90.0,2.27
+Chikkamagaluru,B0163 narasimharajapura,1933,62.38,24.94,25.0,95.0,3.59
+Chikkamagaluru,B0165 sringeri,835,61.86,25.91,25.0,95.0,6.25
+Chikkamagaluru,B0166 tarikere,4237,62.15,25.71,25.0,95.0,2.61
+Chitradurga,B0026 challakere,21467,37.51,28.49,0.0,80.0,3.42
+Chitradurga,B0035 chitradurga,18330,42.25,27.88,5.0,80.0,4.29
+Chitradurga,B0059 hiriyur,14139,47.68,28.8,10.0,90.0,2.6
+Chitradurga,B0060 holalkere,9651,48.8,28.62,10.0,90.0,4.54
+Chitradurga,B0063 hosadurga,12987,50.58,28.89,10.0,90.0,4.28
+Chitradurga,B0097 molakalmur,10764,29.92,26.84,0.0,70.0,0.85
+Dakshina Kannada,B0095 mangaluru south,1623,72.92,22.31,40.0,95.0,4.8
+Davanagere,B0028 channagiri,8934,52.85,28.7,10.0,90.0,5.51
+Davanagere,B0037 davanagere(n),4453,48.06,26.87,10.0,85.0,5.27
+Davanagere,B0038 davanagere(s),3422,56.02,28.18,15.0,90.0,3.91
+Davanagere,B0056 harihara,6417,54.57,28.19,15.0,90.0,4.2
+Davanagere,B0062 honnali,7822,48.63,28.17,10.0,85.0,4.71
+Davanagere,B0071 jagalur,7288,38.57,27.72,5.0,80.0,2.99
+Dharwad,B0041 dharwad,21943,68.89,24.5,35.0,95.0,2.21
+Dharwad,B0066 hubli,11073,65.22,25.71,25.0,95.0,1.39
+Dharwad,B0076 kalghatagi,13220,56.5,26.32,20.0,90.0,4.5
+Dharwad,B0086 kundagol,10273,64.73,25.49,25.0,95.0,3.67
+Dharwad,B0106 navalgund,10303,54.17,27.59,15.0,90.0,3.52
+Gadag,B0043 gadag rural,12123,47.99,27.32,10.0,85.0,4.33
+Gadag,B0102 mundaragi,8454,47.98,27.01,10.0,85.0,2.43
+Gadag,B0105 naragund,4842,54.06,27.26,15.0,90.0,0.94
+Gadag,B0115 ron,14509,56.01,28.06,15.0,90.0,1.76
+Gadag,B0122 shirhatti,11483,56.02,26.77,15.0,90.0,2.85
+Hassan,B0003 alur,2879,64.81,25.56,25.0,95.0,4.66
+Hassan,B0004 arakalagudu,7281,53.6,26.17,15.0,85.0,4.62
+Hassan,B0005 arasikere,7841,59.58,26.69,20.0,95.0,2.89
+Hassan,B0018 belur,4843,59.29,25.14,20.0,90.0,2.97
+Hassan,B0029 channarayapatna,6418,68.29,26.64,25.0,100.0,3.78
+Hassan,B0057 hassan,6449,62.57,25.84,25.0,95.0,1.93
+Hassan,B0061 holenarasipura,5928,52.51,26.66,15.0,85.0,3.75
+Hassan,B0116 sakaleshapura,3578,59.0,25.95,20.0,90.0,4.13
+Haveri,B0023 byadagi,5085,60.09,25.73,25.0,90.0,8.25
+Haveri,B0053 hanagal,10350,53.67,26.88,15.0,90.0,5.15
+Haveri,B0058 hirekerur,8486,58.68,27.03,20.0,95.0,2.35
+Haveri,B0114 ranebennur,9481,61.78,25.99,25.0,95.0,3.21
+Haveri,B0118 savanur,6809,57.93,26.84,20.0,90.0,1.23
+Haveri,B0121 shiggoan,5416,64.82,23.33,30.0,95.0,3.39
+Haveri,B0149 haveri,8364,55.76,26.98,15.0,90.0,5.13
+Kalaburagi,B0001 afzalpur,10194,46.82,30.0,5.0,90.0,-0.68
+Kalaburagi,B0002 aland,15677,42.87,28.07,5.0,85.0,-0.14
+Kalaburagi,B0033 chincholi,12003,41.39,27.9,5.0,80.0,0.71
+Kalaburagi,B0036 chittapur,13761,35.16,26.33,5.0,75.0,2.19
+Kalaburagi,B0048 gulbarga north,5279,45.63,26.97,10.0,85.0,0.96
+Kalaburagi,B0049 gulbarga south,7377,40.49,27.0,5.0,80.0,1.7
+Kalaburagi,B0073 jewargi,16840,46.48,28.74,10.0,85.0,-0.87
+Kalaburagi,B0119 sedam,10516,37.86,27.31,5.0,80.0,2.32
+Kodagu,B0092 madikeri,4776,55.02,26.16,20.0,90.0,4.59
+Kodagu,B0129 somavarpet,3787,59.34,25.54,20.0,90.0,3.81
+Kodagu,B0140 virajpet,4984,50.02,27.74,10.0,88.5,2.09
+Kolar,B0014 bangarapete,2073,52.64,26.13,15.0,85.0,3.0
+Kolar,B0074 k g f,358,66.03,27.13,20.0,95.0,15.3
+Kolar,B0079 kolar,8412,54.22,27.31,15.0,90.0,2.91
+Kolar,B0094 malur,6782,51.18,26.63,15.0,85.0,1.79
+Kolar,B0100 mulbagal,6811,49.64,28.12,10.0,90.0,1.35
+Kolar,B0131 srinivasapur,6941,54.28,28.89,10.0,90.0,1.81
+Kolar,B0151 k g f,3002,46.08,26.14,10.0,80.0,2.58
+Koppal,B0044 gangavathi,16483,45.01,27.43,10.0,85.0,1.62
+Koppal,B0081 koppal,15439,49.87,27.26,10.0,85.0,1.51
+Koppal,B0085 kuknoor,6125,46.11,27.21,10.0,85.0,1.64
+Koppal,B0088 kustagi,14933,48.19,26.89,10.0,85.0,-1.92
+Koppal,B0143 yelburga,10327,47.13,28.28,10.0,85.0,1.77
+Mandya,B0083 krishnaraja pet,5,79.0,11.4,68.0,88.0,-1.67
+Mandya,B0090 maddur,5901,54.52,26.98,15.0,90.0,4.67
+Mandya,B0093 malavally,7720,54.21,26.83,15.0,90.0,4.8
+Mandya,B0103 nagamangala,6082,62.57,25.54,25.0,95.0,2.74
+Mandya,B0109 pandavapura,4874,63.23,25.61,25.0,95.0,3.27
+Mandya,B0132 srirangapatna,4035,57.24,28.16,15.0,90.0,4.63
+Mandya,B0148 h.d.kote,108,52.73,27.64,15.0,90.0,1.76
+Mandya,B0155 krishnaraja pet,6661,50.47,26.83,15.0,85.0,4.83
+Mandya,B0158 mandya north,4277,56.91,25.82,20.0,90.0,3.39
+Mandya,B0159 mandya south,2712,55.77,28.07,15.0,95.0,4.08
+Mysuru,B0104 nanjanagud,8896,52.77,28.42,10.0,90.0,5.9
+Mysuru,B0133 t.n.pura,6954,59.33,27.13,20.0,95.0,4.93
+Mysuru,B0148 h.d.kote,5867,52.21,27.8,15.0,90.0,4.5
+Mysuru,B0150 hunsur,5616,51.95,26.82,15.0,90.0,3.49
+Mysuru,B0156 krishnarajanagara,3785,53.92,28.04,15.0,90.0,1.63
+Mysuru,B0162 mysore rural,5223,55.3,26.85,15.0,90.0,4.75
+Mysuru,B0164 periya patna,5255,64.47,25.47,30.0,95.0,4.16
+Raichur,B0039 devadurga,14171,42.82,26.89,5.0,80.0,-0.07
+Raichur,B0089 lingasugur,15003,45.25,26.95,10.0,80.0,-2.66
+Raichur,B0096 manvi,12586,49.01,28.14,10.0,85.0,-0.3
+Raichur,B0111 raichur,13764,49.59,28.8,10.0,90.0,3.25
+Raichur,B0126 sindhanur,14600,46.61,27.41,10.0,85.0,0.11
+Ramanagara,B0077 kanakapura,8568,57.12,27.2,15.0,90.0,4.45
+Ramanagara,B0112 ramanagara,4460,76.26,23.03,45.0,100.0,2.6
+Ramanagara,B0146 channapatna,6050,52.24,27.81,15.0,90.0,6.06
+Ramanagara,B0157 magadi,5868,56.47,26.89,15.0,90.0,3.41
+Tumakuru,B0031 chiknayakanhalli,8784,63.08,25.18,25.0,95.0,3.16
+Tumakuru,B0046 gubbi,11721,72.47,25.39,30.0,100.0,1.73
+Tumakuru,B0082 koratagere,5775,59.13,26.3,20.0,90.0,4.54
+Tumakuru,B0087 kunigal,7076,61.54,26.04,25.0,95.0,4.09
+Tumakuru,B0091 madhugiri,9112,51.69,27.36,15.0,90.0,3.08
+Tumakuru,B0127 sira,13283,54.38,26.97,15.0,90.0,2.99
+Tumakuru,B0135 tiptur,6816,66.06,24.54,30.0,95.0,3.08
+Tumakuru,B0136 tumkur,11261,63.97,25.02,25.0,95.0,2.86
+Tumakuru,B0137 turuvekere,6426,72.29,24.09,35.0,100.0,3.52
+Tumakuru,B0168 pavagada,3857,72.34,22.92,40.0,100.0,2.18
+Udupi,B0022 brahmavara,1850,73.54,23.26,40.0,100.0,4.59
+Udupi,B0024 byndoor,560,85.1,15.72,64.5,100.0,-2.04
+Udupi,B0138 udupi,405,62.65,25.6,22.0,95.0,2.88
+Uttara Kannada,B0101 mundagod,466,60.28,26.75,20.0,90.0,7.55
+Uttara Kannada,B0144 yellapur,335,83.43,18.87,55.0,100.0,4.87
+Vijayanagara,B0051 hadagali,8727,47.12,28.03,10.0,85.0,-0.71
+Vijayanagara,B0052 hagaribommanahalli,11100,43.33,27.42,5.0,80.0,2.14
+Vijayanagara,B0055 harapanahalli,17073,41.31,27.57,5.0,80.0,0.91
+Vijayanagara,B0065 hosapete,9803,43.55,27.24,5.0,80.0,1.68
+Vijayanagara,B0084 kudligi,14706,42.96,28.99,5.0,85.0,2.59
+Vijayapura,B0016 basavan bagewadi,11240,63.2,27.99,20.0,95.0,0.98
+Vijayapura,B0025 chadachan,6301,66.96,26.58,25.0,95.0,1.93
+Vijayapura,B0070 indi,11400,53.22,29.37,10.0,90.0,2.11
+Vijayapura,B0125 sindagi,12843,49.9,28.75,10.0,90.0,0.65
+Vijayapura,B0134 talikoti,298,76.02,18.32,50.0,95.0,2.2
+Vijayapura,B0139 vijayapura rural,16624,61.69,27.64,20.0,95.0,1.34
+Vijayapura,B0161 muddebihal,10877,50.98,29.57,10.0,90.0,0.5
+Yadgir,B0120 shahapur,14094,46.78,27.93,10.0,85.0,-0.6
+Yadgir,B0123 shorapur,19558,50.85,28.97,10.0,90.0,-1.04
+Yadgir,B0141 yadgir,11201,45.5,28.04,10.0,85.0,-0.44

@@ -1,0 +1,102 @@
+idx,section,indicator,nfhs6_urban,nfhs6_rural,nfhs6_total,nfhs5_total
+1,Population and Household Profile Urban Rural Total Total,Population below age 5 years (%),6.8,6.3,6.5,7.0
+2,Population and Household Profile Urban Rural Total Total,Population below age 15 years (%),21.9,22.0,22.0,22.9
+3,Population and Household Profile Urban Rural Total Total,Population age 60 years and above (%),13.1,15.8,14.6,13.3
+4,Population and Household Profile Urban Rural Total Total,Population living in households with electricity (%),99.8,99.6,99.7,99.1
+5,Population and Household Profile Urban Rural Total Total,Population living in households with an improved drinking-water source1 (%),98.9,96.2,97.3,95.3
+6,Population and Household Profile Urban Rural Total Total,Households using iodized salt (%),98.3,94.7,96.3,92.8
+7,Population and Household Profile Urban Rural Total Total,Households with any usual member covered under a health insurance/financing scheme (%),57.1,68.1,63.3,31.8
+8,Population and Household Profile Urban Rural Total Total,Households with any usual member having a bank account/post office account (%),98.0,99.1,98.6,94.5
+9,Population and Household Profile Urban Rural Total Total,Female population age 6 years and above who ever attended school (%),86.4,71.5,77.8,73.0
+10,Population and Household Profile Urban Rural Total Total,Households with any usual female members owning a house and/or land (alone or jointly with others) (%),20.2,36.9,29.5,16.2
+11,Population and Household Profile Urban Rural Total Total,Children age 2-4 years who attended pre-school (%) Characteristics of Adults (age 15-49 years),51.7,50.0,50.7,44.5
+12,Population and Household Profile Urban Rural Total Total,Women with 10 or more years of schooling (%),69.4,48.3,57.6,50.2
+13,Population and Household Profile Urban Rural Total Total,Men with 10 or more years of schooling (%),69.8,57.3,63.0,56.5
+14,Population and Household Profile Urban Rural Total Total,Women who have ever used the internet (%),74.1,45.1,57.9,35.0
+15,Population and Household Profile Urban Rural Total Total,Men who have ever used the internet (%) Marriage and Fertility,90.2,79.4,84.3,56.3
+16,Population and Household Profile Urban Rural Total Total,Women age 20-24 years married before age 18 years (%),10.0,19.1,15.3,21.3
+17,Population and Household Profile Urban Rural Total Total,Men age 25-29 years married before age 21 years (%),4.2,4.6,4.4,6.1
+18,Population and Household Profile Urban Rural Total Total,Total fertility rate (children per woman),1.7,1.8,1.8,1.7
+19,Population and Household Profile Urban Rural Total Total,Women age 15-19 years who were already mothers or pregnant at the time of the survey (%) Current Use of Family Planning Methods (currently married women age 15–49 years),2.2,6.8,4.9,5.4
+20,Population and Household Profile Urban Rural Total Total,Any method2 (%),60.3,68.2,64.8,68.7
+21,Population and Household Profile Urban Rural Total Total,Any modern method2 (%),57.6,67.4,63.2,68.2
+22,Population and Household Profile Urban Rural Total Total,Any traditional method (%),2.7,0.8,1.6,0.5
+23,Population and Household Profile Urban Rural Total Total,Female sterilization (%),49.1,62.8,56.9,57.4
+24,Population and Household Profile Urban Rural Total Total,Male sterilization (%) Unmet Need for Family Planning (currently married women age 15–49 years),0.0,0.1,0.0,0.0
+25,Population and Household Profile Urban Rural Total Total,Total unmet need3 (%),10.6,7.4,8.8,6.4
+26,Population and Household Profile Urban Rural Total Total,Unmet need for spacing3 (%),5.8,4.9,5.3,3.7
+27,Population and Household Profile Urban Rural Total Total,Unmet need for limiting3 (%) Maternal and Child Health Antenatal Care (for last birth in the 5 years before the survey),4.8,2.5,3.5,2.7
+28,Population and Household Profile Urban Rural Total Total,Mothers who had an antenatal check-up in the first trimester (%),88.3,77.3,82.4,71.0
+29,Population and Household Profile Urban Rural Total Total,Mothers who had any antenatal care visits (%),94.9,97.5,96.3,98.3
+30,Population and Household Profile Urban Rural Total Total,Mothers who had at least 4 antenatal care visits (%),87.6,81.9,84.5,70.9
+31,Population and Household Profile Urban Rural Total Total,Mothers whose last birth was protected against neonatal tetanus4 (%),96.3,95.6,95.9,93.6
+32,Population and Household Profile Urban Rural Total Total,Mothers who consumed iron folic acid for 100 days or more when they were pregnant (%),84.0,74.5,78.9,44.7
+33,Population and Household Profile Urban Rural Total Total,Mothers who consumed iron folic acid for 180 days or more when they were pregnant (%),73.4,60.4,66.4,26.7
+34,Population and Household Profile Urban Rural Total Total,Registered pregnancies for which the mother received a Mother and Child Protection (MCP) card (%) Delivery Care (for births in the 5 years before the survey),95.5,99.4,97.6,97.6
+35,Population and Household Profile Urban Rural Total Total,Institutional births (%),99.1,98.3,98.7,97.0
+36,Population and Household Profile Urban Rural Total Total,Institutional births in public facility (%),45.0,68.4,58.1,64.8
+37,Population and Household Profile Urban Rural Total Total,Births attended by skilled health personnel5(%),96.7,96.6,96.6,93.8
+38,Population and Household Profile Urban Rural Total Total,Births delivered by caesarean section (%),52.6,40.2,45.7,31.5
+39,Population and Household Profile Urban Rural Total Total,Births in a private health facility that were delivered by caesarean section (%),62.9,64.9,63.8,52.5
+40,Population and Household Profile Urban Rural Total Total,"Births in a public health facility that were delivered by caesarean section (%) Note: Major indicators are highlighted in grey. ( ) Based on 25-49 unweighted cases * Percentage not shown; based on fewer than 25 unweighted cases 1Piped water into dwelling/yard/plot, piped to neighbour, public tap/standpipe, tube well or borehole, protected dug well, protected spring, rain water, tanker truck, cart with small tank, bottled water, community RO plant. The main source used for drinking water at the time of interview is recorded. 2Any method includes other methods that are not shown separately; Any modern method includes other modern methods that are not shown separately. 3Unmet need for family planning refers to fecund women who are not using contraception but who wish to postpone the next birth (spacing) or stop childbearing altogether (limiting). Specifically, women are considered to have unmet need for spacing if they are: · At risk of becoming pregnant, not using contraception, and either do not want to become pregnant within the next two years, or are unsure if or when they want to become pregnant. · Pregnant with a mistimed pregnancy. · Postpartum amenorrhoeic for up to two years following a mistimed birth and not using contraception. Women are considered to have unmet need for limiting if they are: · At risk of becoming pregnant, not using contraception, and want no (more) children. · Pregnant with an unwanted pregnancy. · Postpartum amenorrhoeic for up to two years following an unwanted birth and not using contraception. 4Includes mothers with two injections during the pregnancy for their last birth, or two or more injections (the last within 3 years of the last live birth), or three or more injections (the last within 5 years of the last birth), or four or more injections (the last within 10 years of the last live birth), or five or more injections at any time prior to the last birth. 5Doctor/nurse/LHV/ANM/midwife/other health personnel. Postnatal Care (for last birth in the 5 years before the survey) Urban Rural Total Total",41.1,30.4,34.0,22.6
+41,Population and Household Profile Urban Rural Total Total,Mothers who received postnatal care from a doctor/nurse/LHV/ANM/midwife/other health personnel within 2 days of delivery+ (%),94.1,93.2,93.6,87.4
+42,Population and Household Profile Urban Rural Total Total,Children born at home who were taken to a health facility for a check-up within 24 hours of birth (%),*,(27.0),23.4,12.3
+43,Population and Household Profile Urban Rural Total Total,Children who received postnatal care from a doctor/nurse/LHV/ANM/midwife/ other health personnel within 2 days of delivery+ (%) Child Vaccinations and Vitamin A Supplementation,92.5,93.8,93.2,85.5
+44,Population and Household Profile Urban Rural Total Total,Children age 12-23 months fully vaccinated based on information from either vaccination card or mother's recall6 (%),90.0,90.5,90.2,84.3
+45,Population and Household Profile Urban Rural Total Total,Children age 12-23 months fully vaccinated based on information from vaccination card only7 (%),89.9,93.1,91.8,88.3
+46,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received any vaccine (%),96.9,96.8,96.8,97.5
+47,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received BCG (%),96.5,96.4,96.4,97.1
+48,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received 3 doses of polio vaccine8 (%),91.0,91.6,91.3,87.5
+49,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received 3 doses of pentavalent vaccine (%),92.5,93.8,93.3,92.3
+50,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received the first dose of measles-containing vaccine (MCV) (%),95.9,95.4,95.6,91.4
+51,Population and Household Profile Urban Rural Total Total,Children age 24-35 months who have received a second dose of measles-containing vaccine (MCV) (%),78.6,80.2,79.4,62.4
+52,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received birth dose of hepatitis B vaccine (%),90.8,93.7,92.5,84.5
+53,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who have received 3 doses of rotavirus vaccine (%),87.5,82.3,84.4,5.9
+54,Population and Household Profile Urban Rural Total Total,Children age 9-35 months who received a vitamin A dose in the last 6 months (%),88.5,90.7,89.7,86.2
+55,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who received most of their vaccinations in a public health facility (%),82.4,96.7,90.9,91.7
+56,Population and Household Profile Urban Rural Total Total,Children age 12-23 months who received most of their vaccinations in a private health facility (%) Treatment of Childhood Diseases (children under age 5 years),16.2,3.3,8.6,7.9
+57,Population and Household Profile Urban Rural Total Total,Prevalence of diarrhoea in the 2 weeks preceding the survey (%),5.8,6.5,6.2,5.3
+58,Population and Household Profile Urban Rural Total Total,Prevalence of severe diarrhoea in the 2 weeks preceding the survey (%),1.4,1.0,1.2,0.7
+59,Population and Household Profile Urban Rural Total Total,Prevalence of symptoms of acute respiratory infection (ARI) in the 2 weeks preceding the survey (%),0.6,0.9,0.8,1.5
+60,Population and Household Profile Urban Rural Total Total,Children with fever or symptoms of ARI in the 2 weeks preceding the survey taken to a health facility or health provider (%) Child Feeding Practices and Nutritional Status of Children,82.8,78.8,80.3,65.7
+61,Population and Household Profile Urban Rural Total Total,Children under age 3 years breastfed within one hour of birth9 (%),52.7,44.7,48.3,49.1
+62,Population and Household Profile Urban Rural Total Total,Children under age 6 months exclusively breastfed10 (%),58.6,63.7,61.6,61.0
+63,Population and Household Profile Urban Rural Total Total,Children under age 6 months currently breastfeeding10 (%),92.8,94.5,93.8,92.4
+64,Population and Household Profile Urban Rural Total Total,Children under age 6 months exclusively breastfed or breastfeeding and consuming plain water only/other milk10 (%),79.9,84.0,82.3,75.2
+65,Population and Household Profile Urban Rural Total Total,Children age 6-8 months receiving solid or semi-solid food and breastmilk10 (%),60.7,56.2,57.9,45.8
+66,Population and Household Profile Urban Rural Total Total,"Breastfeeding children age 6-23 months receiving an adequate diet10, 11 (%)",14.8,13.8,14.2,10.6
+67,Population and Household Profile Urban Rural Total Total,"Non-breastfeeding children age 6-23 months receiving an adequate diet10, 11 (%)",31.2,31.2,31.2,18.9
+68,Population and Household Profile Urban Rural Total Total,"Total children age 6-23 months receiving an adequate diet10, 11 (%)",19.7,17.3,18.3,12.4
+69,Population and Household Profile Urban Rural Total Total,Children under 5 years who are stunted (height-for-age)12 (%),19.0,32.0,26.5,35.4
+70,Population and Household Profile Urban Rural Total Total,Children under 5 years who are wasted (weight-for-height)12 (%),16.3,20.5,18.7,19.5
+71,Population and Household Profile Urban Rural Total Total,Children under 5 years who are severely wasted (weight-for-height)13 (%),3.1,5.6,4.6,8.4
+72,Population and Household Profile Urban Rural Total Total,Children under 5 years who are underweight (weight-for-age)12 (%),20.2,33.4,27.8,32.9
+73,Population and Household Profile Urban Rural Total Total,"Children under 5 years who are overweight (weight-for-height)14 (%) +LHV = Lady Health Visitor; ANM = Auxiliary Nurse Midwife 6Vaccinated with BCG, measles-containing vaccine (MCV)/MR/MMR/Measles, and 3 doses each of polio (excluding polio vaccine given at birth) and DPT or penta vaccine. 7Among children whose vaccination card was shown to the interviewer, percentage vaccinated with BCG, measles-containing vaccine (MCV)/MR/MMR/Measles, and 3 doses each of polio (excluding polio vaccine given at birth) and DPT or penta vaccine. 8Not including polio vaccination given at birth. 9Based on the last child born in the 3 years before the survey. 10Based on the youngest child living with the mother. 11Breastfed children receiving 4 or more food groups and a minimum meal frequency, non-breastfed children fed with a minimum of 3 Infant and Young Child Feeding Practices (fed with other milk or milk products at least twice a day, a minimum meal frequency that is, receiving solid or semi-solid food at least twice a day for breastfed infants 6-8 months and at least three times a day for breastfed children 9-23 months, and solid or semi-solid foods from at least four food groups not including the milk or milk products food group). 12Below -2 standard deviations, based on the WHO standard. 13Below -3 standard deviations, based on the WHO standard. 14Above +2 standard deviations, based on the WHO standard. Nutritional Status of Adults (age 15-49 years) Urban Rural Total Total",1.1,0.9,1.0,3.2
+74,Population and Household Profile Urban Rural Total Total,Women whose Body Mass Index (BMI) is below normal (BMI <18.5 kg/m2)15 (%),10.5,18.6,15.1,17.2
+75,Population and Household Profile Urban Rural Total Total,Men whose Body Mass Index (BMI) is below normal (BMI <18.5 kg/m2) (%),8.5,18.4,14.0,14.3
+76,Population and Household Profile Urban Rural Total Total,Women who are overweight or obese (BMI ≥25.0 kg/m2)15 (%),51.7,33.0,41.2,30.2
+77,Population and Household Profile Urban Rural Total Total,Men who are overweight or obese (BMI ≥25.0 kg/m2) (%) Blood Sugar Level among Adults (age 15 years and above),42.9,31.1,36.4,30.9
+78,Population and Household Profile Urban Rural Total Total - Women,Blood sugar level - high (141-160 mg/dl)16 (%),8.8,8.0,8.3,5.7
+79,Population and Household Profile Urban Rural Total Total - Women,Blood sugar level - very high (>160 mg/dl)16 (%),14.8,10.7,12.4,6.8
+80,Population and Household Profile Urban Rural Total Total - Women,Blood sugar level - high or very high (>140 mg/dl) or taking medicine to control blood sugar level16 (%),25.8,20.0,22.3,14.0
+81,Population and Household Profile Urban Rural Total Total - Men,Blood sugar level - high (141-160 mg/dl)16 (%),9.2,9.6,9.4,6.6
+82,Population and Household Profile Urban Rural Total Total - Men,Blood sugar level - very high (>160 mg/dl)16 (%),17.8,13.0,14.8,7.6
+83,Population and Household Profile Urban Rural Total Total - Men,Blood sugar level - high or very high (>140 mg/dl) or taking medicine to control blood sugar level16 (%) Hypertension among Adults (age 15 years and above),29.7,23.9,26.1,15.6
+84,Population and Household Profile Urban Rural Total Total - Women,Mildly elevated blood pressure (Systolic 140-159 mm of Hg and/or Diastolic 90-99 mm of Hg) (%),11.9,11.4,11.6,14.8
+85,Population and Household Profile Urban Rural Total Total - Women,Moderately or severely elevated blood pressure (Systolic ≥160 mm of Hg and/or Diastolic ≥100 mm of Hg) (%),6.6,6.3,6.4,6.2
+86,Population and Household Profile Urban Rural Total Total - Women,Elevated blood pressure (Systolic ≥140 mm of Hg and/or Diastolic ≥90 mm of Hg) or taking medicine to control blood pressure (%),27.8,23.3,25.1,25.0
+87,Population and Household Profile Urban Rural Total Total - Men,Mildly elevated blood pressure (Systolic 140-159 mm of Hg and/or Diastolic 90-99 mm of Hg) (%),17.1,14.4,15.4,17.2
+88,Population and Household Profile Urban Rural Total Total - Men,Moderately or severely elevated blood pressure (Systolic ≥160 mm of Hg and/or Diastolic ≥100 mm of Hg) (%),4.1,3.9,4.0,6.7
+89,Population and Household Profile Urban Rural Total Total - Men,Elevated blood pressure (Systolic ≥140 mm of Hg and/or Diastolic ≥90 mm of Hg) or taking medicine to control blood pressure (%) Women's Empowerment (women age 15-49 years),32.4,25.7,28.2,26.9
+90,Population and Household Profile Urban Rural Total Total - Men,Currently married women who usually participate in three household decisions17 (%),92.9,86.4,89.2,82.7
+91,Population and Household Profile Urban Rural Total Total - Men,Women who worked in the last 12 months and were paid in cash (%),35.8,44.2,40.6,37.0
+92,Population and Household Profile Urban Rural Total Total - Men,Women having a bank or savings account that they themselves use (%),94.4,95.0,94.7,88.7
+93,Population and Household Profile Urban Rural Total Total - Men,Women having a mobile phone that they themselves use (%),85.9,61.7,72.4,61.8
+94,Population and Household Profile Urban Rural Total Total - Men,Women age 15-24 years who use hygienic methods of protection during their menstrual period18 (%) Gender Based Violence (age 18-49 years),93.6,77.4,84.1,84.6
+95,Population and Household Profile Urban Rural Total Total - Men,Ever-married women age 18-49 years who have ever experienced spousal violence19 (%),6.9,19.9,14.1,44.4
+96,Population and Household Profile Urban Rural Total Total - Men,Ever-married women age 18-49 years who have experienced physical violence during any pregnancy (%),2.2,3.5,2.9,5.8
+97,Population and Household Profile Urban Rural Total Total - Men,Young women age 18-29 years who experienced sexual violence by age 18 (%) Tobacco Use and Alcohol Consumption among Adults (age 15 years and above),0.0,0.2,0.1,2.1
+98,Population and Household Profile Urban Rural Total Total - Men,Women age 15 years and above who use any kind of tobacco (%),2.3,9.4,6.4,8.6
+99,Population and Household Profile Urban Rural Total Total - Men,Men age 15 years and above who use any kind of tobacco (%),18.1,28.6,24.2,27.3
+100,Population and Household Profile Urban Rural Total Total - Men,Women age 15 years and above who consume alcohol (%),0.2,0.8,0.5,0.9
+101,Population and Household Profile Urban Rural Total Total - Men,"Men age 15 years and above who consume alcohol (%) 15Excludes pregnant women and women with a birth in the preceding 2 months. 16Random blood sugar measurement. 17Decisions about health care for herself, making major household purchases, and visits to her family or relatives. 18Reusable sanitary pads, disposable sanitary pads, tampons, and menstrual cups are considered to be hygienic methods of protection. 19Spousal violence is defined as physical and/or sexual violence.",13.3,17.3,15.6,16.6

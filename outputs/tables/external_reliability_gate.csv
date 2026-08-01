@@ -1,0 +1,5 @@
+level,usable,match_pct,bias_p,reason
+district,True,100.0,,coverage 100.0% and no detectable selection bias (p=n/a)
+block,True,70.1,0.7606,coverage 70.1% and no detectable selection bias (p=0.761)
+cluster,False,0.0,,UDISE+ has no Cluster field; the education-cluster layer does not exist in any joinable external source
+gp,False,37.6,0.8277,coverage 37.6% below the 60% floor

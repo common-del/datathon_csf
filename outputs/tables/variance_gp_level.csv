@@ -1,0 +1,5 @@
+level,n_groups,raw_pct_of_between_place_variance,df_adjusted_pct
+District,29,31.1,30.7
+Block,166,45.8,44.0
+Cluster,2584,73.8,45.9
+GP (each its own group),5018,100.0,

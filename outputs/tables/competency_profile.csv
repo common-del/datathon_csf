@@ -1,0 +1,165 @@
+competency_code,competency_label,year,grade,gender,n,pct_items_correct,pct_mastered
+addition,addition,2022-23,4.0,F,55958,61.45,76.35
+addition,addition,2022-23,4.0,M,48057,59.22,74.23
+addition,addition,2022-23,5.0,F,60265,67.49,82.6
+addition,addition,2022-23,5.0,M,52899,64.99,80.78
+addition,addition,2022-23,6.0,F,49019,70.97,84.49
+addition,addition,2022-23,6.0,M,46504,69.57,82.32
+addition,addition,2023-24,4.0,F,84969,50.17,73.78
+addition,addition,2023-24,4.0,M,71971,47.74,70.64
+addition,addition,2023-24,5.0,F,87663,54.55,77.61
+addition,addition,2023-24,5.0,M,74316,51.97,74.15
+addition,addition,2023-24,6.0,F,81105,70.9,84.11
+addition,addition,2023-24,6.0,M,70833,65.88,80.28
+addition,addition,2024-25,4.0,F,111475,67.45,82.55
+addition,addition,2024-25,4.0,M,98392,65.24,80.36
+addition,addition,2024-25,5.0,F,110454,55.97,79.27
+addition,addition,2024-25,5.0,M,93554,53.93,76.52
+addition,addition,2024-25,6.0,F,96626,66.49,82.54
+addition,addition,2024-25,6.0,M,85027,61.87,78.85
+data handling,data handling,2023-24,4.0,F,84969,57.78,57.78
+data handling,data handling,2023-24,4.0,M,71971,55.53,55.53
+data handling,data handling,2023-24,5.0,F,87663,65.12,65.12
+data handling,data handling,2023-24,5.0,M,74316,61.99,61.99
+data handling,data handling,2023-24,6.0,F,81105,58.27,58.27
+data handling,data handling,2023-24,6.0,M,70833,53.64,53.64
+data handling,data handling,2024-25,5.0,F,110454,66.11,66.11
+data handling,data handling,2024-25,5.0,M,93554,64.0,64.0
+data handling,data handling,2024-25,6.0,F,96626,55.01,55.01
+data handling,data handling,2024-25,6.0,M,85027,52.54,52.54
+division,division,2022-23,4.0,F,55958,40.43,38.26
+division,division,2022-23,4.0,M,48057,38.54,36.37
+division,division,2022-23,5.0,F,60265,54.22,52.95
+division,division,2022-23,5.0,M,52899,50.91,48.94
+division,division,2022-23,6.0,F,49019,56.19,72.21
+division,division,2022-23,6.0,M,46504,53.77,70.33
+division,division,2023-24,4.0,F,84969,40.92,56.21
+division,division,2023-24,4.0,M,71971,39.88,55.07
+division,division,2023-24,5.0,F,87663,42.66,56.62
+division,division,2023-24,5.0,M,74316,40.12,53.7
+division,division,2023-24,6.0,F,81105,47.71,60.09
+division,division,2023-24,6.0,M,70833,44.19,56.25
+division,division,2024-25,4.0,F,111475,46.49,44.11
+division,division,2024-25,4.0,M,98392,43.63,40.87
+division,division,2024-25,5.0,F,110454,39.93,54.55
+division,division,2024-25,5.0,M,93554,37.96,52.3
+division,division,2024-25,6.0,F,96626,38.94,52.34
+division,division,2024-25,6.0,M,85027,36.17,49.1
+fraction,fraction,2022-23,4.0,F,55958,41.6,41.6
+fraction,fraction,2022-23,4.0,M,48057,39.21,39.21
+fraction,fraction,2022-23,5.0,F,60265,64.08,64.08
+fraction,fraction,2022-23,5.0,M,52899,61.49,61.49
+fraction,fraction,2022-23,6.0,F,49019,74.12,74.12
+fraction,fraction,2022-23,6.0,M,46504,71.27,71.27
+fraction,fraction,2023-24,4.0,F,84969,52.61,52.61
+fraction,fraction,2023-24,4.0,M,71971,50.35,50.35
+fraction,fraction,2023-24,5.0,F,87663,78.85,78.85
+fraction,fraction,2023-24,5.0,M,74316,75.26,75.26
+fraction,fraction,2023-24,6.0,F,81105,73.13,73.13
+fraction,fraction,2023-24,6.0,M,70833,69.19,69.19
+measurement,measurement,2022-23,4.0,F,55958,50.52,51.74
+measurement,measurement,2022-23,4.0,M,48057,50.12,51.2
+measurement,measurement,2022-23,5.0,F,60265,46.52,57.52
+measurement,measurement,2022-23,5.0,M,52899,46.53,57.78
+measurement,measurement,2022-23,6.0,F,49019,55.75,57.49
+measurement,measurement,2022-23,6.0,M,46504,56.45,58.43
+measurement,measurement,2023-24,4.0,F,84969,43.93,52.95
+measurement,measurement,2023-24,4.0,M,71971,43.6,53.01
+measurement,measurement,2023-24,5.0,F,87663,46.11,44.63
+measurement,measurement,2023-24,5.0,M,74316,46.63,45.84
+measurement,measurement,2023-24,6.0,F,81105,56.86,73.4
+measurement,measurement,2023-24,6.0,M,70833,56.54,73.12
+measurement,measurement,2024-25,4.0,F,111475,62.84,65.81
+measurement,measurement,2024-25,4.0,M,98392,61.37,64.25
+measurement,measurement,2024-25,5.0,F,110454,51.53,52.47
+measurement,measurement,2024-25,5.0,M,93554,51.82,53.3
+measurement,measurement,2024-25,6.0,F,96626,46.62,62.26
+measurement,measurement,2024-25,6.0,M,85027,47.33,62.71
+mensuration,mensuration,2024-25,6.0,F,96626,56.33,56.33
+mensuration,mensuration,2024-25,6.0,M,85027,54.7,54.7
+multiplication,multiplication,2022-23,4.0,F,55958,52.89,54.94
+multiplication,multiplication,2022-23,4.0,M,48057,49.87,52.08
+multiplication,multiplication,2022-23,5.0,F,60265,61.65,63.68
+multiplication,multiplication,2022-23,5.0,M,52899,57.35,59.1
+multiplication,multiplication,2022-23,6.0,F,49019,52.32,65.8
+multiplication,multiplication,2022-23,6.0,M,46504,49.51,62.62
+multiplication,multiplication,2023-24,4.0,F,84969,46.61,49.88
+multiplication,multiplication,2023-24,4.0,M,71971,43.91,46.66
+multiplication,multiplication,2023-24,5.0,F,87663,57.31,73.97
+multiplication,multiplication,2023-24,5.0,M,74316,53.31,70.03
+multiplication,multiplication,2023-24,6.0,F,81105,45.2,46.82
+multiplication,multiplication,2023-24,6.0,M,70833,41.0,41.93
+multiplication,multiplication,2024-25,4.0,F,111475,56.47,58.57
+multiplication,multiplication,2024-25,4.0,M,98392,53.13,54.8
+multiplication,multiplication,2024-25,5.0,F,110454,49.11,67.04
+multiplication,multiplication,2024-25,5.0,M,93554,46.04,63.89
+multiplication,multiplication,2024-25,6.0,F,96626,36.42,34.6
+multiplication,multiplication,2024-25,6.0,M,85027,33.61,31.9
+number sense,number sense,2022-23,4.0,F,55958,59.63,62.18
+number sense,number sense,2022-23,4.0,M,48057,56.99,59.04
+number sense,number sense,2022-23,5.0,F,60265,72.78,84.64
+number sense,number sense,2022-23,5.0,M,52899,69.97,82.18
+number sense,number sense,2022-23,6.0,F,49019,59.79,62.62
+number sense,number sense,2022-23,6.0,M,46504,59.43,62.57
+number sense,number sense,2023-24,4.0,F,84969,59.29,75.81
+number sense,number sense,2023-24,4.0,M,71971,57.45,74.05
+number sense,number sense,2023-24,5.0,F,87663,64.38,81.07
+number sense,number sense,2023-24,5.0,M,74316,62.42,78.95
+number sense,number sense,2023-24,6.0,F,81105,55.32,56.36
+number sense,number sense,2023-24,6.0,M,70833,53.61,54.26
+number sense,number sense,2024-25,4.0,F,111475,65.29,77.04
+number sense,number sense,2024-25,4.0,M,98392,62.19,73.98
+number sense,number sense,2024-25,5.0,F,110454,58.26,60.06
+number sense,number sense,2024-25,5.0,M,93554,56.19,57.6
+number sense,number sense,2024-25,6.0,F,96626,52.92,52.46
+number sense,number sense,2024-25,6.0,M,85027,51.27,50.98
+place value,place value,2022-23,4.0,F,55958,48.21,48.21
+place value,place value,2022-23,4.0,M,48057,45.39,45.39
+place value,place value,2022-23,5.0,F,60265,59.68,59.68
+place value,place value,2022-23,5.0,M,52899,56.31,56.31
+place value,place value,2023-24,4.0,F,84969,49.29,65.96
+place value,place value,2023-24,4.0,M,71971,47.63,64.05
+place value,place value,2023-24,5.0,F,87663,55.77,55.77
+place value,place value,2023-24,5.0,M,74316,53.88,53.88
+place value,place value,2024-25,4.0,F,111475,55.18,55.18
+place value,place value,2024-25,4.0,M,98392,52.98,52.98
+place value,place value,2024-25,5.0,F,110454,60.14,60.14
+place value,place value,2024-25,5.0,M,93554,57.85,57.85
+place value,place value,2024-25,6.0,F,96626,58.22,58.22
+place value,place value,2024-25,6.0,M,85027,54.66,54.66
+shapes,shapes,2022-23,4.0,F,55958,50.47,64.34
+shapes,shapes,2022-23,4.0,M,48057,48.57,62.64
+shapes,shapes,2022-23,5.0,F,60265,52.58,69.58
+shapes,shapes,2022-23,5.0,M,52899,49.53,66.6
+shapes,shapes,2022-23,6.0,F,49019,69.98,86.17
+shapes,shapes,2022-23,6.0,M,46504,67.55,84.07
+shapes,shapes,2023-24,4.0,F,84969,35.6,35.6
+shapes,shapes,2023-24,4.0,M,71971,34.31,34.31
+shapes,shapes,2023-24,5.0,F,87663,47.01,66.81
+shapes,shapes,2023-24,5.0,M,74316,46.2,65.39
+shapes,shapes,2023-24,6.0,F,81105,58.6,60.84
+shapes,shapes,2023-24,6.0,M,70833,55.27,56.96
+shapes,shapes,2024-25,4.0,F,111475,66.88,78.29
+shapes,shapes,2024-25,4.0,M,98392,64.16,76.01
+shapes,shapes,2024-25,5.0,F,110454,46.67,65.27
+shapes,shapes,2024-25,5.0,M,93554,45.17,63.87
+shapes,shapes,2024-25,6.0,F,96626,65.71,82.55
+shapes,shapes,2024-25,6.0,M,85027,62.05,79.13
+subtraction,subtraction,2022-23,4.0,F,55958,43.62,59.29
+subtraction,subtraction,2022-23,4.0,M,48057,41.5,57.01
+subtraction,subtraction,2022-23,5.0,F,60265,51.83,68.74
+subtraction,subtraction,2022-23,5.0,M,52899,49.0,65.4
+subtraction,subtraction,2022-23,6.0,F,49019,68.06,72.16
+subtraction,subtraction,2022-23,6.0,M,46504,65.0,68.74
+subtraction,subtraction,2023-24,4.0,F,84969,55.21,78.97
+subtraction,subtraction,2023-24,4.0,M,71971,53.05,76.32
+subtraction,subtraction,2023-24,5.0,F,87663,40.26,59.68
+subtraction,subtraction,2023-24,5.0,M,74316,38.49,57.28
+subtraction,subtraction,2023-24,6.0,F,81105,52.93,54.64
+subtraction,subtraction,2023-24,6.0,M,70833,50.79,52.31
+subtraction,subtraction,2024-25,4.0,F,111475,49.21,65.65
+subtraction,subtraction,2024-25,4.0,M,98392,47.0,63.01
+subtraction,subtraction,2024-25,5.0,F,110454,52.95,69.85
+subtraction,subtraction,2024-25,5.0,M,93554,51.01,67.36
+subtraction,subtraction,2024-25,6.0,F,96626,44.85,45.04
+subtraction,subtraction,2024-25,6.0,M,85027,43.05,43.11

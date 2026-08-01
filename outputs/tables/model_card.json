@@ -1,0 +1,16 @@
+{
+  "level": "gp",
+  "best_feature_set": "A_persistence",
+  "best_model": "ridge",
+  "cv_rmse_pp": 10.481,
+  "cv_r2": 0.486,
+  "persistence_rmse_pp": 10.481,
+  "verdict": "no feature set beats simple persistence - report that honestly",
+  "n_units": 1939,
+  "bottom_quartile_cutoff_pct": 38.82,
+  "early_warning_precision": 0.699,
+  "early_warning_recall": 0.384,
+  "n_structural_features": 0,
+  "structural_features": [],
+  "_full_predictions": "       district         block  ...     target predicted_pct\n0     Bagalkote  B0008 badami  ...  48.660000         49.02\n1     Bagalkote  B0008 badami  ...  77.430000         63.40\n2     Bagalkote  B0008 badami  ...  56.889999         54.19\n3     Bagalkote  B0008 badami  ...  60.160000         48.54\n4     Bagalkote  B0008 badami  ...  68.470001         50.52\n...         ...           ...  ...        ...           ...\n1946     Yadgir  B0141 yadgir  ...  47.869999         48.63\n1947     Yadgir  B0141 yadgir  ...  37.500000         45.13\n1948     Yadgir  B0141 yadgir  ...  29.629999         40.62\n1949     Yadgir  B0141 yadgir  ...  35.919998         36.70\n1950     Yadgir  B0141 yadgir  ...  54.220001         48.47\n\n[1939 rows x 7 columns]"
+}

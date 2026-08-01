@@ -1,0 +1,12 @@
+competency_code,competency_label,F,M,gap_pp_F_minus_M,overall_mastery_pct,difficulty_tier
+addition,addition,80.29,77.5,2.79,79.0,easy (foundational)
+number sense,number sense,67.87,65.68,2.19,67.5,easy (foundational)
+shapes,shapes,67.45,65.45,2.0,66.4,easy (foundational)
+subtraction,subtraction,63.4,60.82,2.58,62.8,easy (foundational)
+fraction,fraction,64.77,61.9,2.87,62.6,middle
+data handling,data handling,60.68,57.76,2.92,59.4,middle
+measurement,measurement,57.88,58.1,-0.22,57.5,middle
+place value,place value,57.96,55.41,2.55,56.4,hard (higher-order)
+multiplication,multiplication,56.86,53.24,3.62,55.9,hard (higher-order)
+mensuration,mensuration,56.33,54.7,1.63,55.6,hard (higher-order)
+division,division,53.54,50.87,2.67,52.6,hard (higher-order)

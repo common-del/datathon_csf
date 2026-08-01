@@ -1,9 +1,12 @@
-# Python teams: list every package your src/run_all.py imports, pinned where possible.
-# Example:
-# pandas==2.2.2
-# numpy==1.26.4
-# scikit-learn==1.5.0
-# matplotlib==3.9.0
-#
-# R teams: ignore this file. Pin your packages with renv.lock (renv::snapshot())
-# or an install.R script instead.
+# Pinned to what the pipeline actually uses. Nothing exotic, nothing that needs a compiler.
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+matplotlib>=3.7
+plotly>=5.18
+openpyxl>=3.1
+python-pptx>=0.6.21
+pyarrow>=14.0
+notebook>=7.0
+python-calamine>=0.2

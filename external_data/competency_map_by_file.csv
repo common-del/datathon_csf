@@ -1,0 +1,181 @@
+grade,year,item,competency,question_name
+4,2022-23,Q1,number sense,oral_number_name_association
+4,2022-23,Q2,place value,identify_place_value_for_a_given_number
+4,2022-23,Q3,number sense,arranging_in_ascending_or_descending_order
+4,2022-23,Q4,number sense,before_and_after
+4,2022-23,Q5,addition,add_using_pictures
+4,2022-23,Q6,addition,addition_with_carry(abstract)
+4,2022-23,Q7,subtraction,subtraction_without_borrow(abstract)
+4,2022-23,Q8,subtraction,subtraction_with_borrow(abstract)
+4,2022-23,Q9,multiplication,multiplication_repeated_addition
+4,2022-23,Q10,multiplication,long_multiplication(abstract)
+4,2022-23,Q11,multiplication,long_multiplication(abstract)
+4,2022-23,Q12,division,division_with_repeated_subtraction
+4,2022-23,Q13,division,long_division_without_remainder
+4,2022-23,Q14,division,long_division_without_remainder
+4,2022-23,Q15,fraction,fractions_using_pictures
+4,2022-23,Q16,measurement,read_time
+4,2022-23,Q17,measurement,reading_a_calendar
+4,2022-23,Q18,measurement,measure_length_using_standard_unit
+4,2022-23,Q19,shapes,2d_shapes_attributes
+4,2022-23,Q20,shapes,observes_and_extends_patterns_in_sequence_of_shapes
+4,2023-24,Q1,number sense,oral_number_name_association
+4,2023-24,Q2,place value,identify_place_value_for_a_given_number
+4,2023-24,Q3,number sense,arranging_in_ascending_or_descending_order
+4,2023-24,Q4,place value,expansion_form_and_short_form_of_numbers
+4,2023-24,Q5,addition,add_using_pictures
+4,2023-24,Q6,addition,addition_with_carry(abstract)
+4,2023-24,Q7,subtraction,subtraction_without_borrow(abstract)
+4,2023-24,Q8,subtraction,subtraction_word_problem
+4,2023-24,Q9,multiplication,long_multiplication(abstract)
+4,2023-24,Q10,multiplication,long_multiplication(abstract)
+4,2023-24,Q11,multiplication,multiplication_word_problem
+4,2023-24,Q12,division,division_with_repeated_subtraction
+4,2023-24,Q13,division,long_division_without_remainder
+4,2023-24,Q14,fraction,fractions_using_pictures
+4,2023-24,Q15,measurement,read_time
+4,2023-24,Q16,measurement,2d_shapes_area
+4,2023-24,Q17,measurement,measuring_weight_standard
+4,2023-24,Q18,measurement,measures_using_standard
+4,2023-24,Q19,shapes,3d_shapes_attributes
+4,2023-24,Q20,data handling,observes_and_analyse
+4,2024-25,Q1,number sense,oral_number_name_association
+4,2024-25,Q2,place value,identify_place_value_for_a_given_number
+4,2024-25,Q3,number sense,
+4,2024-25,Q4,number sense,
+4,2024-25,Q5,addition,addition_without_carry_(seeing_pictures)
+4,2024-25,Q6,addition,addition_with_carry_(abstract)
+4,2024-25,Q7,subtraction,subtraction_without_borrow_(seeing_pictures)
+4,2024-25,Q8,subtraction,subtraction_with_borrow_(abstract)
+4,2024-25,Q9,multiplication,multiplication_(seeing_pictures)
+4,2024-25,Q10,multiplication,long_multiplication_(abstract)
+4,2024-25,Q11,multiplication,long_multiplication_(abstract)
+4,2024-25,Q12,division,division_(seeing_pictures)
+4,2024-25,Q13,division,long_division_without_remainder
+4,2024-25,Q14,division,long_division_without_remainder
+4,2024-25,Q15,number sense,fractions_using_pictures
+4,2024-25,Q16,measurement,time_-_read_time_using_pictures
+4,2024-25,Q17,measurement,time_-_read_calendar
+4,2024-25,Q18,shapes,2-d_shapes_identification
+4,2024-25,Q19,measurement,using_pictures
+4,2024-25,Q20,shapes,patterns_(seeing_pictures)
+5,2022-23,Q1,number sense,oral_number_name_association
+5,2022-23,Q2,place value,identify_place_value_for_a_given_number
+5,2022-23,Q3,number sense,arranging_in_ascending_or_descending_order
+5,2022-23,Q4,addition,add_using_pictures
+5,2022-23,Q5,addition,addition_with_carry(abstract)
+5,2022-23,Q6,subtraction,subtraction_without_borrow(abstract)
+5,2022-23,Q7,subtraction,subtraction_with_borrow(abstract)
+5,2022-23,Q8,multiplication,multiplication_repeated_addition
+5,2022-23,Q9,multiplication,long_multiplication(abstract)
+5,2022-23,Q10,multiplication,long_multiplication(abstract)
+5,2022-23,Q11,division,division_with_repeated_subtraction
+5,2022-23,Q12,division,long_division_without_remainder
+5,2022-23,Q13,division,long_division_without_remainder
+5,2022-23,Q14,fraction,fractions_using_pictures
+5,2022-23,Q15,shapes,2d_shapes_attributes
+5,2022-23,Q16,measurement,measure_length_using_standard_unit
+5,2022-23,Q17,measurement,reading_a_calendar
+5,2022-23,Q18,measurement,read_time
+5,2022-23,Q19,measurement,measure_length_using_standard_unit
+5,2022-23,Q20,shapes,observes_and_extends_patterns_in_sequence_of_shapes
+5,2023-24,Q1,number sense,oral_number_name_association
+5,2023-24,Q2,place value,identify_place_value_for_a_given_number
+5,2023-24,Q3,number sense,arranging_in_ascending_or_descending_order
+5,2023-24,Q4,addition,addition_word_problem
+5,2023-24,Q5,addition,addition_with_carry(abstract)
+5,2023-24,Q6,subtraction,subtraction_using_pictures
+5,2023-24,Q7,subtraction,subtraction_with_borrow(abstract)
+5,2023-24,Q8,multiplication,multiplication_repeated_addition
+5,2023-24,Q9,multiplication,long_multiplication(abstract)
+5,2023-24,Q10,division,division_with_repeated_subtraction
+5,2023-24,Q11,division,long_division_without_remainder
+5,2023-24,Q12,fraction,fractions_using_pictures
+5,2023-24,Q13,shapes,3d_shapes_attributes
+5,2023-24,Q14,measurement,reading_a_calendar
+5,2023-24,Q15,measurement,read_time
+5,2023-24,Q16,measurement,measure_length_using_standard_unit
+5,2023-24,Q17,measurement,measures_using_standard
+5,2023-24,Q18,measurement,read_weight
+5,2023-24,Q19,shapes,patterns_observe
+5,2023-24,Q20,data handling,observes_and_analyse
+5,2024-25,Q1,number sense,number_sequence
+5,2024-25,Q2,place value,identify_place_value_for_a_given_number
+5,2024-25,Q3,number sense,
+5,2024-25,Q4,addition,addition_with_carry_(word_problem)
+5,2024-25,Q5,addition,addition_with_carry_(abstract)
+5,2024-25,Q6,subtraction,subtraction_without_borrow_(seeing_picture)
+5,2024-25,Q7,subtraction,subtraction_with_borrow_(abstract)
+5,2024-25,Q8,multiplication,multiplication_(seeing_pictures)
+5,2024-25,Q9,multiplication,long_multiplication_(abstract)
+5,2024-25,Q10,division,division_(word_problem)
+5,2024-25,Q11,division,long_division_(abstract)
+5,2024-25,Q12,number sense,fractions_using_pictures
+5,2024-25,Q13,shapes,3-d_shapes_attributes_seeing_pictures
+5,2024-25,Q14,measurement,time_-_read_calendar
+5,2024-25,Q15,measurement,time_-_read_time_using_pictures
+5,2024-25,Q16,measurement,
+5,2024-25,Q17,measurement,volume-word_problem
+5,2024-25,Q18,measurement,weight-_readweight_using_pictures
+5,2024-25,Q19,shapes,patterns_(seeing_pictures)
+5,2024-25,Q20,data handling,observes_and_analyse_(seeing_pictures)
+6,2022-23,Q1,number sense,"comparision_greater_than,equal_to_and_lesser_than_with_numbers_only"
+6,2022-23,Q2,number sense,arranging_in_ascending_or_descending_order
+6,2022-23,Q3,number sense,
+6,2022-23,Q4,addition,add_using_pictures
+6,2022-23,Q5,addition,addition_without_carry(abstract)
+6,2022-23,Q6,addition,addition_with_carry(abstract)
+6,2022-23,Q7,subtraction,"mental_math_subtract_multiples_of_10,100s"
+6,2022-23,Q8,subtraction,subtraction_with_borrow(abstract)
+6,2022-23,Q9,subtraction,subtraction_with_borrow(abstract)
+6,2022-23,Q10,multiplication,long_multiplication(abstract)
+6,2022-23,Q11,multiplication,long_multiplication(abstract)
+6,2022-23,Q12,division,division_with_repeated_subtraction
+6,2022-23,Q13,division,long_division_with_remainder
+6,2022-23,Q14,fraction,fractions_using_pictures
+6,2022-23,Q15,shapes,2d_shapes_attributes
+6,2022-23,Q16,shapes,
+6,2022-23,Q17,measurement,"mensuration(area,perimeter,circumference,radius,diameter_etc)"
+6,2022-23,Q18,measurement,read_time
+6,2022-23,Q19,measurement,measuring_weight_standard
+6,2022-23,Q20,addition,addition_word_problem
+6,2023-24,Q1,number sense,"comparision_greater_than,equal_to_and_lesser_than_with_numbers_only"
+6,2023-24,Q2,number sense,arranging_in_ascending_or_descending_order
+6,2023-24,Q3,number sense,
+6,2023-24,Q4,addition,addition_with_carry(abstract)
+6,2023-24,Q5,addition,addition_word_problem
+6,2023-24,Q6,subtraction,subtraction_using_pictures
+6,2023-24,Q7,subtraction,subtraction_with_borrow(abstract)
+6,2023-24,Q8,subtraction,subtraction_word_problem
+6,2023-24,Q9,multiplication,long_multiplication(abstract)
+6,2023-24,Q10,multiplication,long_multiplication(abstract)
+6,2023-24,Q11,multiplication,multiplication_word_problem
+6,2023-24,Q12,division,long_division_without_remainder
+6,2023-24,Q13,division,division_word_problem
+6,2023-24,Q14,fraction,fractions_using_pictures
+6,2023-24,Q15,shapes,3d_shapes_attributes
+6,2023-24,Q16,shapes,
+6,2023-24,Q17,measurement,read_time
+6,2023-24,Q18,measurement,measuring_weight_conversion
+6,2023-24,Q19,shapes,patterns_observe
+6,2023-24,Q20,data handling,observes_and_analyse
+6,2024-25,Q1,place value,
+6,2024-25,Q2,number sense,
+6,2024-25,Q3,number sense,
+6,2024-25,Q4,addition,addition_with_carry_(abstract)
+6,2024-25,Q5,addition,addition_with_carry_(wordproblem)
+6,2024-25,Q6,subtraction,subtraction_with_borrow_(seeing_pictures)
+6,2024-25,Q7,subtraction,subtraction_with_borrow_(abstract)
+6,2024-25,Q8,subtraction,subtraction_with_borrow(word_problem)
+6,2024-25,Q9,multiplication,long_multiplication_(abstract)
+6,2024-25,Q10,multiplication,long_multiplication_(abstract)
+6,2024-25,Q11,multiplication,multiplication_(word_problem)
+6,2024-25,Q12,division,long_division_(abstract)
+6,2024-25,Q13,division,division_(word_problem)
+6,2024-25,Q14,number sense,fractions_using_pictures
+6,2024-25,Q15,shapes,2-d_shapes_attributes_seeing_pictures
+6,2024-25,Q16,shapes,
+6,2024-25,Q17,mensuration,"mensuration(area,perimeter,circumference,radius,diameter_etc)"
+6,2024-25,Q18,measurement,time_-_read_time_using_pictures
+6,2024-25,Q19,measurement,volume-conversion(word_problem)
+6,2024-25,Q20,data handling,observes_and_analyse_(seeing_pictures)

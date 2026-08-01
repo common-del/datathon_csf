@@ -1,0 +1,34 @@
+contest_district_value,standard_district,kag_join_name,nfhs_join_name,aser_join_name,udise_join_name,sslc_dist_code(s),notes
+bagalkot,Bagalkote,Bagalkote,Bagalkot,Bagalkot,Bagalkot,OA,
+ballari,Ballari,Ballari,Bellary,Bellary,Ballari,TT,
+belagavi,Belagavi,Belagavi (sum with 'belagavi chikkodi'),Belgaum (sum with 'belagavi chikkodi'),Belgaum (sum with 'belagavi chikkodi'),Belagavi,NN,"SSLC alone splits the same way as the contest data (NN=Belagavi direct match); KAG/NFHS/ASER only have one whole-district row, so sum this row + belagavi chikkodi before joining those three"
+belagavi chikkodi,Belagavi,Belagavi (sum with 'belagavi'),Belgaum (sum with 'belagavi'),Belgaum (sum with 'belagavi'),Belagavi Chikkodi,,"see note above; SSLC code NA = Chikkodi, direct match"
+bengaluru rural,Bengaluru Rural,Bengaluru (Rural),Bangalore Rural,Bengaluru Rural,Bengaluru Rural,BB,
+(no contest row),Bengaluru Urban,Bengaluru (Urban),Bangalore,Bengaluru Urban,,AS + AN (sum),Contest data has ZERO rows for Bengaluru Urban in any year/grade - nothing to join. Plausibly because the district has no rural Gram Panchayats (fully urban/BBMP) so the GP contest never covers it. External data for this district (KAG/NFHS/ASER/SSLC all have it) is unusable for this join.
+bidar,Bidar,Bidar,Bidar,Bidar,Bidar,SS,
+chamarajanagara,Chamarajanagara,Chamarajanagara,Chamarajanagar,Chamarajanagar,Chamarajanagara,EA,
+chikkaballapura,Chikkaballapura,Chikkaballapura,Chikkaballapura,Chikkaballapur,Chikkaballapura,CA,
+chikkamagaluru,Chikkamagaluru,Chikkamagaluru,Chikmagalur,Chikkamagaluru,Chikkamangaluru,JJ,
+chitradurga,Chitradurga,Chitradurga,Chitradurga,Chitradurga,Chitradurga,II,
+dakshina kannada,Dakshina Kannada,Dakshina Kannada,Dakshina Kannada,Dakshina Kannada,Dakshina Kannada,GG,
+davanagere,Davanagere,Davanagere,Davanagere,Davanagere,Davanagere,IA,
+dharwad,Dharwad,Dharwada,Dharwad,Dharwad,Dharwad,MM,
+gadag,Gadag,Gadag,Gadag,Gadag,Gadag,MB,
+hassan,Hassan,Hassan,Hassan,Hassan,Hassan,LL,
+haveri,Haveri,Haveri,Haveri,Haveri,Haveri,MA,
+kalaburgi,Kalaburagi,Kalburgi,Gulbarga,Kalaburagi,Kalburgi,QQ,
+kodagu,Kodagu,Kodagu,Kodagu,Kodagu,Kodagu,HH,
+kolar,Kolar,Kolara,Kolar,Kolar,Kolar,CC,
+koppal,Koppal,Koppal,Koppal,Koppal,Koppal,RA,
+mandya,Mandya,Mandya,Mandya,Mandya,Mandya,FF,
+mysuru,Mysuru,Mysuru,Mysore,Mysuru,Mysuru,EE,
+raichur,Raichur,Raichuru,Raichur,Raichur,Raichur,RR,
+ramanagara,Ramanagara,Ramanagara,Ramanagara,Ramanagara,Ramanagara,BA,
+(no contest row),Shivamogga,Shivamogga,Shimoga,Shivamogga,,KK,"Contest data has ZERO rows for Shivamogga in any year/grade - genuine contest-coverage gap, not a naming issue. External data exists (including ASER, which shows Shivamogga at 39.5%/62.4% Std3-5/Std6-8 reading proficiency) but has nothing on the contest side to join against."
+tumakuru,Tumakuru,Tumakuru (sum with 'tumakuru madhugiri'),Tumkur (sum with 'tumakuru madhugiri'),Tumakuru (sum with 'tumakuru madhugiri'),Tumakuru,DD,SSLC splits the same way as the contest data (DD=Tumakuru direct match); sum with madhugiri row before joining KAG/NFHS/ASER
+tumakuru madhugiri,Tumakuru,Tumakuru (sum with 'tumakuru'),Tumkur (sum with 'tumakuru'),Tumakuru (sum with 'tumakuru'),Tumakuru Madhugiri,DA,"SSLC code DA = Madhugiri, direct match"
+udupi,Udupi,Udupi,Udupi,Udupi,Udupi,GA,
+uttara kannada sirsi,Uttara Kannada,Uttara Kannada (partial only),Uttara Kannada (partial only),Uttara Kannada (partial only),Uttara Kannada Sirsi,PA,"Only covers 2 of Uttara Kannada's 11 taluks (mundagod, yellapur) and 801 student-rows total across all 3 years/grades combined - the rest of the district (Karwar, Sirsi town, Siddapur, Ankola, Bhatkal, Honnavar, Kumta, Haliyal, Joida) has no contest rows at all. Treat any KAG/NFHS/ASER/SSLC 'Uttara Kannada' join here as representing a small, non-representative slice, not the whole district. SSLC's own PP=Uttara Kannada code covers the non-Sirsi remainder, which the contest doesn't reach."
+vijayanagar,Vijayanagara,Vijayanagara,(no match - district didn't exist in NFHS-5's 2019-20 survey; use Ballari as proxy),(no separate row in the 2024 ASER report either - use Bellary as proxy),(no match in UDISE),TA,KAG's Vijayanagara row also reuses Ballari's 2011-census figures (see README caveat) since the district was carved out of Ballari in 2021
+vijayapura,Vijayapura,Vijayapura,Bijapur,Vijayapura,Vijayapura,OO,
+yadagiri,Yadgir,Yadgiri,Yadgir,Yadgir,Yadagiri,QA,

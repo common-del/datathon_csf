@@ -1,0 +1,4 @@
+basis,assessed_total,enrolled_total,state_coverage_pct,district_years_over_90pct,district_years_under_50pct,n_district_years
+broad,1379087,5237782,26.3,0,236,279
+rural,1379087,3644154,37.8,0,166,279
+strict,1379087,4464722,30.9,0,203,279

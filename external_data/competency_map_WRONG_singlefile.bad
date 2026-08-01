@@ -1,0 +1,21 @@
+item,competency_code,competency_label,question_name
+Q1,number_sense,number sense,oral_number_name_association
+Q2,place_value,place value,identify_place_value_for_a_given_number
+Q3,number_sense,number sense,arranging_in_ascending_or_descending_order
+Q4,number_sense,number sense,before_and_after
+Q5,addition,addition,add_using_pictures
+Q6,addition,addition,addition_with_carry(abstract)
+Q7,subtraction,subtraction,subtraction_without_borrow(abstract)
+Q8,subtraction,subtraction,subtraction_with_borrow(abstract)
+Q9,multiplication,multiplication,multiplication_repeated_addition
+Q10,multiplication,multiplication,long_multiplication(abstract)
+Q11,multiplication,multiplication,long_multiplication(abstract)
+Q12,division,division,division_with_repeated_subtraction
+Q13,division,division,long_division_without_remainder
+Q14,division,division,long_division_without_remainder
+Q15,fraction,fraction,fractions_using_pictures
+Q16,measurement,measurement,read_time
+Q17,measurement,measurement,reading_a_calendar
+Q18,measurement,measurement,measure_length_using_standard_unit
+Q19,shapes,shapes,2d_shapes_attributes
+Q20,shapes,shapes,observes_and_extends_patterns_in_sequence_of_shapes

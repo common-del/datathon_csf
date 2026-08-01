@@ -1,0 +1,4 @@
+level,match_rate_pct,n_units,sources
+district,100.0,29,"['NFHS-5 (2019-21) district fact sheets', 'ASER 2024 Karnataka district estimates', 'PGI-D 2025-26 (district performance grading)', 'PARAKH Rashtriya Sarvekshan 2024 district dashboard (achievement %, integers)', 'UDISE+ 2024-25 school records, aggregated (Karnataka)', 'Census 2011 Primary Census Abstract, Karnataka (data.gov.in)']"
+block,68.2,170,"['UDISE+ 2024-25 school records aggregated to block level (Karnataka)', 'Census 2011 PCA at CD-Block level, Karnataka (data.gov.in), fuzzy-matched to educational blocks']"
+gp,37.4,5617,['UDISE+ 2024-25 school records aggregated to gp level (Karnataka)']

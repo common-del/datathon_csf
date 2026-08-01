@@ -1,21 +1,24 @@
+# Never commit the primary dataset (competition rule)
+data/primary/*.csv
+data/primary/*.CSV
+data/primary/*.xlsx
+data/primary/*.xls
+data/primary/*.txt
+!data/primary/PUT_THE_DATASET_HERE.txt
+
 __pycache__/
 *.pyc
-.venv/
-venv/
 .ipynb_checkpoints/
 .DS_Store
+Thumbs.db
 
-# Office / LibreOffice lock and temp files
-.~lock.*#
-~$*
-
-# R
-.Rproj.user/
-.Rhistory
-.RData
-renv/library/
-
-# Never commit the dataset. The repo is public, and the data contains
-# student assessment records. Keep all provided and derived data under data/.
+# Belt and braces: nothing under data/ is ever committed except the placeholder
 data/*
-!data/README.md
+!data/primary
+data/primary/*
+!data/primary/PUT_THE_DATASET_HERE.txt
+sandbox_run.log
+
+# 181 MB merged file: over GitHub's 100 MB limit. The notebook rebuilds the identical
+# frame from data/primary/ when this file is absent, so nothing breaks without it.
+external_data/datathon_master_appended_new.csv

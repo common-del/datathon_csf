@@ -1,0 +1,5 @@
+level,targeting_efficiency_ceiling_pct,ceiling_raw_basis_pct,reads_as
+district,6.67,7.34,max share of learning variation reachable by targeting at district level or coarser (df-adjusted basis)
+block,10.13,10.58,max share of learning variation reachable by targeting at block level or coarser (df-adjusted basis)
+cluster,13.07,17.8,max share of learning variation reachable by targeting at cluster level or coarser (df-adjusted basis)
+gp,21.88,22.21,max share of learning variation reachable by targeting at gp level or coarser (df-adjusted basis)

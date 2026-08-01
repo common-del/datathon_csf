@@ -1,0 +1,32 @@
+current_name,census2011_name,nfhs5_name,aser2024_name,census2011_code,revenue_division,is_new_district,parent_district,alt_spellings,is_371J_kalyana_karnataka,princely_legacy
+Bagalkote,Bagalkot,Bagalkot,Bagalkot,556.0,Belagavi,0,,Bagalkote;Bagalkot;Bagalakote,0,Bombay
+Ballari,Bellary,Bellary,Bellary,565.0,Kalaburagi,0,,Ballari;Bellary;Bellari,1,Madras
+Belagavi,Belgaum,Belgaum,Belgaum,555.0,Belagavi,0,,Belagavi;Belgaum;Belgavi;Belagaum,0,Bombay
+Bengaluru Rural,Bangalore Rural,Bangalore Rural,Bengaluru Rural,583.0,Bengaluru,0,,Bengaluru Rural;Bangalore Rural;Bengaluru North,0,Mysore
+Bengaluru Urban,Bangalore,Bangalore (Urban),Bengaluru Urban,572.0,Bengaluru,0,,Bengaluru Urban;Bangalore;Bangalore Urban;Bengaluru,0,Mysore
+Bidar,Bidar,Bidar,Bidar,558.0,Kalaburagi,0,,Bidar;Bider,1,Hyderabad
+Chamarajanagara,Chamarajanagar,Chamarajanagar,Chamarajanagar,578.0,Mysuru,0,,Chamarajanagara;Chamarajanagar;Chamrajnagar,0,Mysore
+Chikkaballapura,Chikkaballapura,Chikkaballapura,Chikkaballapur,582.0,Bengaluru,0,Kolar,Chikkaballapura;Chikkaballapur;Chikballapur,0,Mysore
+Chikkamagaluru,Chikmagalur,Chikmagalur,Chikkamagaluru,570.0,Mysuru,0,,Chikkamagaluru;Chikmagalur;Chickmagalur,0,Mysore
+Chitradurga,Chitradurga,Chitradurga,Chitradurga,566.0,Bengaluru,0,,Chitradurga;Chitaldurg,0,Mysore
+Dakshina Kannada,Dakshina Kannada,Dakshina Kannada,Dakshina Kannada,575.0,Mysuru,0,,Dakshina Kannada;Dakshin Kannad;South Kanara,0,Madras
+Davanagere,Davanagere,Davanagere,Davanagere,567.0,Bengaluru,0,,Davanagere;Davangere,0,Mysore
+Dharwad,Dharwad,Dharwad,Dharwad,562.0,Belagavi,0,,Dharwad;Dharwar,0,Bombay
+Gadag,Gadag,Gadag,Gadag,561.0,Belagavi,0,,Gadag;Gadaga;Gadag-Betageri,0,Bombay
+Hassan,Hassan,Hassan,Hassan,574.0,Mysuru,0,,Hassan;Hasan,0,Mysore
+Haveri,Haveri,Haveri,Haveri,564.0,Belagavi,0,,Haveri,0,Bombay
+Kalaburagi,Gulbarga,Gulbarga,Kalaburagi,579.0,Kalaburagi,0,,Kalaburagi;Gulbarga;Kalburgi;Kalburagi,1,Hyderabad
+Kodagu,Kodagu,Kodagu,Kodagu,576.0,Mysuru,0,,Kodagu;Coorg;Madikeri,0,Coorg
+Kolar,Kolar,Kolar,Kolar,581.0,Bengaluru,0,,Kolar;Kolara,0,Mysore
+Koppal,Koppal,Koppal,Koppal,560.0,Kalaburagi,0,,Koppal;Koppala,1,Hyderabad
+Mandya,Mandya,Mandya,Mandya,573.0,Mysuru,0,,Mandya,0,Mysore
+Mysuru,Mysore,Mysore,Mysuru,577.0,Mysuru,0,,Mysuru;Mysore;Maisuru,0,Mysore
+Raichur,Raichur,Raichur,Raichur,559.0,Kalaburagi,0,,Raichur;Raichuru,1,Hyderabad
+Ramanagara,Ramanagara,Ramanagara,Ramanagara,584.0,Bengaluru,0,Bengaluru Rural,Ramanagara;Ramanagaram;Bengaluru South,0,Mysore
+Shivamogga,Shimoga,Shimoga,Shivamogga,568.0,Bengaluru,0,,Shivamogga;Shimoga;Shivamoga,0,Mysore
+Tumakuru,Tumkur,Tumkur,Tumakuru,571.0,Bengaluru,0,,Tumakuru;Tumkur;Tumkuru,0,Mysore
+Udupi,Udupi,Udupi,Udupi,569.0,Mysuru,0,,Udupi;Udipi,0,Madras
+Uttara Kannada,Uttara Kannada,Uttara Kannada,Uttara Kannada,563.0,Belagavi,0,,Uttara Kannada;Uttar Kannada;North Kanara;Karwar,0,Bombay
+Vijayanagara,,,,,Kalaburagi,1,Ballari,Vijayanagara;Vijayanagar;Vijaynagar;Hosapete;Hospet,1,Madras
+Vijayapura,Bijapur,Bijapur,Vijayapura,557.0,Belagavi,0,,Vijayapura;Vijayapur;Bijapur,0,Bombay
+Yadgir,Yadgir,Yadgir,Yadgir,580.0,Kalaburagi,0,Kalaburagi,Yadgir;Yadagir;Yadagiri;Yadgiri,1,Hyderabad
