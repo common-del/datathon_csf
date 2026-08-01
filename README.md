@@ -1,12 +1,5 @@
 # Datathon 2026 — Karnataka mathematics learning analytics
 
-## Team
-
-Team **datathon_csf** · Datathon 2026 (Akshara Foundation + ACSEL) · Tracks: Data Insights & Visualization, Predictive Analytics, Policy & Intervention Design
-
-Primary evidence: `report.pdf` and `docs/policy_note.pdf`. Supporting: `slides.pptx`. Every numeric claim: `claims.json`.
-
-
 Team **datathon_csf** · Akshara Foundation + ACSEL
 Tracks: Data Insights & Visualization, Predictive Analytics, Policy & Intervention Design
 
@@ -57,7 +50,7 @@ DATA_ACCESS.md             how to get the data before running
 report.pdf                 main findings
 slides.pptx                12-slide deck
 docs/policy_note.pdf       one-page note for the Commissioner
-claims.json                46 numeric claims, each with how to verify it
+claims.json                47 numeric claims, each with how to verify it
 manifest.yml               inventory, tracks, external datasets
 requirements.txt           pinned dependencies
 
