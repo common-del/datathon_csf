@@ -61,7 +61,7 @@ These are public UDISE+ extracts. Sources and the verification log are in
 
 ```
 pip install -r requirements.txt
-jupyter notebook Datathon_2026_CSF_Analysis.ipynb    # then Run All
+jupyter notebook jupyter_notebook.ipynb    # then Run All
 ```
 
 Or headless, without Jupyter:

@@ -1,109 +1,96 @@
 # Datathon 2026 — Karnataka mathematics learning analytics
 
-## Team
+Team **datathon_csf** · Akshara Foundation + ACSEL
+Tracks: Data Insights & Visualization, Predictive Analytics, Policy & Intervention Design
 
-Team **datathon_csf** · Datathon 2026 (Akshara Foundation + ACSEL) · Tracks: Data Insights & Visualization, Predictive Analytics, Policy & Intervention Design
-
-Primary evidence: `report.pdf` and `docs/policy_note.pdf`. Supporting: `slides.pptx`. Every numeric claim: `claims.json`.
+Primary evidence: `report.pdf` and `docs/policy_note.pdf`. Supporting: `slides.pptx`.
+Every numeric claim is listed in `claims.json` with the file and row that proves it.
 
 ## Start here
 
 **1. Get the data.** It is not in this repo, by competition rule and because the merged file is
-181 MB, over GitHub's limit. Read **`DATA_ACCESS.md`**. Quickest route: download the zip from
-https://drive.google.com/file/d/1YFrqXsiXpJg2GnsgN5drQcNXezS4k204/view?usp=sharing and unzip it
-to `external_data/datathon_master_appended_new.csv`.
+181 MB, over GitHub's per-file limit. Read **`DATA_ACCESS.md`**. Quickest route: download the zip
+from https://drive.google.com/file/d/1YFrqXsiXpJg2GnsgN5drQcNXezS4k204/view?usp=sharing and unzip
+it to `external_data/datathon_master_appended_new.csv`.
 
 **2. Run the one notebook.**
 
 ```
 pip install -r requirements.txt
-jupyter notebook Datathon_2026_CSF_Analysis.ipynb     # then Run All
+jupyter notebook jupyter_notebook.ipynb     # then Run All
 ```
 
-`Datathon_2026_CSF_Analysis.ipynb` is the single entry point. Run All rebuilds every figure,
-table and number behind `report.pdf`, `slides.pptx` and `docs/policy_note.pdf`, and its final
-section re-checks all 48 published numbers and prints PASS or FAIL for each.
+`jupyter_notebook.ipynb` is the single entry point. Run All rebuilds every figure, table and
+number behind `report.pdf`, `slides.pptx` and `docs/policy_note.pdf`. Its final section re-checks
+all 48 published numbers against the report and prints PASS or FAIL for each, then prints a map
+tracing every figure to the exact place it appears in each document.
 
-Prefer the command line? `python src/run_all.py` does the pipeline without Jupyter, or
-double-click `RUN_ME.bat` on Windows.
+Headless, without Jupyter:
+
+```
+python src/run_all.py            # the organisers' single entry point
+python src/fix_coverage.py
+python src/day1_verdicts.py
+python src/extra_hypotheses.py
+```
 
 Offline, fixed seed 20260801, roughly three minutes.
 
-## What's in the box
+## What's in the repo
 
 ```
-START_HERE.md              the only page you need on Day 1
-RUN_ME.bat                 double-click to run everything
-CHECK_SETUP.bat            double-click to diagnose your install
+jupyter_notebook.ipynb     the single entry point: Run All reproduces everything
+DATA_ACCESS.md             how to get the data before running
+report.pdf                 main findings
+slides.pptx                12-slide deck
+docs/policy_note.pdf       one-page note for the Commissioner
+claims.json                46 numeric claims, each with how to verify it
+manifest.yml               inventory, tracks, external datasets
+requirements.txt           pinned dependencies
 
-data/primary/              put the Akshara CSV here. Never committed.
-external_data/             8 external datasets, already cleaned and joined
-data/SOURCES.md            every citation, plus the joining hazards
+src/run_all.py             pipeline entry point: QA, analyses, model, figures, dashboard
+src/fix_coverage.py        corrected coverage denominator, asserted against UDISE
+src/day1_verdicts.py       hypotheses H1-H13
+src/extra_hypotheses.py    hypotheses EH1-EH24
+src/variance_gp_level.py   variance decomposition on GP means
+src/figure_*.py            the five standalone figure builders
+src/build_hypothesis_xlsx.py   the 36-hypothesis register
+src/build_deliverables.py  rebuilds slides.pptx, manifest.yml, claims.json
+src/{loader,schema,qa,metrics,analyses,external,model,figures,dashboard,
+     coverage,choropleth,config}.py    pipeline internals
 
-prep/00_check_environment.py    what's installed, what's missing
-prep/01_fetch_census.py         pulls Census 2011 Karnataka (needs internet, run once)
-prep/02_build_udise_covariates.py  rebuilds the UDISE covariates (already done)
-prep/03_make_synthetic.py       fake data shaped like the real thing, for rehearsal
-
-src/run_all.py             the entry point
-src/config.py              the ONLY file you might edit
-src/schema.py              works out which column is which
-src/loader.py              load, clean, harmonise
-src/qa.py                  integrity and anomaly checks
-src/metrics.py             the 5 original metrics
-src/analyses.py            items, competencies, gender, geography, cohorts
-src/external.py            joins, with match-rate reporting
-src/model.py               early-warning model, 3 nested feature sets
-src/figures.py             static charts
-src/dashboard.py           self-contained interactive HTML
-
-docs/report_TEMPLATE.md         report skeleton
-docs/policy_note_TEMPLATE.md    2-page policy note skeleton
-docs/slides_TEMPLATE.pptx       12-slide deck, pre-formatted, figure names printed on each slide
-docs/build_slides.js            regenerates the deck if you want to change the layout
-
-playbook/INSTALL_WINDOWS.md     Thursday night, 40 minutes
-playbook/DAY1_BATTLE_PLAN.md    hour by hour against the 7pm deadline
-playbook/INSIGHT_PLAYBOOK.md    what every output means, and the sentence to write
-playbook/JUDGE_QA_PREP.md       the 14 questions, and how to answer them
-
-outputs/                   everything the pipeline produces
-manifest.yml               auto-generated list of outputs
-claims.json                auto-generated list of every numeric claim
+prep/                      how external_data was built, kept for provenance
+external_data/             11 verified public datasets, plus the competency map
+outputs/figures/           21 charts
+outputs/tables/            61 tables
+outputs/predictions/       Track 2: predicted mean per GP on the 0-20 scale
+outputs/HYPOTHESIS_REGISTER.xlsx   all 36 hypotheses with method and assumptions
+data/                      git-ignored. Never committed. See DATA_ACCESS.md
 ```
 
-## The external data, at a glance
+## External data
 
-| Dataset | Vintage | Finest level available |
+| Dataset | Vintage | Finest level used |
 |---|---|---|
-| Census 2011 Primary Census Abstract, Karnataka | 2011 | CD Block (and village) |
-| NFHS-5 district fact sheets | 2019–21 | District |
-| ASER (rural) Karnataka | 2024 | District (pooled grade bands) |
+| UDISE+ school and enrolment records, Karnataka | 2022-23 to 2024-25 | District, block |
+| Census 2011 Primary Census Abstract | 2011 | CD block |
+| NFHS-5 district fact sheets | 2019-21 | District |
+| NFHS-6 fact sheet | 2023-24 | State |
+| ASER rural Karnataka | 2024 | District |
 | PGI-D | 2025-26 | Educational district |
-| UDISE+ school records, Karnataka | 2022-23 to 2024-25 | **Gram Panchayat** |
-| Karnataka geography hierarchy | 2024-25 | Gram Panchayat |
-| Karnataka district crosswalk | — | 31 revenue / 35 educational districts |
+| PARAKH Rashtriya Sarvekshan | 2024 | District |
+| Karnataka district crosswalk and geography hierarchy | 2024-25 | GP |
+| Dated timeline of 26 school-system events | 2022-25 | Taluk to state |
 
-Gram Panchayat coverage in UDISE is 97.8% for rural schools, which is why block and GP joins work at all. Full caveats in `data/SOURCES.md`.
+Full citations in `external_data/SOURCES.md`, verification log in `docs/VERIFICATION_LOG.md`.
 
-## The five original metrics
-
-1. **Learning Variance Signature** — where the variation in learning actually lives across the administrative hierarchy, with a df-adjusted variance component so small units don't fake a signal.
-2. **Targeting Efficiency Ceiling** — the most of the learning gap any scheme at a given tier could reach, executed perfectly.
-3. **Competency Bottleneck Score** — gate lift × (1 − mastery), finding the competency that is both load-bearing and missing.
-4. **Floor Index** — the 10th percentile tracked against the mean, so you can see whether the weakest children moved.
-5. **Structural Advantage Residual** — actual minus what socio-economic and school-system conditions predict, which turns "correlation is not causation" into a method rather than a caveat.
-
-Plus the **Intervention Triage Score** as the decision tool: gap × children affected × tractability.
-
-## Design notes
-
-- Every analysis step is wrapped. One failure never stops the run; it gets reported at the end of `outputs/RUN_LOG.txt`.
-- Column names are detected against a synonym dictionary, with a manual override in `src/config.py` if detection fails.
-- If no real item-to-competency mapping is supplied, one is inferred by clustering item correlations, and the output says so.
-- Charts use a green-white-red diverging scale, green for the socially preferable direction, white at the benchmark.
-- `external_data/SAMPLE_competency_map_DO_NOT_USE_FOR_REAL_DATA.csv` is a shape example only. On Day 1, save the real mapping as `external_data/competency_map.csv`.
+External covariates are joined only at levels that pass an automatic reliability gate.
+District passes at 100%, block at 68%. Gram Panchayat is refused at 37%, and cluster is refused
+outright because UDISE+ carries no cluster field.
 
 ## Rules compliance
 
-Python only. Single entry point. Relative paths. Fixed seed 20260801. No network at runtime. Dashboard is code-generated Plotly in one self-contained HTML file, no Power BI or Tableau. Primary dataset excluded by `.gitignore`. All external data public and cited in `data/SOURCES.md`.
+Python only. Single entry point. Relative paths throughout. Fixed seed 20260801. No network
+access at runtime. The dashboard is code-generated Plotly in one self-contained HTML file, no
+Power BI or Tableau. The primary dataset is excluded by `.gitignore` and never committed. All
+external data is public and cited.
