@@ -48,6 +48,7 @@ for f in files:
     df = pd.read_csv(f, low_memory=False)
     items = [c for c in df.columns if re.fullmatch(r"Q\d+", str(c))]
     A = df[items].apply(pd.to_numeric, errors="coerce").to_numpy(dtype="float32")
+    if not A.flags.writeable: A = A.copy()   # newer numpy hands back a read-only view
     A[(A != 0) & (A != 1)] = np.nan                      # only 0/1 responses count
     mp = cmap[(cmap.grade == g) & (cmap.year == y)]
     if mp.empty:

@@ -47,6 +47,7 @@ for f in sorted(glob.glob(os.path.join("data", "primary", "std_grade*_20*.csv"))
     d = pd.read_csv(f, low_memory=False)
     items = [c for c in d.columns if re.fullmatch(r"Q\d+", str(c))]
     A = d[items].apply(pd.to_numeric, errors="coerce").to_numpy(dtype="float32")
+    if not A.flags.writeable: A = A.copy()   # newer numpy hands back a read-only view
     A[(A != 0) & (A != 1)] = np.nan
     i2c = dict(zip(cmap[(cmap.grade == g) & (cmap.year == y)]["item"],
                    cmap[(cmap.grade == g) & (cmap.year == y)]["competency"]))
