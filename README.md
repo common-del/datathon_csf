@@ -15,6 +15,11 @@ it to `external_data/datathon_master_appended_new.csv`.
 
 **2. Run the one notebook.**
 
+On Windows, double-click **`RUN_NOTEBOOK.bat`**. It moves to the repo root, checks Python and
+the data, installs the requirements the first time, and opens the notebook.
+
+Any platform:
+
 ```
 pip install -r requirements.txt
 jupyter notebook jupyter_notebook.ipynb     # then Run All
@@ -40,6 +45,7 @@ Offline, fixed seed 20260801, roughly three minutes.
 
 ```
 jupyter_notebook.ipynb     the single entry point: Run All reproduces everything
+RUN_NOTEBOOK.bat           Windows: double-click to open the notebook from the right folder
 DATA_ACCESS.md             how to get the data before running
 report.pdf                 main findings
 slides.pptx                12-slide deck

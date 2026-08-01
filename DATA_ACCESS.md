@@ -59,6 +59,11 @@ These are public UDISE+ extracts. Sources and the verification log are in
 
 ## Then run it
 
+On Windows, just double-click **`RUN_NOTEBOOK.bat`** in the repo root. It handles the folder,
+the dependency install and opening the notebook.
+
+Any platform:
+
 ```
 pip install -r requirements.txt
 jupyter notebook jupyter_notebook.ipynb    # then Run All

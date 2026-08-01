@@ -1,0 +1,6 @@
+*.bat text eol=crlf
+*.ipynb -text
+*.pdf binary
+*.pptx binary
+*.xlsx binary
+*.png binary
