@@ -6,14 +6,28 @@ Team **datathon_csf** · Datathon 2026 (Akshara Foundation + ACSEL) · Tracks: D
 
 Primary evidence: `report.pdf` and `docs/policy_note.pdf`. Supporting: `slides.pptx`. Every numeric claim: `claims.json`.
 
+## Start here
 
-Single entry point, offline, fixed seed, under 3 minutes.
+**1. Get the data.** It is not in this repo, by competition rule and because the merged file is
+181 MB, over GitHub's limit. Read **`DATA_ACCESS.md`**. Quickest route: download the zip from
+https://drive.google.com/file/d/1YFrqXsiXpJg2GnsgN5drQcNXezS4k204/view?usp=sharing and unzip it
+to `external_data/datathon_master_appended_new.csv`.
+
+**2. Run the one notebook.**
 
 ```
-python src/run_all.py          # or double-click RUN_ME.bat on Windows
+pip install -r requirements.txt
+jupyter notebook Datathon_2026_CSF_Analysis.ipynb     # then Run All
 ```
 
-**New here? Read `START_HERE.md`. Nothing else.**
+`Datathon_2026_CSF_Analysis.ipynb` is the single entry point. Run All rebuilds every figure,
+table and number behind `report.pdf`, `slides.pptx` and `docs/policy_note.pdf`, and its final
+section re-checks all 48 published numbers and prints PASS or FAIL for each.
+
+Prefer the command line? `python src/run_all.py` does the pipeline without Jupyter, or
+double-click `RUN_ME.bat` on Windows.
+
+Offline, fixed seed 20260801, roughly three minutes.
 
 ## What's in the box
 

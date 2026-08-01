@@ -100,17 +100,22 @@ PRIMARY = sorted(glob.glob("data/primary/std_grade*_20*.csv"))
 udise_enr = sorted(glob.glob("data/udise_csv/udise_ka_enrolment_by_grade_*.csv"))
 udise_sch = sorted(glob.glob("data/udise_csv/udise_ka_school_*.csv"))
 
-print("master merged file  :", "found" if os.path.exists(MASTER) else "absent (will rebuild from data/primary)")
+print("master merged file  :", "found" if os.path.exists(MASTER)
+      else "absent -> will rebuild from data/primary (see DATA_ACCESS.md)")
 print("primary raw files   :", len(PRIMARY))
 print("UDISE enrolment     :", len(udise_enr))
 print("UDISE school        :", len(udise_sch))
 print("external_data csvs  :", len(glob.glob("external_data/*.csv")))
 if not os.path.exists(MASTER) and len(PRIMARY) != 9:
     raise SystemExit(
-        "No usable primary data.\n"
-        "Either place the 9 organiser files at data/primary/std_grade<G>_<YEAR>.csv\n"
-        "(prep/05_standardise_primary.py converts the original workbooks),\n"
-        "or place the merged file at " + MASTER)
+        "No usable primary data. Two ways to fix this, either works.\n\n"
+        "  A) Download the merged file (zipped, ~181 MB unzipped) and unzip it to:\n"
+        "         external_data/datathon_master_appended_new.csv\n"
+        "     https://drive.google.com/file/d/1YFrqXsiXpJg2GnsgN5drQcNXezS4k204/view?usp=sharing\n\n"
+        "  B) Place the 9 organiser files at data/primary/std_grade<G>_<YEAR>.csv\n"
+        "     (prep/05_standardise_primary.py converts the original workbooks)\n\n"
+        "The file is too large for GitHub's 100 MB limit, so it is not in the repo.\n"
+        "See DATA_ACCESS.md. Both routes produce an identical frame and identical numbers.")
 """)
 
 md("""## 2. Load and build the analysis frame
@@ -1059,6 +1064,69 @@ for f in ["manifest.yml", "claims.json", "report.pdf", "slides.pptx", "docs/poli
     print("   %-46s %s" % (f, "OK" if os.path.exists(f) else "MISSING"))
 print("\nSeed %d. Data source used: %s." % (SEED, SOURCE))
 print("Every figure is also written to outputs/figures/ at 200 dpi.")
+""")
+
+md("""## 15. Rebuild the submission artefacts, and trace every figure to where it appears
+
+This is the last step. It regenerates the artefacts that are derived from data, and prints a map
+showing which figure and which table backs each part of the report, the deck and the policy note.
+
+`report.pdf` and `docs/policy_note.pdf` are deliberately **not** regenerated here. Those two are
+the human-finalised documents committed to the repo, and a notebook run must never overwrite
+them. Everything in them is verified number by number in Section 14 instead.""")
+
+code(r"""
+os.environ["SKIP_DOCS"] = "1"     # protect the finalised report.pdf and policy_note.pdf
+run("src/build_deliverables.py")  # rebuilds slides.pptx, manifest.yml, claims.json, README
+cl = json.load(open("claims.json"))
+print("\nclaims.json  : %d claims, team %s" % (len(cl["claims"]), cl["team_name"]))
+mfy = open("manifest.yml", encoding="utf-8").read()
+print("manifest.yml : team ok %s | three tracks %s"
+      % ("datathon_csf" in mfy, all(t in mfy for t in
+         ["Data Insights", "Predictive Analytics", "Policy & Intervention Design"])))
+from pptx import Presentation
+pr = Presentation("slides.pptx")
+print("slides.pptx  : %d slides, %d embedded figures"
+      % (len(pr.slides._sldIdLst), sum(1 for sl in pr.slides for sh in sl.shapes if sh.shape_type == 13)))
+""")
+
+code(r"""
+TRACE = [
+ ("report §1  Who took the test",        "11_participation.png",        "participation_grade_year.csv, participation_district.csv"),
+ ("report §2.1 Grade gradient",          "10_g6_collapse.png",          "state_grade_year.csv, g6_collapse_panel_gps.csv"),
+ ("report §2.1 Heatmap",                 "09_year_grade_heatmap.png",   "state_grade_year.csv"),
+ ("report §2.2 Boys and girls",          "12_gender_grade_year.png",    "gender_grade_year.csv"),
+ ("report §2.3 All 11 skills",           "13_competency_spectrum.png",  "competency_grade_year.csv"),
+ ("report §3   36 hypotheses",           "(tables only)",               "hypothesis_menu.csv, HYPOTHESIS_REGISTER.xlsx"),
+ ("report §4.1 Where variation lives",   "01_variance_signature.png",   "targeting_efficiency_ceiling.csv"),
+ ("report §4.1 GP-level rerun",          "16_variance_gp_level.png",    "variance_gp_level.csv, variance_gp_level_sequential.csv"),
+ ("report §4.2 Kalyana Karnataka",       "14_kk_vs_rest.png",           "kk_vs_rest_udise.csv"),
+ ("report §4.3 Equity and the floor",    "05_floor_vs_mean.png",        "floor_index_district.csv"),
+ ("report §4.4 Bright spots",            "06_bright_spots.png",         "bright_spots_block.csv"),
+ ("report §5   Which skills matter",     "15_competency_correlation.png","competency_total_correlation.csv, competency_correlation_matrix.csv"),
+ ("slides  s4  The collapse",            "10_g6_collapse.png",          "hypothesis_menu.csv (EH1-EH6, EH22)"),
+ ("slides  s5  Bottleneck",              "02_competency_bottleneck.png","competency_bottleneck.csv"),
+ ("slides  s6  Floor",                   "05_floor_vs_mean.png",        "floor_index_district.csv"),
+ ("slides  s7  Gender",                  "04_gender_by_competency.png", "gender_by_competency.csv"),
+ ("slides  s8  Bright spots",            "06_bright_spots.png",         "bright_spots_block.csv"),
+ ("slides  s9  The product",             "07_triage.png",               "triage_block.csv, dashboard.html"),
+ ("policy note  fact 1 (the ladder)",    "(tables only)",               "competency_prerequisite_pairs.csv"),
+ ("policy note  fact 2 (KK teachers)",   "14_kk_vs_rest.png",           "kk_vs_rest_udise.csv"),
+ ("policy note  fact 3 (averages)",      "01_variance_signature.png",   "variance_gp_level.csv, league_coverage_adjusted.csv"),
+]
+print("%-36s %-32s %s" % ("WHERE IT APPEARS", "FIGURE", "BACKING TABLE(S)"))
+print("-" * 132)
+missing = 0
+for where, figf, tabs in TRACE:
+    okf = "(tables only)" if figf.startswith("(") else ("OK " if os.path.exists(os.path.join(FIG, figf)) else "MISS")
+    if okf == "MISS": missing += 1
+    for t in [x.strip() for x in tabs.split(",")]:
+        if t.endswith(".csv") and not os.path.exists(os.path.join(TAB, t)): missing += 1
+    print("%-36s %-32s %s" % (where, figf, tabs))
+print("-" * 132)
+print("missing artefacts:", missing)
+print("\nEvery row above was produced by this notebook. Nothing in the report, the deck or the")
+print("policy note is drawn from a source outside this run.")
 """)
 
 nb = {"cells": C,

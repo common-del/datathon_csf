@@ -92,8 +92,14 @@ def md_to_pdf(md_path, pdf_path, two_page=False):
     doc.build(story)
     print("wrote", pdf_path)
 
-md_to_pdf("docs/report_FINAL.md", "report.pdf")
-md_to_pdf("docs/policy_note_FINAL.md", os.path.join("docs", "policy_note.pdf"), two_page=True)
+# SKIP_DOCS=1 leaves report.pdf and docs/policy_note.pdf untouched. Those two are the
+# human-finalised documents committed to the repo; the notebook must never overwrite them.
+SKIP_DOCS = bool(os.environ.get("SKIP_DOCS"))
+if SKIP_DOCS:
+    print("SKIP_DOCS set: leaving report.pdf and docs/policy_note.pdf alone")
+else:
+    md_to_pdf("docs/report_FINAL.md", "report.pdf")
+    md_to_pdf("docs/policy_note_FINAL.md", os.path.join("docs", "policy_note.pdf"), two_page=True)
 
 # ============================ 1b. MD -> DOCX (editable) ============================
 from docx import Document
@@ -183,8 +189,9 @@ def md_to_docx(md_path, docx_path, compact=False):
     doc.save(docx_path)
     print("wrote", docx_path)
 
-md_to_docx("docs/report_FINAL.md", "report.docx")
-md_to_docx("docs/policy_note_FINAL.md", os.path.join("docs", "policy_note.docx"), compact=True)
+if not SKIP_DOCS:
+    md_to_docx("docs/report_FINAL.md", "report.docx")
+    md_to_docx("docs/policy_note_FINAL.md", os.path.join("docs", "policy_note.docx"), compact=True)
 
 # ============================ 2. SLIDES ============================
 from pptx import Presentation
