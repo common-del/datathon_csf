@@ -1,0 +1,12 @@
+competency,standardised_coefficient,rf_importance,rf_rank,lin_rank,rank_gap
+Division,0.974,0.536,1,4,3
+Measurement,1.292,0.211,2,1,-1
+Number Sense,1.061,0.082,3,3,0
+Multiplication,1.096,0.071,4,2,-2
+Subtraction,0.934,0.046,5,5,0
+Addition,0.808,0.034,6,7,1
+Shapes,0.855,0.02,7,6,-1
+Place Value,0.455,0.001,8,8,0
+Data Handling,0.352,0.0,9,10,1
+Mensuration,0.117,0.0,9,11,2
+Fractions,0.37,0.0,9,9,0

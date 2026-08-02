@@ -1,0 +1,12 @@
+{
+ "linear_r2": "0.991",
+ "rf_r2_in_sample": "0.959",
+ "rf_subsample_rows": "250,000",
+ "rf_zero_importance_competencies": [
+  "Data Handling",
+  "Fractions",
+  "Mensuration"
+ ],
+ "rf_top2_share": 0.747,
+ "source": "jupyter_notebook.ipynb, executed cell containing RandomForestRegressor"
+}

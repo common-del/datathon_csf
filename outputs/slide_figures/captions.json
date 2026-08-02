@@ -1,0 +1,36 @@
+{
+ "captions": {
+  "S1_g6_collapse.png": "Dashed = the same 2,182 Gram Panchayats, present all 3 years.",
+  "S2_grade_flip.png": "Class 6 was on top in 2022-23. Bottom by 2024-25.",
+  "S3_participation.png": "Out of every eligible child, counted from UDISE+ enrolment.",
+  "S4_coverage_extremes.png": "Three years pooled. Two districts tested nobody at all.",
+  "S5_prereq_ladder.png": "So more division practice cannot fix division. Fix what comes first.",
+  "S6_weakest_competencies.png": "The 7 competencies present in all 9 question papers, all years.",
+  "S7_kk_gap.png": "The 7 Article 371J districts, weighted by how many children sat.",
+  "S8_kk_inputs.png": "Each row has its own scale. Rural State Government schools, UDISE+ 2024-25.",
+  "S9_variation.png": "Each Gram Panchayat collapsed to its own average first.",
+  "S10_signal_competencies.png": "How closely a competency moves with the child's whole score.",
+  "S11_gender.png": "Girls lead in all 9 class-years, by 2.1 points on average.",
+  "S14_kk_outcomes.png": "Red number = points behind. The 3 tests measure different things.",
+  "S12_coverage_map.png": "Red = tested almost nobody. Grey = no contest data at all.",
+  "S13_forest_importance.png": "Shaded ones score 0% because they were rarely asked.",
+  "S15_kk_widening.png": "Red number = points behind. Kalyana Karnataka falls in both years."
+ },
+ "titles": {
+  "S1_g6_collapse.png": "Class 6 lost 2 competencies",
+  "S2_grade_flip.png": "Older children now score lower",
+  "S3_participation.png": "Testing doubled in 3 years",
+  "S4_coverage_extremes.png": "5 districts tested almost nobody",
+  "S5_prereq_ladder.png": "Competencies build on each other",
+  "S6_weakest_competencies.png": "Division is the weakest of all",
+  "S7_kk_gap.png": "The gap is getting wider",
+  "S8_kk_inputs.png": "Fewer teachers, bigger schools",
+  "S9_variation.png": "Clusters separate places most",
+  "S10_signal_competencies.png": "What each one tells us",
+  "S11_gender.png": "Boys and girls move together",
+  "S14_kk_outcomes.png": "Behind on all 3 tests",
+  "S12_coverage_map.png": "Who actually got tested",
+  "S13_forest_importance.png": "What the model leans on",
+  "S15_kk_widening.png": "The gap opens every year"
+ }
+}
